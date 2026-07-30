@@ -15,25 +15,25 @@ const keynoteTopics = [
     icon: MessageSquare,
     title: 'The Power of Authentic Communication',
     description:
-      'Learn how to communicate with clarity and confidence by embracing vulnerability and showing up as your whole self. This keynote transforms how teams and leaders connect.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     icon: Users,
     title: 'Leadership Through Storytelling',
     description:
-      'Great leaders are great storytellers. Discover how to craft narratives that inspire action, build trust, and create lasting organizational change.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     icon: Lightbulb,
     title: 'Confidence in the Spotlight',
     description:
-      'Overcome public speaking anxiety and performance pressure. Practical techniques drawn from theatre and communication science to help you shine when it matters most.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     icon: Heart,
     title: 'The Art of Meaningful Connection',
     description:
-      'In a digital age, human connection is more important than ever. Explore strategies for building genuine relationships in professional and personal contexts.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ];
 
@@ -71,7 +71,7 @@ export default function Speaking() {
             Inspiring Audiences to Lead with Authenticity
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10">
-            Keynotes and workshops that blend research, storytelling, and actionable insights to transform how people communicate and lead.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <Link
             href="/contact"
@@ -90,7 +90,7 @@ export default function Speaking() {
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-semibold mb-4">Keynote Topics</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Signature presentations tailored to your organization's unique needs and goals.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -113,9 +113,9 @@ export default function Speaking() {
         <section className="bg-muted/30 py-24">
           <div className="max-w-5xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-12">
-              <h2 className="font-serif text-4xl font-semibold mb-4">See Sarah Speak</h2>
+              <h2 className="font-serif text-4xl font-semibold mb-4">See Brianne Speak</h2>
               <p className="text-muted-foreground text-lg">
-                Watch a recent keynote on authentic leadership and communication.
+                Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
             <div className="aspect-video bg-gradient-to-br from-muted via-card to-accent rounded-sm border border-border flex items-center justify-center">
@@ -148,7 +148,7 @@ export default function Speaking() {
                 Weekly Conversations on Communication & Leadership
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Join thousands of listeners exploring authentic communication, storytelling, and leadership development through in-depth interviews and solo episodes.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <Link
                 href="/media"
@@ -170,7 +170,7 @@ export default function Speaking() {
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl font-semibold mb-4">What Audiences Say</h2>
               <p className="text-muted-foreground text-lg">
-                From corporate leaders to nonprofit teams to educational institutions.
+                Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
             <TestimonialsCarousel />
@@ -212,7 +212,7 @@ export default function Speaking() {
               Let's Create Something Meaningful Together
             </h2>
             <p className="text-background/80 text-lg mb-10 max-w-2xl mx-auto">
-              Whether you're planning a conference keynote, leadership retreat, or professional development workshop, I'd love to hear about your vision.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <Link
               href="/contact"

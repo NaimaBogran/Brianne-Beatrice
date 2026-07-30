@@ -17,22 +17,22 @@ const values = [
   {
     icon: Heart,
     title: 'Authenticity',
-    description: 'True leadership begins when we show up as our whole selves, vulnerabilities included.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     icon: Lightbulb,
     title: 'Empowerment',
-    description: 'Everyone has a story worth telling and a voice that deserves to be heard.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     icon: Target,
     title: 'Impact',
-    description: 'Meaningful change happens through connection, not perfection.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     icon: GraduationCap,
     title: 'Lifelong Learning',
-    description: 'The best teachers remain students, constantly curious and evolving.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 ];
 
@@ -49,14 +49,14 @@ export default function About() {
                 A Life Dedicated to Voice and Vision
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Educator, director, speaker—each role is a different stage for the same mission: helping people communicate with courage and clarity.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
               </p>
             </div>
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-accent via-muted to-card rounded-sm overflow-hidden border border-border shadow-lg">
                 <img
                   src={aboutPortrait}
-                  alt="Dr. Sarah Mitchell portrait"
+                  alt="Brianne Beatrice portrait"
                   className="w-full h-full object-cover mix-blend-multiply opacity-85"
                 />
               </div>
@@ -71,16 +71,16 @@ export default function About() {
           <h2 className="font-serif text-3xl font-semibold mb-8">Professional Biography</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Dr. Sarah Mitchell is a community college professor, theatre director, and sought-after public speaker who has spent over 15 years empowering individuals to communicate authentically and lead with confidence. Her unique approach combines academic rigor, artistic sensitivity, and real-world applicability.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              As a professor of Communication Studies at Bay Area Community College, Dr. Mitchell has transformed the lives of thousands of students, many of whom are first-generation college attendees finding their voice for the first time. Her courses on public speaking, interpersonal communication, and performance studies consistently earn the highest student evaluations in the department.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              In the theatre, Sarah has directed over 30 productions, including critically acclaimed interpretations of classics and bold new works. Her direction is known for its emotional depth, cultural relevance, and ability to draw out transformative performances from actors at all levels.
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              As a keynote speaker and workshop facilitator, she works with corporations, nonprofits, and educational institutions to develop leaders who communicate with authenticity and impact. Her keynotes blend storytelling, research-backed insights, and actionable strategies that audiences can implement immediately.
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
             </p>
           </div>
         </section>
@@ -166,9 +166,9 @@ export default function About() {
         <section className="bg-foreground text-background py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <blockquote className="font-serif text-3xl lg:text-4xl font-medium leading-relaxed mb-8">
-              "The most powerful thing we can do is help someone discover they have something worth saying—and then give them the tools to say it with conviction."
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             </blockquote>
-            <p className="text-background/70 text-lg">— Dr. Sarah Mitchell</p>
+            <p className="text-background/70 text-lg">— Brianne Beatrice</p>
           </div>
         </section>
       </FadeInSection>

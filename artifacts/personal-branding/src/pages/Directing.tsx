@@ -74,7 +74,7 @@ export default function Directing() {
             Theatre That Moves, Challenges, and Inspires
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            For over a decade, I've directed productions that honor the text, elevate the performers, and speak to the moment we're living in.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </section>
@@ -85,13 +85,13 @@ export default function Directing() {
           <h2 className="font-serif text-4xl font-semibold mb-8 text-center">Directing Philosophy</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              I believe theatre is a site of transformation—for the actors, for the audience, and for the community. My directing work begins with deep respect for the playwright's vision and a commitment to excavating the emotional truth at the heart of every scene.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              I work collaboratively with actors, designers, and production teams to create a rehearsal environment where risk-taking is encouraged and every voice is valued. I'm drawn to plays that grapple with social justice, family dynamics, and the complexity of the human experience.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Whether directing classics or contemporary works, my goal is always the same: to tell stories that matter, with honesty, rigor, and heart.
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
           </div>
         </section>
@@ -104,7 +104,7 @@ export default function Directing() {
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl font-semibold mb-4">Featured Productions</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Selected directing credits from the past five years.
+                Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -148,7 +148,7 @@ export default function Directing() {
           <div className="space-y-8">
             <div className="bg-card border border-border p-10 rounded-sm">
               <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "Mitchell's direction of <em>A Raisin in the Sun</em> was nothing short of revelatory. She drew performances that were raw, honest, and deeply moving. This is what theatre should be."
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </blockquote>
               <p className="text-sm text-muted-foreground">
                 — Regional Arts Review, 2023
@@ -156,7 +156,7 @@ export default function Directing() {
             </div>
             <div className="bg-card border border-border p-10 rounded-sm">
               <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "Under Mitchell's direction, <em>The Glass Menagerie</em> became a haunting meditation on memory and loss. Her vision honored Williams while making it feel urgent and contemporary."
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </blockquote>
               <p className="text-sm text-muted-foreground">
                 — Theatre Critic, Bay Area Arts Journal, 2022
@@ -164,7 +164,7 @@ export default function Directing() {
             </div>
             <div className="bg-card border border-border p-10 rounded-sm">
               <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "Best Director Award for <em>Fences</em>. Mitchell's work demonstrates a rare combination of artistic vision and deep respect for the actor's process."
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </blockquote>
               <p className="text-sm text-muted-foreground">
                 — Regional Theatre Festival, 2019
@@ -180,7 +180,7 @@ export default function Directing() {
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <h2 className="font-serif text-4xl font-semibold mb-6">Directing Resume</h2>
             <p className="text-background/80 text-lg mb-10 max-w-2xl mx-auto">
-              For a complete list of directing credits, design collaborations, and production history, download my directing resume.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
             </p>
             <button
               className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-sm font-medium hover:opacity-90 transition-opacity"

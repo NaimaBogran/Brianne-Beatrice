@@ -19,9 +19,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-xl font-semibold mb-3">Dr. Sarah Mitchell</h3>
+            <h3 className="font-serif text-xl font-semibold mb-3">Brianne Beatrice</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Empowering authentic communication and transformative leadership through education, performance, and speaking.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold mb-4 uppercase tracking-wide">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="mailto:sarah.mitchell@example.com"
+                href="mailto:brianne.beatrice@example.com"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-accent hover:bg-foreground hover:text-background transition-colors"
                 data-testid="link-email"
               >
@@ -68,7 +68,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground text-center">
-            &copy; {new Date().getFullYear()} Dr. Sarah Mitchell. All rights reserved.
+            &copy; {new Date().getFullYear()} Brianne Beatrice. All rights reserved.
           </p>
         </div>
       </div>

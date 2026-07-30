@@ -10,22 +10,22 @@ const roleCards = [
   {
     icon: Mic,
     title: 'Speaker',
-    description: 'Keynote presentations on authentic communication, leadership, and meaningful storytelling.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     icon: GraduationCap,
     title: 'Professor',
-    description: 'Inspiring students in communication studies and performance at the community college level.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     icon: Theater,
     title: 'Director',
-    description: 'Bringing powerful theatrical productions to life with vision and emotional depth.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     icon: Users,
     title: 'Educator',
-    description: 'Committed to empowering individuals to find their voice and lead with confidence.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Home() {
                 Helping people communicate with confidence, lead with authenticity, and tell meaningful stories.
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">
-                I bring together the art of performance, the science of communication, and the power of education to help individuals and organizations find their voice.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -79,7 +79,7 @@ export default function Home() {
               <div className="aspect-[4/5] bg-gradient-to-br from-muted via-card to-accent rounded-sm overflow-hidden border border-border shadow-xl">
                 <img
                   src={heroPortrait}
-                  alt="Dr. Sarah Mitchell"
+                  alt="Brianne Beatrice"
                   className="w-full h-full object-cover mix-blend-multiply opacity-90"
                 />
               </div>
@@ -94,7 +94,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl lg:text-5xl font-semibold mb-4">What I Do</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Four interconnected roles, one unified mission: empowering authentic expression.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
 
@@ -129,7 +129,7 @@ export default function Home() {
                 </div>
                 <h2 className="font-serif text-4xl font-semibold mb-4">The Inspired Voice</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  Weekly conversations exploring authentic communication, leadership development, and the art of meaningful connection. Join thousands of listeners finding their voice.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
                 </p>
                 <Link
                   href="/media"
@@ -157,7 +157,7 @@ export default function Home() {
             <Award className="w-12 h-12 text-muted-foreground/50 mx-auto mb-6" />
             <h2 className="font-serif text-4xl font-semibold mb-4">Recognition & Impact</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
-              Honored for contributions to education, community leadership, and the performing arts.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </p>
           </div>
 
@@ -213,9 +213,9 @@ export default function Home() {
       {/* Bio Preview */}
       <FadeInSection>
         <section className="max-w-4xl mx-auto px-6 lg:px-12 py-24 text-center">
-          <h2 className="font-serif text-3xl font-semibold mb-6">About Dr. Sarah Mitchell</h2>
+          <h2 className="font-serif text-3xl font-semibold mb-6">About Brianne Beatrice</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            With over 15 years of experience as a community college professor, theatre director, and public speaker, I've dedicated my career to helping people discover and amplify their authentic voice. My work bridges academia, the stage, and the speaking circuit—creating spaces where communication becomes transformation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <Link
             href="/about"

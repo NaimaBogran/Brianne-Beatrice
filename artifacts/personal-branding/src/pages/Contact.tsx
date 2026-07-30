@@ -39,7 +39,7 @@ export default function Contact() {
             Let's Start a Conversation
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Whether you're looking for a keynote speaker, a workshop facilitator, or a collaborator on a creative project, I'd love to hear from you.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function Contact() {
               <div className="aspect-[3/4] bg-gradient-to-br from-muted via-card to-accent rounded-sm overflow-hidden border border-border shadow-lg mb-8">
                 <img
                   src={heroPortrait}
-                  alt="Dr. Sarah Mitchell"
+                  alt="Brianne Beatrice"
                   className="w-full h-full object-cover mix-blend-multiply opacity-90"
                 />
               </div>
@@ -61,12 +61,12 @@ export default function Contact() {
                 <div>
                   <h3 className="font-serif text-2xl font-semibold mb-4">Get in Touch</h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    I respond to all inquiries within 48 hours. For speaking engagements, please include event details, audience size, and preferred dates.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4">
                   <a
-                    href="mailto:sarah.mitchell@example.com"
+                    href="mailto:brianne.beatrice@example.com"
                     className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors"
                     data-testid="link-email-contact"
                   >
@@ -75,7 +75,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Email</p>
-                      <p className="font-medium">sarah.mitchell@example.com</p>
+                      <p className="font-medium">brianne.beatrice@example.com</p>
                     </div>
                   </a>
                   <a
@@ -90,7 +90,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">LinkedIn</p>
-                      <p className="font-medium">Dr. Sarah Mitchell</p>
+                      <p className="font-medium">Brianne Beatrice</p>
                     </div>
                   </a>
                 </div>
@@ -169,25 +169,25 @@ export default function Contact() {
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <h2 className="font-serif text-4xl font-semibold mb-6">Let's Collaborate</h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-              I'm always interested in meaningful partnerships—whether that's co-facilitating workshops, collaborating on research, or creating innovative educational programs. If you have an idea, let's explore it together.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="bg-background border border-border p-8 rounded-sm">
                 <h3 className="font-serif text-xl font-semibold mb-3">Speaking Engagements</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Keynotes, workshops, and panels on communication, leadership, and storytelling.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
               <div className="bg-background border border-border p-8 rounded-sm">
                 <h3 className="font-serif text-xl font-semibold mb-3">Consulting & Coaching</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Executive communication coaching and organizational culture consulting.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
               <div className="bg-background border border-border p-8 rounded-sm">
                 <h3 className="font-serif text-xl font-semibold mb-3">Creative Projects</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Theatre collaborations, curriculum development, and content creation.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
             </div>

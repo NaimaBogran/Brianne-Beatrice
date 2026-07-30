@@ -83,7 +83,7 @@ export default function Recognition() {
             Honored for Impact and Excellence
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Recognition for contributions to education, the performing arts, and community leadership.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default function Recognition() {
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-semibold mb-4">Awards & Honors</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Celebrating milestones in teaching, directing, and public speaking.
+              Lorem ipsum dolor sit amet, consectetur adipiscing.
             </p>
           </div>
           <div className="space-y-8">
@@ -132,7 +132,7 @@ export default function Recognition() {
               <Star className="w-12 h-12 mx-auto mb-6 text-foreground" />
               <h2 className="font-serif text-4xl font-semibold mb-4">Professional Honors</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Leadership roles, speaking engagements, and professional contributions.
+                Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -185,9 +185,9 @@ export default function Recognition() {
         <section className="bg-foreground text-background py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <blockquote className="font-serif text-3xl lg:text-4xl font-medium leading-relaxed mb-8">
-              "Recognition is meaningful not for what it says about me, but for what it represents: the power of education, the importance of storytelling, and the potential in every student I've had the privilege to teach."
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             </blockquote>
-            <p className="text-background/70 text-lg">— Dr. Sarah Mitchell</p>
+            <p className="text-background/70 text-lg">— Brianne Beatrice</p>
           </div>
         </section>
       </FadeInSection>

@@ -9,19 +9,19 @@ import {
 } from '@/components/ui/accordion';
 
 const courses = [
-  { code: 'COMM 101', title: 'Public Speaking', description: 'Fundamentals of effective oral communication' },
-  { code: 'COMM 220', title: 'Interpersonal Communication', description: 'Building meaningful connections through dialogue' },
-  { code: 'THTR 150', title: 'Introduction to Theatre', description: 'Performance, storytelling, and dramatic literature' },
-  { code: 'COMM 310', title: 'Advanced Performance Studies', description: 'Embodied rhetoric and performative communication' },
+  { code: 'COMM 101', title: 'Public Speaking', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing' },
+  { code: 'COMM 220', title: 'Interpersonal Communication', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing' },
+  { code: 'THTR 150', title: 'Introduction to Theatre', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing' },
+  { code: 'COMM 310', title: 'Advanced Performance Studies', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing' },
 ];
 
 const accomplishments = [
-  '15+ years teaching at the community college level',
+  'xx+ years teaching at the community college level',
   'Highest-rated faculty member in Communication Studies department (2019-2023)',
-  '3,000+ students taught across diverse backgrounds and experiences',
+  'x,xxx+ students taught across diverse backgrounds and experiences',
   'Developed innovative curriculum blending communication theory with performance practice',
   'Recipient of Distinguished Faculty Award, State Community College System (2023)',
-  'Mentor to dozens of students who went on to graduate programs and professional careers',
+  'Mentor to xx students who went on to graduate programs and professional careers',
 ];
 
 const philosophyPrinciples = [
@@ -54,7 +54,7 @@ export default function Teaching() {
             Empowering Students to Find Their Voice
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            As a community college professor, I have the privilege of working with students at pivotal moments in their lives—many discovering for the first time that they have something powerful to say.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function Teaching() {
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl font-semibold mb-4">Courses Taught</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                From foundational skills to advanced performance studies.
+                Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
@@ -113,28 +113,28 @@ export default function Teaching() {
               <Users className="w-12 h-12 mb-6 text-foreground" />
               <h2 className="font-serif text-4xl font-semibold mb-6">Student Impact</h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Teaching at a community college means working with students from all walks of life—returning adults, recent high school graduates, career changers, and first-generation college students. It's the most meaningful work I do.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-serif font-semibold flex-shrink-0">
-                    95%
+                    xx%
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Student Success Rate</p>
                     <p className="text-sm text-muted-foreground">
-                      Students passing with C or higher across all courses
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-serif font-semibold flex-shrink-0">
-                    4.8
+                    x.x
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Average Rating</p>
                     <p className="text-sm text-muted-foreground">
-                      Student evaluations (out of 5.0) for past 5 years
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
                     </p>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ export default function Teaching() {
             <div className="bg-card border border-border p-10 rounded-sm">
               <Star className="w-10 h-10 text-muted-foreground/30 mb-6" />
               <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "Dr. Mitchell didn't just teach me how to give a speech. She taught me that my story matters, that I have authority, and that I deserve to be heard. That changed everything."
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </blockquote>
               <p className="text-sm text-muted-foreground">— Former student, Class of 2022</p>
             </div>
@@ -179,7 +179,7 @@ export default function Teaching() {
         <section className="max-w-4xl mx-auto px-6 lg:px-12 py-24 text-center">
           <h2 className="font-serif text-3xl font-semibold mb-6">Curriculum Vitae</h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
-            For a complete record of my teaching experience, publications, and professional development, download my CV.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
           </p>
           <button
             className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-sm font-medium hover:opacity-90 transition-opacity"

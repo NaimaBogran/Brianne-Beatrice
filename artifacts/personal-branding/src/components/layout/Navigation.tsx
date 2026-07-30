@@ -27,7 +27,7 @@ export function Navigation() {
             {/* Logo/Name */}
             <Link href="/" className="flex items-center group">
               <span className="font-serif text-2xl font-semibold text-foreground tracking-tight transition-opacity group-hover:opacity-70">
-                Dr. Sarah Mitchell
+                Brianne Beatrice
               </span>
             </Link>
 

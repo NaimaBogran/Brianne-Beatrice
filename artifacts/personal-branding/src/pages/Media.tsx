@@ -6,19 +6,19 @@ const podcastEpisodes = [
   {
     number: 42,
     title: 'The Power of Pausing: Strategic Silence in Communication',
-    description: 'Exploring how silence can be just as powerful as speech in public speaking and leadership.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     date: 'March 15, 2024',
   },
   {
     number: 41,
     title: 'Storytelling as Leadership with Marcus Johnson',
-    description: 'A conversation about narrative, authenticity, and leading through story.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     date: 'March 8, 2024',
   },
   {
     number: 40,
     title: 'Overcoming Imposter Syndrome in Professional Settings',
-    description: 'Practical strategies for showing up with confidence even when doubt creeps in.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     date: 'March 1, 2024',
   },
 ];
@@ -97,7 +97,7 @@ export default function Media() {
             Amplifying Ideas Through Multiple Platforms
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            From podcasts to publications, sharing insights on communication, leadership, and the transformative power of storytelling.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </section>
@@ -113,10 +113,10 @@ export default function Media() {
               </div>
               <h2 className="font-serif text-4xl font-semibold mb-4">The Inspired Voice</h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                A weekly podcast exploring authentic communication, leadership development, and the art of meaningful connection. Join thousands of listeners finding their voice and leading with confidence.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
               <p className="text-muted-foreground mb-4">
-                Available on Apple Podcasts, Spotify, and wherever you listen.
+                Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
             <div className="bg-card border border-border p-12 rounded-sm">
@@ -166,7 +166,7 @@ export default function Media() {
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl font-semibold mb-4">Articles & Publications</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Written contributions to leading publications on communication, education, and leadership.
+                Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

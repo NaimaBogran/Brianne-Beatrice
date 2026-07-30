@@ -5,17 +5,17 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: "Dr. Mitchell's keynote transformed how our team approaches communication. Her insights on authentic leadership were exactly what we needed to hear.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     author: "Jennifer Roberts",
     title: "VP of Human Resources, Tech Innovations Inc.",
   },
   {
-    quote: "As a student, I've never had a professor who made me feel so empowered to use my voice. Dr. Mitchell doesn't just teach—she transforms.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     author: "Marcus Chen",
     title: "Communication Studies Graduate, Class of 2023",
   },
   {
-    quote: "Her directing work is nothing short of brilliant. She brings out performances that are raw, honest, and deeply moving. A true artist and educator.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     author: "Lisa Patterson",
     title: "Theatre Critic, Regional Arts Review",
   },
