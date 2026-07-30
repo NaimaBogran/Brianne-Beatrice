@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Personal Branding Website"
+version = "1.0.0"
+id = "artifacts/personal-branding"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20051
+
+[services.development]
+run = "pnpm --filter @workspace/personal-branding run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/personal-branding", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/personal-branding/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20051"
+BASE_PATH = "/"
