@@ -1,0 +1,278 @@
+Create a modern, elegant multi-page personal branding website prototype for a professional whose long-term goal is to become a nationally recognized motivational speaker.
+
+This is NOT the final website. It is a clickable mockup/prototype that demonstrates the site's layout, navigation, user experience, and overall design. Use placeholder content, placeholder images, and sample text throughout. The goal is to present a polished concept that can later be filled with real content.
+
+## About the Client
+
+The client is an accomplished professional with many roles including:
+- Community college professor specializing in acting and public speaking
+- Theatre director
+- Actor (do NOT make this the primary focus)
+- Public speaker
+- Aspiring motivational speaker
+
+She has received numerous awards, recognitions, and community honors, has been featured in articles, has appeared on podcasts, and has an extensive professional background.
+
+Her acting experience should be treated as part of her story and credibility, not the primary focus of the website.
+
+The overall brand should position her as someone who inspires confidence, communication, leadership, storytelling, and personal growth.
+
+Think of websites like Mel Robbins, Simon Sinek, or Brené Brown—not in terms of copying their design, but in creating a polished personal brand with a clear mission.
+
+## Overall Design
+
+Create a warm, professional, inspiring aesthetic.
+
+Style:
+- Modern
+- Elegant
+- Clean
+- Sophisticated
+- Lots of white space
+- Editorial feel
+- Accessible
+- Inspiring
+
+Use:
+- Large hero photography placeholders
+- Beautiful typography
+- Soft animations
+- Card layouts
+- Subtle hover effects
+- Rounded corners
+- Light shadows
+- Responsive design
+- Mobile friendly
+
+Suggested palette:
+- Warm white backgrounds
+- Deep navy
+- Soft burgundy accents
+- Warm beige
+- Gold accent for awards
+
+Typography:
+Headings:
+Playfair Display
+
+Body:
+Inter
+
+Icons:
+Lucide Icons
+
+## Navigation
+
+Sticky navigation bar with smooth scrolling and page transitions.
+
+Pages:
+
+Home
+
+About
+
+Speaking
+
+Teaching
+
+Directing
+
+Media
+
+Recognition
+
+Contact
+
+Every page should be fully designed with placeholder content and clickable navigation.
+
+## Homepage
+
+Create an impressive landing page including:
+
+Large smiling headshot placeholder
+
+Headline:
+
+"Helping people communicate with confidence, lead with authenticity, and tell meaningful stories."
+
+Supporting paragraph
+
+Primary CTA
+
+Book Me to Speak
+
+Secondary CTA
+
+Learn More
+
+Featured cards:
+
+Speaker
+
+Professor
+
+Director
+
+Educator
+
+Featured podcast section
+
+Recognition preview
+
+Recent media
+
+Short biography
+
+Testimonials carousel (placeholder)
+
+Footer
+
+## About Page
+
+Professional biography
+
+Career timeline
+
+Mission
+
+Values
+
+Education
+
+Professional philosophy
+
+Large portrait placeholder
+
+Quote section
+
+## Speaking Page
+
+Hero section
+
+Speaking topics
+
+Placeholder keynote descriptions
+
+Embedded video placeholder
+
+Podcast feature
+
+Testimonials
+
+Book a Speaking Engagement CTA
+
+## Teaching Page
+
+Teaching philosophy
+
+Courses taught
+
+Student impact
+
+Professional accomplishments
+
+Download CV button (placeholder)
+
+## Directing Page
+
+Directing philosophy
+
+Featured productions
+
+Gallery placeholders
+
+Download directing resume button
+
+Production cards
+
+## Media Page
+
+Podcast section
+
+Embedded podcast placeholder
+
+Articles grid
+
+Press mentions
+
+Interviews
+
+Videos
+
+Media cards
+
+## Recognition Page
+
+Awards
+
+Honors
+
+Community recognition
+
+Influential Women recognition
+
+Featured articles
+
+Timeline of accomplishments
+
+Cards with placeholder content
+
+## Contact Page
+
+Professional headshot placeholder
+
+Contact form
+
+Email
+
+LinkedIn
+
+Call-to-action encouraging collaboration and speaking opportunities
+
+## Functionality
+
+The prototype should feel like a finished product.
+
+Include:
+
+Smooth scrolling
+
+Page transitions
+
+Hover animations
+
+Fade-in animations
+
+Responsive navigation
+
+Clickable buttons
+
+Clickable cards
+
+Working navigation between pages
+
+Placeholder downloads
+
+Interactive image gallery
+
+Accordion FAQs
+
+## Technical
+
+Use React with TypeScript.
+
+Organize components cleanly.
+
+Separate reusable UI components.
+
+Create a modern design system with reusable cards, buttons, typography, spacing, and color variables.
+
+Use Tailwind CSS.
+
+Use Framer Motion for tasteful animations.
+
+Use Lucide React icons.
+
+The code should be clean, modular, and easy to replace placeholder content later.
+
+Focus on creating an impressive client presentation prototype rather than a content-complete website.
