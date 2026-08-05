@@ -157,14 +157,16 @@ export default function About() {
         </section>
       </FadeInSection>
 
-      {/* Philosophy Quote */}
+      {/* Philosophy Closing */}
       <FadeInSection>
         <section className="bg-foreground text-background py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-            <blockquote className="font-serif text-3xl lg:text-4xl font-medium leading-relaxed mb-8">
-              "The skills you develop on stage — presence, courage, listening, vulnerability — are exactly the skills every leader needs in real life."
-            </blockquote>
-            <p className="text-background/70 text-lg">— Brianne Beatrice</p>
+            <p className="font-serif text-3xl lg:text-4xl font-medium leading-relaxed mb-8">
+              Performer. Director. Professor. Mentor.
+            </p>
+            <p className="text-background/70 text-xl leading-relaxed max-w-2xl mx-auto">
+              Two decades of teaching, directing, and performing — all in service of helping people find their voice and step into their power.
+            </p>
           </div>
         </section>
       </FadeInSection>

@@ -192,14 +192,16 @@ export default function Recognition() {
         </section>
       </FadeInSection>
 
-      {/* Quote Section */}
+      {/* Closing CTA */}
       <FadeInSection>
         <section className="bg-foreground text-background py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-            <blockquote className="font-serif text-3xl lg:text-4xl font-medium leading-relaxed mb-8">
-              "Recognition is meaningful only when it reflects a genuine transformation in the people you work with."
-            </blockquote>
-            <p className="text-background/70 text-lg">— Brianne Beatrice</p>
+            <p className="font-serif text-3xl lg:text-4xl font-medium leading-relaxed mb-8">
+              A career defined by national recognition in teaching, directing, and performance.
+            </p>
+            <p className="text-background/70 text-xl leading-relaxed max-w-2xl mx-auto">
+              From the Kennedy Center to the classroom — every award reflects the students, collaborators, and communities who made it possible.
+            </p>
           </div>
         </section>
       </FadeInSection>

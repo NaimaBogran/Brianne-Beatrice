@@ -147,11 +147,19 @@ export default function Teaching() {
                 She believes that every student who walks into a performance classroom is capable of transformation — and her teaching is built to prove it.
               </p>
             </div>
-            <div className="bg-card border border-border p-10 rounded-sm">
-              <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "The greatest thing I can do as an educator is help a student leave my classroom believing in themselves more than they did when they walked in."
-              </blockquote>
-              <p className="text-sm text-muted-foreground">— Brianne Beatrice</p>
+            <div className="bg-card border border-border p-10 rounded-sm space-y-6">
+              <div className="border-l-4 border-foreground pl-6">
+                <p className="font-semibold text-lg mb-1">20+ Years Teaching</p>
+                <p className="text-muted-foreground text-sm">Across Northern Essex Community College, Salem State University, UMass Boston, Merrimack College, Actor's Workshop Boston, and Penn State</p>
+              </div>
+              <div className="border-l-4 border-foreground pl-6">
+                <p className="font-semibold text-lg mb-1">National Alliance Acting Teacher of Excellence</p>
+                <p className="text-muted-foreground text-sm">Awarded 2026 — National Alliance of Acting Teachers, Region I</p>
+              </div>
+              <div className="border-l-4 border-foreground pl-6">
+                <p className="font-semibold text-lg mb-1">Golden Lamp Award of Teaching Excellence</p>
+                <p className="text-muted-foreground text-sm">Northern Essex Community College, 2022–2023</p>
+              </div>
             </div>
           </div>
         </section>
