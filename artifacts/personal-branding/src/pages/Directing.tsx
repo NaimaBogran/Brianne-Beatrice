@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { Theater, Award, ChevronDown, ChevronUp } from 'lucide-react';
-import theatreStage from '@/assets/theatre-stage.png';
+import { Theater, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import brianneStageDirecting from '@/assets/brianne-stage-directing.jpg';
+import haverhillLifeCover from '@/assets/brianne-haverhill-life-cover.jpg';
 
 const featuredProductions = [
   {
@@ -96,9 +97,9 @@ export default function Directing() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={theatreStage}
-            alt="Theatre stage"
-            className="w-full h-full object-cover opacity-20"
+            src={brianneStageDirecting}
+            alt="Brianne Beatrice directing a theatre production on stage"
+            className="w-full h-full object-cover object-center opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
         </div>
@@ -173,6 +174,43 @@ export default function Directing() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Press Feature — Haverhill Life */}
+      <FadeInSection>
+        <section className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
+          <h2 className="font-serif text-3xl font-semibold mb-10 text-center">In the Press</h2>
+          <div className="grid lg:grid-cols-2 gap-10 items-center bg-card border border-border rounded-sm overflow-hidden">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src={haverhillLifeCover}
+                alt="Haverhill Life magazine cover featuring Brianne Beatrice — Directing Change"
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+            <div className="p-8 lg:p-10">
+              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                Haverhill Life / Merrimack Valley Life
+              </p>
+              <h3 className="font-serif text-2xl font-semibold mb-4 leading-snug">
+                Directing Change
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                A feature on Brianne's work as a director and educator — exploring how she uses theatre to create meaningful change in her students and community.
+              </p>
+              <a
+                href="https://www.merrimackvalleylife.com/articles/directing-change/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-sm font-medium hover:bg-accent transition-colors"
+              >
+                Read Article
+                <ExternalLink size={16} />
+              </a>
             </div>
           </div>
         </section>

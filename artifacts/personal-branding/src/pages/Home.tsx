@@ -3,8 +3,8 @@ import { Link } from 'wouter';
 import { Mic, GraduationCap, Theater, Users, ArrowRight, Award, Star } from 'lucide-react';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel';
-import brianneHeadshot from '@/assets/brianne-headshot.jpg';
+import brianneHeroHeadshot from '@/assets/brianne-hero-headshot.jpg';
+import brianneSpeaking from '@/assets/brianne-speaking-to-audience.jpg';
 
 const roleCards = [
   {
@@ -108,8 +108,8 @@ export default function Home() {
             >
               <div className="aspect-[4/5] bg-gradient-to-br from-muted via-card to-accent rounded-sm overflow-hidden border border-border shadow-xl">
                 <img
-                  src={brianneHeadshot}
-                  alt="Brianne Beatrice"
+                  src={brianneHeroHeadshot}
+                  alt="Brianne Beatrice, Master of Performance and Inspiration"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
@@ -174,9 +174,43 @@ export default function Home() {
         </section>
       </FadeInSection>
 
-      {/* Recognition Preview */}
+      {/* Speaker / Impact Section */}
       <FadeInSection>
         <section className="bg-muted/30 py-24">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="order-2 lg:order-1">
+                <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Speaker & Educator</p>
+                <h2 className="font-serif text-4xl lg:text-5xl font-semibold mb-6">
+                  Bringing the Stage to Every Room
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                  The same skills that define great theatre — presence, listening, vulnerability, and courage — are exactly the skills every leader and communicator needs. Brianne brings more than two decades of teaching and performance to every engagement, helping audiences unlock confidence and authentic connection.
+                </p>
+                <Link
+                  href="/speaking"
+                  className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-sm font-medium hover:bg-accent transition-colors"
+                >
+                  Explore Speaking Topics
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+              <div className="order-1 lg:order-2 aspect-[16/10] rounded-sm overflow-hidden border border-border shadow-lg">
+                <img
+                  src={brianneSpeaking}
+                  alt="Brianne Beatrice speaking to an audience"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Recognition Preview */}
+      <FadeInSection>
+        <section className="py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <Award className="w-12 h-12 text-foreground/50 mx-auto mb-6" />
@@ -214,21 +248,6 @@ export default function Home() {
                 <ArrowRight size={18} />
               </Link>
             </div>
-          </div>
-        </section>
-      </FadeInSection>
-
-      {/* Testimonials */}
-      <FadeInSection>
-        <section className="py-24">
-          <div className="max-w-5xl mx-auto px-6 lg:px-12">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl font-semibold mb-4">What People Say</h2>
-              <p className="text-muted-foreground text-lg">
-                From students, collaborators, and colleagues.
-              </p>
-            </div>
-            <TestimonialsCarousel />
           </div>
         </section>
       </FadeInSection>

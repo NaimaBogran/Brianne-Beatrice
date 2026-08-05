@@ -1,6 +1,9 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
 import { Award, Trophy, Star } from 'lucide-react';
+import brianneTeachingAward from '@/assets/brianne-teaching-award.jpg';
+import brianneCareerRecognition from '@/assets/brianne-career-recognition.jpg';
+import brianneAwardDisplay from '@/assets/brianne-award-display.jpg';
 
 const professionalAwards = [
   {
@@ -94,6 +97,34 @@ export default function Recognition() {
         </div>
       </section>
 
+      {/* Teaching Award Photo Feature */}
+      <FadeInSection>
+        <section className="max-w-6xl mx-auto px-6 lg:px-12 pt-24 pb-0">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="aspect-[3/4] max-h-[500px] rounded-sm overflow-hidden border border-border shadow-lg">
+              <img
+                src={brianneTeachingAward}
+                alt="Brianne Beatrice holding her Excellence in Teaching Award from the National Society of Leadership and Success"
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Excellence in Teaching</p>
+              <h2 className="font-serif text-4xl font-semibold mb-6">
+                A Career Built on Recognition
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                From national teaching societies to the Kennedy Center, Brianne's commitment to excellence has been recognized across every dimension of her career — in the classroom, on stage as a director, and as a performer.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Each award reflects not just individual achievement, but the students, collaborators, and communities who made it meaningful.
+              </p>
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
       {/* Professional Awards */}
       <FadeInSection>
         <section className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
@@ -128,9 +159,36 @@ export default function Recognition() {
         </section>
       </FadeInSection>
 
-      {/* Directing Recognition */}
+      {/* Career Recognition Photo */}
       <FadeInSection>
         <section className="bg-muted/30 py-24">
+          <div className="max-w-6xl mx-auto px-6 lg:px-12">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">15 Years of Impact</p>
+                <h2 className="font-serif text-4xl font-semibold mb-6">
+                  Recognized for Leading with Purpose
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  At Brianne's 15-year recognition at Northern Essex Community College, colleagues acknowledged not only her national awards and accolades, but her mission to connect students with what is human in themselves and each other — and her dedication to free expression through the medium of the stage.
+                </p>
+              </div>
+              <div className="aspect-[4/3] rounded-sm overflow-hidden border border-border shadow-lg">
+                <img
+                  src={brianneCareerRecognition}
+                  alt="Slide from Brianne Beatrice's 15-year recognition ceremony at Northern Essex Community College"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Directing Recognition */}
+      <FadeInSection>
+        <section className="py-24">
           <div className="max-w-6xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <Star className="w-12 h-12 mx-auto mb-6 text-foreground" />
@@ -162,32 +220,35 @@ export default function Recognition() {
         </section>
       </FadeInSection>
 
-      {/* Performance Recognition */}
+      {/* Award Display Photo */}
       <FadeInSection>
-        <section className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-semibold mb-4">Performance Recognition</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              As a performer, Brianne has earned recognition from the region's most respected theatre organizations.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {performanceRecognition.map((item, index) => (
-              <div
-                key={index}
-                className="bg-card border border-border p-10 rounded-sm text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="w-16 h-16 bg-foreground text-background rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award size={28} />
-                </div>
-                <p className="text-2xl font-serif font-semibold text-muted-foreground/50 mb-4">
-                  {item.year}
-                </p>
-                <h3 className="font-serif text-xl font-semibold mb-2">{item.award}</h3>
-                <p className="text-sm text-muted-foreground font-medium mb-4">{item.organization}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+        <section className="bg-muted/30 py-24">
+          <div className="max-w-6xl mx-auto px-6 lg:px-12">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="aspect-[4/3] rounded-sm overflow-hidden border border-border shadow-lg">
+                <img
+                  src={brianneAwardDisplay}
+                  alt="Display of awards and recognition at a Brianne Beatrice recognition event"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
               </div>
-            ))}
+              <div>
+                <h2 className="font-serif text-4xl font-semibold mb-6">Performance Recognition</h2>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                  As a performer, Brianne has earned recognition from the region's most respected theatre organizations.
+                </p>
+                <div className="space-y-6">
+                  {performanceRecognition.map((item, index) => (
+                    <div key={index} className="border-l-4 border-foreground pl-6">
+                      <p className="text-sm text-muted-foreground mb-1">{item.year} · {item.organization}</p>
+                      <h3 className="font-serif text-xl font-semibold mb-2">{item.award}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </FadeInSection>

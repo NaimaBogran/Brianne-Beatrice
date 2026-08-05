@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import brianneGroup from '@/assets/brianne-large-group.jpg';
 
 const courseCategories = [
   {
@@ -130,6 +131,19 @@ export default function Teaching() {
               ))}
             </div>
           </div>
+        </section>
+      </FadeInSection>
+
+      {/* Community & Impact Image Banner */}
+      <FadeInSection>
+        <section className="w-full overflow-hidden" style={{ maxHeight: '420px' }}>
+          <img
+            src={brianneGroup}
+            alt="Brianne Beatrice with students and community members"
+            className="w-full h-full object-cover object-center"
+            style={{ maxHeight: '420px' }}
+            loading="lazy"
+          />
         </section>
       </FadeInSection>
 

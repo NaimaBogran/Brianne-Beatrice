@@ -1,7 +1,7 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
 import { Heart, Lightbulb, Target, Mic } from 'lucide-react';
-import brianneHeadshot from '@/assets/brianne-headshot.jpg';
+import brianneEducatorCommunity from '@/assets/brianne-educator-community.jpg';
 
 const timeline = [
   { year: '2026', event: 'National Alliance Acting Teacher of Excellence Award — National Alliance of Acting Teachers, Region I' },
@@ -56,9 +56,9 @@ export default function About() {
             <div className="relative">
               <div className="aspect-[3/4] bg-gradient-to-br from-accent via-muted to-card rounded-sm overflow-hidden border border-border shadow-lg">
                 <img
-                  src={brianneHeadshot}
-                  alt="Brianne Beatrice"
-                  className="w-full h-full object-cover object-top"
+                  src={brianneEducatorCommunity}
+                  alt="Brianne Beatrice in community with fellow educators"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>

@@ -1,0 +1,260 @@
+Update the existing Brianne Beatrice website using the uploaded images and the media links already included in the project.
+
+Do not rebuild or dramatically redesign the website. Preserve the current visual language, typography, colors, page structure, animations, and responsive behavior unless a small change is necessary to improve image placement or content spacing.
+
+The goal of this update is to replace generic imagery, empty media areas, testimonials, and unnecessary placeholders with Brianne’s real photos and published content.
+
+## Important content rules
+
+1. Do not invent testimonials, quotes, podcast appearances, articles, awards, productions, speaking engagements, or biographical details.
+
+2. Remove every testimonial section from the website.
+
+3. Do not retain testimonial cards with placeholder quotes.
+
+4. Do not create generic quotes attributed to Brianne or other people.
+
+5. A direct quote may only be used if it appears in one of the linked published articles. If an article contains a strong quote from or about Brianne, display it as an article excerpt and clearly attribute it to the publication. Do not alter the meaning.
+
+6. Brianne currently has:
+   - Two published articles
+   - One podcast appearance
+
+Do not add placeholder articles, fake publications, “coming soon” media cards, or additional podcast episodes.
+
+7. Do not duplicate the same article or podcast appearance simply to fill space.
+
+8. Use generous spacing, larger media cards, and intentional asymmetrical layouts so the Media page still feels polished with only three real items.
+
+## Image assignments
+
+Use the uploaded images according to the following roles.
+
+### Homepage hero
+
+Use:
+
+brianne-hero-headshot.jpg
+
+This must remain Brianne’s primary image.
+
+Display it prominently beside the title:
+
+Master of Performance & Inspiration
+
+Preserve the image’s natural proportions and avoid cropping the top of her hair, face, smile, or shoulders.
+
+On desktop, use a portrait layout with the text beside the image.
+
+On mobile, stack the image and text cleanly.
+
+Add meaningful alt text:
+
+“Brianne Beatrice, Master of Performance and Inspiration”
+
+### Homepage speaker or impact section
+
+Use:
+
+brianne-speaking-to-audience.jpg
+
+Use this in the section describing Brianne as a speaker, educator, communicator, or inspirational leader.
+
+The image should be large enough for visitors to see that she is actively addressing an audience.
+
+Do not place it inside a tiny card.
+
+### About page
+
+Use:
+
+brianne-educator-community.jpg
+
+Use this as a supporting image on the About page because it feels candid, warm, and community-oriented.
+
+Keep the main professional headshot reserved primarily for the homepage.
+
+### Teaching or community-impact section
+
+Use:
+
+brianne-large-group.jpg
+
+Use this as a wide image or banner representing education, mentorship, community, and collective impact.
+
+If the crop does not work well in the existing section, use:
+
+brianne-formal-group.jpg
+
+Do not stretch either image.
+
+### Directing page
+
+Use:
+
+brianne-stage-directing.jpg
+
+Use this as the primary directing image or directing-page banner.
+
+Position it near the directing introduction or featured productions.
+
+Also use:
+
+brianne-haverhill-life-cover.jpg
+
+Use this as a featured press card related to her directing work. Do not use it as a generic background image because the publication cover and text should remain readable.
+
+### Recognition page
+
+Use:
+
+brianne-teaching-award.jpg
+
+Feature this near the top of the Recognition page.
+
+Use:
+
+brianne-career-recognition.jpg
+
+as a secondary visual in the professional-recognition section.
+
+Use:
+
+brianne-award-display.jpg
+
+as a supporting event image where appropriate.
+
+### Media page
+
+Use the actual thumbnail, social preview image, cover image, or episode artwork associated with each existing article and podcast link.
+
+There should be exactly:
+- Two real article cards
+- One real podcast feature
+
+Do not add placeholder cards.
+
+## Article thumbnail requirements
+
+For each of the two existing article links:
+
+1. Attempt to retrieve the article’s Open Graph image using the page’s og:image metadata.
+
+2. Use that image as the card thumbnail when available.
+
+3. If the publication page does not provide a usable image, use an image already associated with that article from the uploaded assets.
+
+4. For the Haverhill Life article, use:
+
+brianne-haverhill-life-cover.jpg
+
+unless the linked article provides a higher-quality official thumbnail.
+
+5. Show:
+   - Publication name
+   - Article title
+   - Brief accurate description or excerpt
+   - Publication date, if available
+   - “Read Article” link
+
+6. Do not invent an excerpt. Use the article’s metadata, introductory text, or a short accurate summary based only on the linked article.
+
+7. Open external article links in a new tab with appropriate security attributes.
+
+## Podcast feature requirements
+
+There is one real podcast appearance.
+
+Do not create multiple episode cards.
+
+Create one visually prominent podcast feature using:
+
+- The podcast’s official artwork, episode artwork, or website thumbnail
+- The correct podcast title
+- Brianne’s episode title, if it can be determined from the provided website
+- A short accurate episode description
+- The main podcast website link already provided
+
+The existing main link may lead to the overall podcast website rather than Brianne’s specific episode. Keep that link, but also find and add the available direct listening links for Brianne’s specific episode.
+
+Look on the existing podcast website for direct links to platforms such as:
+
+- Spotify
+- Apple Podcasts
+- YouTube
+- Amazon Music
+- Audible
+- iHeartRadio
+- Other platforms explicitly linked by the podcast website
+
+Only add a platform button when a valid link to Brianne’s specific episode is available.
+
+Do not link to the podcast’s general Spotify or Apple Podcasts homepage when a specific episode link cannot be found.
+
+Display the available platforms as compact icon buttons underneath the podcast description.
+
+Possible labels:
+
+Listen on Spotify
+Listen on Apple Podcasts
+Watch on YouTube
+Visit Podcast Website
+
+Open external links in a new tab.
+
+If direct episode links cannot be found, retain only the verified links and do not invent URLs.
+
+## Media-page layout
+
+Because there are only three published media items, do not use a crowded multi-row grid.
+
+Use one of these layouts:
+
+Preferred layout:
+- One large featured podcast section across the page
+- Two large article cards beneath it in a two-column desktop layout
+- Stack the articles vertically on mobile
+
+Alternative:
+- One editorial three-item layout with varied card sizes
+
+Use generous image areas, sufficient white space, and visible article titles.
+
+Do not leave empty columns or blank placeholder spaces.
+
+Remove headings such as:
+- More Episodes
+- Latest Episodes
+- Additional Press
+- Coming Soon
+- Testimonials
+
+unless they contain real content.
+
+## Image quality and accessibility
+
+- Preserve image aspect ratios.
+- Use object-position intentionally so faces are not cropped.
+- Add descriptive alt text to every image.
+- Lazy-load images below the fold.
+- Optimize images for web performance without visibly degrading quality.
+- Use responsive image sizing.
+- Do not repeat the hero headshot throughout every page.
+- Avoid using more than two large images on one page unless the layout clearly benefits from it.
+- Keep imagery supportive of Brianne’s positioning as a speaker, educator, director, and inspirational leader.
+
+## Final review
+
+After applying the update, verify:
+
+- There are no testimonials anywhere on the website.
+- There are no invented quotes.
+- There are no placeholder articles.
+- There are no placeholder podcast episodes.
+- The Media page contains only the two actual articles and one actual podcast appearance.
+- The podcast section includes verified direct episode links where they are available.
+- Article and podcast thumbnails use official media assets wherever possible.
+- All uploaded images are assigned intentionally rather than scattered randomly.
+- No important faces, text, publication covers, or award certificates are cropped improperly.
+- All external links work and open safely in a new tab.
+- The website remains fully responsive.
