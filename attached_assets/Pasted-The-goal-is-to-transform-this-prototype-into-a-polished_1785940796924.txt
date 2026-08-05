@@ -1,0 +1,331 @@
+The goal is to transform this prototype into a polished first draft using my client's real content while preserving the current design language.
+
+## Overall Goal
+
+This website should establish Brianne Beatrice as a premium personal brand whose long-term goal is becoming a nationally recognized motivational speaker.
+
+She is NOT simply an actor or professor.
+
+She is a:
+
+Master of Performance & Inspiration
+
+Her career combines education, directing, communication, storytelling, leadership, coaching, and performance.
+
+The website should feel inspiring, sophisticated, warm, and professional.
+
+Every design decision should reinforce this personal brand.
+
+DO NOT make the website feel like an acting portfolio or an academic faculty page.
+
+Instead, it should feel like someone you would hire to keynote a conference, lead a workshop, or inspire an audience.
+
+--------------------------------------------------
+
+## Hero Section
+
+Replace the placeholder hero image with the uploaded professional smiling headshot.
+
+Hero Title:
+
+Master of Performance & Inspiration
+
+Hero Subtitle:
+
+Helping individuals and organizations unlock confidence, authentic communication, and meaningful connection through performance, storytelling, and education.
+
+Primary Button:
+
+Book Brianne
+
+Secondary Button:
+
+Explore Her Journey
+
+--------------------------------------------------
+
+## Homepage
+
+Keep the existing layout but replace placeholder content.
+
+Add a credibility section immediately beneath the hero.
+
+Display statistics as modern cards:
+
+20+ Years of Teaching
+
+National Teaching Awards
+
+Award-Winning Director
+
+Nationally Recognized Productions
+
+Create a Featured Recognition section highlighting:
+
+• National Alliance Acting Teacher of Excellence (2026)
+
+• Influential Women of 2026
+
+• Golden Lamp Award
+
+• Distinguished Teaching Award
+
+Include a "View All Recognition" button linking to the Recognition page.
+
+Create a section introducing Brianne's four pillars.
+
+Speaker
+
+Helping audiences communicate with confidence and authenticity.
+
+Educator
+
+Over two decades helping students develop confidence, creativity, and communication skills.
+
+Director
+
+Award-winning theatrical productions receiving national recognition.
+
+Mentor
+
+Helping people discover their authentic voice both on and off the stage.
+
+Keep the existing call-to-action section but update the language to focus on speaking engagements and collaboration.
+
+--------------------------------------------------
+
+## About Page
+
+Replace placeholder text with content inspired by Brianne's background.
+
+Write copy that feels conversational and inspiring rather than resume-like.
+
+Focus on her mission:
+
+Helping people discover confidence through communication, storytelling, education, and performance.
+
+Include sections for:
+
+Professional Journey
+
+Mission
+
+Teaching Philosophy
+
+Values
+
+Professional Portrait
+
+Keep the design clean with generous white space.
+
+--------------------------------------------------
+
+## Teaching Page
+
+Use Brianne's CV to populate this page.
+
+Instead of listing every class individually, organize them into categories.
+
+Performance
+
+Acting Theory
+
+Scene Study
+
+Improvisation
+
+Audition Preparation
+
+Communication
+
+Public Speaking
+
+Interpersonal Communication
+
+Leadership Through Communication
+
+Theatre
+
+Introduction to Theatre
+
+Script Analysis
+
+Shakespeare
+
+Directing
+
+Mention that she has taught across multiple colleges and universities for more than twenty years.
+
+Include a Download CV button.
+
+--------------------------------------------------
+
+## Speaking Page
+
+This page should support Brianne's future speaking career.
+
+Create beautifully designed topic cards using placeholder descriptions.
+
+Suggested topics:
+
+Finding Your Voice
+
+Confidence Through Communication
+
+Authenticity
+
+Leadership Through Storytelling
+
+Performance Beyond the Stage
+
+Include:
+
+Speaking photo placeholder
+
+Testimonials placeholder
+
+Podcast feature
+
+Booking CTA
+
+--------------------------------------------------
+
+## Directing Page
+
+Populate this page using the directing resume.
+
+Do NOT display the directing resume as plain text.
+
+Create Featured Productions using beautiful cards.
+
+Highlight productions with ACTF invited productions or major awards first.
+
+Examples:
+
+Angels in America: Part I (2026)
+
+The Vagina Monologues
+
+Hurricane Diane
+
+All in the Timing
+
+Then create an expandable timeline or chronological production history for the remaining productions.
+
+Add a short directing philosophy section.
+
+--------------------------------------------------
+
+## Recognition Page
+
+Split the page into two categories.
+
+Professional Recognition
+
+Include:
+
+National Alliance Acting Teacher of Excellence (2026)
+
+Influential Women of 2026
+
+Golden Lamp Award
+
+Distinguished Teaching Award
+
+Stephen Sondheim Teaching Award
+
+Outstanding First Year Advocate
+
+Broadway World Best Actress
+
+IRNE Award Nominee
+
+Directing Recognition
+
+Feature:
+
+The Vagina Monologues
+
+7 National Awards
+
+Hurricane Diane
+
+13 National Awards
+
+Outstanding Achievement in Ensemble productions
+
+Use elegant cards and timeline layouts rather than long lists.
+
+--------------------------------------------------
+
+## Media Page
+
+Create sections for:
+
+Podcast
+
+Articles
+
+Interviews
+
+Press
+
+Videos
+
+Use placeholders where content has not yet been provided.
+
+--------------------------------------------------
+
+## Contact Page
+
+Update messaging to:
+
+Let's Inspire Your Audience Together
+
+Encourage speaking engagements, workshops, collaborations, directing opportunities, and educational events.
+
+--------------------------------------------------
+
+## Design
+
+Preserve the current design language.
+
+Do not dramatically change colors, typography, spacing, or layout.
+
+Instead:
+
+Replace placeholder content with real content.
+
+Improve hierarchy.
+
+Increase white space where necessary.
+
+Ensure consistent spacing.
+
+Ensure all cards use the same styling.
+
+Ensure typography hierarchy is consistent.
+
+Keep animations subtle and professional.
+
+--------------------------------------------------
+
+## User Experience
+
+Every page should naturally encourage users toward speaking engagements and collaboration.
+
+Maintain responsive design.
+
+Maintain all existing animations and transitions.
+
+Do not remove sections unless they are placeholders being replaced.
+
+--------------------------------------------------
+
+## Important
+
+The result should feel less like a portfolio and more like the polished website of an accomplished educator, award-winning director, and emerging motivational speaker.
+
+Prioritize storytelling over listing accomplishments.
+
+Every achievement should reinforce Brianne's credibility and support her future brand as a speaker.

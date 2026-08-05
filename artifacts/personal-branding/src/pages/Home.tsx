@@ -1,31 +1,61 @@
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
-import { Mic, GraduationCap, Theater, Users, ArrowRight, Award, Podcast } from 'lucide-react';
+import { Mic, GraduationCap, Theater, Users, ArrowRight, Award, Star } from 'lucide-react';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel';
-import heroPortrait from '@/assets/hero-portrait.png';
+import brianneHeadshot from '@/assets/brianne-headshot.jpg';
 
 const roleCards = [
   {
     icon: Mic,
     title: 'Speaker',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Helping audiences communicate with confidence and authenticity — from the stage to the boardroom.',
   },
   {
     icon: GraduationCap,
-    title: 'Professor',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Educator',
+    description: 'Over two decades helping students develop confidence, creativity, and communication skills.',
   },
   {
     icon: Theater,
     title: 'Director',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Award-winning theatrical productions receiving national recognition at the Kennedy Center and beyond.',
   },
   {
     icon: Users,
-    title: 'Educator',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Mentor',
+    description: 'Helping people discover their authentic voice both on and off the stage.',
+  },
+];
+
+const stats = [
+  { label: 'Years of Teaching', value: '20+' },
+  { label: 'National Teaching Awards', value: '★★★' },
+  { label: 'Award-Winning Director', value: '✦' },
+  { label: 'Nationally Recognized Productions', value: '★★★' },
+];
+
+const recognitionHighlights = [
+  {
+    year: '2026',
+    award: 'National Alliance Acting Teacher of Excellence',
+    org: 'National Alliance of Acting Teachers – Region I',
+  },
+  {
+    year: '2026',
+    award: 'Influential Women of 2026',
+    org: 'National Recognition',
+  },
+  {
+    year: '2022–23',
+    award: 'Golden Lamp Award of Teaching Excellence',
+    org: 'Northern Essex Community College',
+  },
+  {
+    year: '2024',
+    award: 'Hurricane Diane — 13 National Awards',
+    org: 'KCACTF Distinguished Directing',
   },
 ];
 
@@ -33,7 +63,7 @@ export default function Home() {
   return (
     <PageTransition>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-muted/30 to-background z-0" />
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -46,18 +76,18 @@ export default function Home() {
                 Speaker • Educator • Director
               </p>
               <h1 className="font-serif text-5xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
-                Helping people communicate with confidence, lead with authenticity, and tell meaningful stories.
+                Master of Performance & Inspiration
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Helping individuals and organizations unlock confidence, authentic communication, and meaningful connection through performance, storytelling, and education.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/speaking"
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-sm font-medium hover:opacity-90 transition-opacity"
                   data-testid="link-book-speaking"
                 >
-                  Book a Speaking Engagement
+                  Book Brianne
                   <ArrowRight size={18} />
                 </Link>
                 <Link
@@ -65,7 +95,7 @@ export default function Home() {
                   className="inline-flex items-center gap-2 border border-border px-8 py-4 rounded-sm font-medium hover:bg-accent transition-colors"
                   data-testid="link-learn-more"
                 >
-                  Learn More
+                  Explore Her Journey
                 </Link>
               </div>
             </motion.div>
@@ -78,9 +108,9 @@ export default function Home() {
             >
               <div className="aspect-[4/5] bg-gradient-to-br from-muted via-card to-accent rounded-sm overflow-hidden border border-border shadow-xl">
                 <img
-                  src={heroPortrait}
+                  src={brianneHeadshot}
                   alt="Brianne Beatrice"
-                  className="w-full h-full object-cover mix-blend-multiply opacity-90"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </motion.div>
@@ -88,13 +118,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Role Cards */}
+      {/* Credibility Stats */}
+      <FadeInSection>
+        <section className="bg-foreground text-background py-16">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <p className="font-serif text-3xl lg:text-4xl font-bold text-background mb-2">
+                    {stat.value}
+                  </p>
+                  <p className="text-background/70 text-sm uppercase tracking-wider leading-snug">
+                    {stat.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Four Pillars */}
       <FadeInSection>
         <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl lg:text-5xl font-semibold mb-4">What I Do</h2>
+            <h2 className="font-serif text-4xl lg:text-5xl font-semibold mb-4">What Brianne Brings</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              A career that weaves education, directing, communication, storytelling, and performance into one cohesive vision.
             </p>
           </div>
 
@@ -117,92 +174,58 @@ export default function Home() {
         </section>
       </FadeInSection>
 
-      {/* Podcast Preview */}
-      <FadeInSection>
-        <section className="bg-muted/50 py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium mb-6">
-                  <Podcast size={16} />
-                  Featured Podcast
-                </div>
-                <h2 className="font-serif text-4xl font-semibold mb-4">The Inspired Voice</h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
-                <Link
-                  href="/media"
-                  className="inline-flex items-center gap-2 font-medium hover:gap-3 transition-all"
-                  data-testid="link-explore-podcast"
-                >
-                  Explore All Episodes
-                  <ArrowRight size={18} />
-                </Link>
-              </div>
-              <div className="bg-card border border-border p-12 rounded-sm">
-                <div className="aspect-video bg-gradient-to-br from-muted to-accent rounded-sm flex items-center justify-center">
-                  <Podcast className="w-20 h-20 text-muted-foreground/30" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </FadeInSection>
-
       {/* Recognition Preview */}
       <FadeInSection>
-        <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
-          <div className="text-center mb-16">
-            <Award className="w-12 h-12 text-muted-foreground/50 mx-auto mb-6" />
-            <h2 className="font-serif text-4xl font-semibold mb-4">Recognition & Impact</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-            </p>
-          </div>
+        <section className="bg-muted/30 py-24">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="text-center mb-16">
+              <Award className="w-12 h-12 text-foreground/50 mx-auto mb-6" />
+              <h2 className="font-serif text-4xl font-semibold mb-4">Featured Recognition</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Nationally recognized for excellence in teaching, directing, and performance.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { award: 'Distinguished Faculty Award', org: 'State Community College System', year: '2023' },
-              { award: 'Influential Women in Education', org: 'Regional Leadership Council', year: '2022' },
-              { award: 'Excellence in Teaching', org: 'National Communication Association', year: '2021' },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center p-8 border border-border rounded-sm bg-card"
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {recognitionHighlights.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-center p-8 border border-border rounded-sm bg-background hover:shadow-lg transition-shadow"
+                >
+                  <p className="font-serif text-2xl font-semibold text-muted-foreground/50 mb-4">{item.year}</p>
+                  <Star className="w-6 h-6 text-foreground/40 mx-auto mb-4" />
+                  <h3 className="font-semibold text-base mb-2 leading-snug">{item.award}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.org}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/recognition"
+                className="inline-flex items-center gap-2 text-foreground font-medium hover:gap-3 transition-all"
+                data-testid="link-view-recognition"
               >
-                <p className="text-3xl font-serif font-semibold text-muted-foreground/40 mb-4">{item.year}</p>
-                <h3 className="font-semibold text-lg mb-2">{item.award}</h3>
-                <p className="text-sm text-muted-foreground">{item.org}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/recognition"
-              className="inline-flex items-center gap-2 text-foreground font-medium hover:gap-3 transition-all"
-              data-testid="link-view-recognition"
-            >
-              View All Recognition
-              <ArrowRight size={18} />
-            </Link>
+                View All Recognition
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </section>
       </FadeInSection>
 
       {/* Testimonials */}
       <FadeInSection>
-        <section className="bg-muted/30 py-24">
+        <section className="py-24">
           <div className="max-w-5xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl font-semibold mb-4">What People Say</h2>
               <p className="text-muted-foreground text-lg">
-                From keynote audiences, students, and collaborators.
+                From students, collaborators, and colleagues.
               </p>
             </div>
             <TestimonialsCarousel />
@@ -212,17 +235,36 @@ export default function Home() {
 
       {/* Bio Preview */}
       <FadeInSection>
+        <section className="bg-muted/30 py-24">
+          <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+            <h2 className="font-serif text-3xl font-semibold mb-6">About Brianne Beatrice</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Brianne Beatrice is an Associate Professor of Theatre at Northern Essex Community College, an award-winning director whose productions have earned national recognition at the Kennedy Center American College Theatre Festival, and an emerging motivational speaker whose mission is simple: help people discover their authentic voice. With a career spanning more than two decades and a Master of Fine Arts from Penn State, Brianne brings the discipline of the stage to every room she enters.
+            </p>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-sm font-medium hover:bg-accent transition-colors"
+              data-testid="link-full-bio"
+            >
+              Read Full Biography
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* CTA */}
+      <FadeInSection>
         <section className="max-w-4xl mx-auto px-6 lg:px-12 py-24 text-center">
-          <h2 className="font-serif text-3xl font-semibold mb-6">About Brianne Beatrice</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <h2 className="font-serif text-3xl font-semibold mb-4">Ready to Inspire Your Audience?</h2>
+          <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
+            Whether you're booking a keynote, planning a workshop, or exploring a collaboration — Brianne is ready to bring her energy, expertise, and passion to your stage.
           </p>
           <Link
-            href="/about"
-            className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-sm font-medium hover:bg-accent transition-colors"
-            data-testid="link-full-bio"
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Read Full Biography
+            Get in Touch
             <ArrowRight size={18} />
           </Link>
         </section>

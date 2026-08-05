@@ -1,6 +1,6 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { BookOpen, Users, Star, Award, Download, TrendingUp } from 'lucide-react';
+import { BookOpen, Users, Award, Download, TrendingUp } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -8,37 +8,59 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const courses = [
-  { code: 'COMM 101', title: 'Public Speaking', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing' },
-  { code: 'COMM 220', title: 'Interpersonal Communication', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing' },
-  { code: 'THTR 150', title: 'Introduction to Theatre', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing' },
-  { code: 'COMM 310', title: 'Advanced Performance Studies', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing' },
+const courseCategories = [
+  {
+    category: 'Performance',
+    courses: [
+      { title: 'Acting Theory and Practice', description: 'A performance-based exploration of vocal, physical, and psychological technique through exercises, scenes, and monologues. Students develop the tools to take creative risks and work truthfully with scene partners.' },
+      { title: 'Acting Scene Study', description: 'In-depth scene and monologue work emphasizing character development and script analysis. Students overcome fears, build confidence in public, and develop the ability to make bold creative choices.' },
+      { title: 'Improvisation, Voice & Movement', description: 'The actor\'s instruments are the voice and the body. This course isolates these areas through mime, rudimentary improvisation, and physical awareness — culminating in performed improvised scenes.' },
+      { title: 'Audition Preparation', description: 'Contemporary, classical, and on-camera audition techniques including Meisner and Rotenberg approaches. Covers the business of acting: headshots, resumes, casting, and interview skills.' },
+    ],
+  },
+  {
+    category: 'Communication',
+    courses: [
+      { title: 'Public Speaking', description: 'Practical training in the craft of confident, persuasive public communication. Students learn to research, organize, and deliver compelling messages in a variety of professional contexts.' },
+      { title: 'Interpersonal Communication', description: 'The science and art of communicating across difference — developing empathy, active listening, and the ability to connect meaningfully with others in personal and professional life.' },
+      { title: 'Leadership Through Communication', description: 'Explores how language, presence, and storytelling drive effective leadership. Students examine the communication habits of transformative leaders and develop their own authentic leadership voice.' },
+    ],
+  },
+  {
+    category: 'Theatre',
+    courses: [
+      { title: 'Introduction to Theatre', description: 'A broad introduction to the theatrical world — playwright, producer, director, actor, designer, and technician — through reading, discussing, and attending performances.' },
+      { title: 'Shakespeare Literature', description: 'Close reading and analysis of selected Shakespeare plays, with attention to language, performance, and cultural context. Students learn to read plays comfortably and write about them with insight.' },
+      { title: 'Script Analysis', description: 'A methodology for breaking down a dramatic text: identifying action, objectives, obstacles, and relationships. An essential foundation for both actors and directors.' },
+      { title: 'Directing', description: 'Students direct a one-act play performed before a live audience. Each student selects a script, conducts research and analysis, blocks the production, casts actors, and completes a full director\'s book.' },
+    ],
+  },
 ];
 
 const accomplishments = [
-  'xx+ years teaching at the community college level',
-  'Highest-rated faculty member in Communication Studies department (2019-2023)',
-  'x,xxx+ students taught across diverse backgrounds and experiences',
-  'Developed innovative curriculum blending communication theory with performance practice',
-  'Recipient of Distinguished Faculty Award, State Community College System (2023)',
-  'Mentor to xx students who went on to graduate programs and professional careers',
+  'Associate Professor and Theatre Coordinator, Northern Essex Community College (2010–Present)',
+  'More than 20 years teaching across undergraduate universities, film studios, and community colleges',
+  'National Alliance Acting Teacher of Excellence Award — National Alliance of Acting Teachers, Region I (2026)',
+  'Golden Lamp Award of Teaching Excellence — Northern Essex Community College (2022–2023)',
+  'Stephen Sondheim Teaching Award Nominee — Kennedy Center (2017)',
+  'Distinguished Teaching Award Nominee — Salem State University (2015–2017)',
 ];
 
 const philosophyPrinciples = [
   {
     question: 'What drives my teaching?',
     answer:
-      'I believe education is about transformation, not information. My goal is to create a space where students feel safe to take risks, make mistakes, and discover their authentic voice. Many of my students are first-generation college attendees, and I take seriously the responsibility of helping them see themselves as capable, articulate leaders.',
+      'I believe education is about transformation, not information. My goal is to create a space where students feel safe to take risks, make mistakes, and discover their authentic voice. Many of my students are first-generation college attendees, and I take seriously the responsibility of helping them see themselves as capable, articulate, confident people — both on stage and in life.',
   },
   {
     question: 'How do I approach the classroom?',
     answer:
-      "Every class is a performance and a conversation. I blend lecture, discussion, experiential activities, and real-world application. Students learn by doing—whether that's delivering speeches, analyzing performances, or engaging in dialogue about communication ethics. I meet students where they are and challenge them to grow.",
+      'Every class is a performance and a conversation. I blend technique, discussion, experiential activities, and real-world application. Students learn by doing — whether that\'s delivering speeches, analyzing performances, directing scenes, or improvising together. I meet students where they are and challenge them to go further than they thought possible.',
   },
   {
     question: 'What do students gain?',
     answer:
-      'Beyond content knowledge, students develop confidence, critical thinking, empathy, and the ability to communicate across difference. They learn to craft and deliver compelling messages, whether in a boardroom, on a stage, or in everyday conversation. They leave with skills that matter in every aspect of life.',
+      'Beyond content knowledge, students develop confidence, critical thinking, empathy, and the ability to communicate across difference. They leave with skills that matter in every aspect of life — in the boardroom, on a stage, in a job interview, or in an everyday conversation. The skills of the stage are the skills of a full life.',
   },
 ];
 
@@ -54,7 +76,7 @@ export default function Teaching() {
             Empowering Students to Find Their Voice
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            For more than twenty years, Brianne has taught acting, communication, and theatre across universities and community colleges — transforming classrooms into laboratories of confidence and creativity.
           </p>
         </div>
       </section>
@@ -82,22 +104,28 @@ export default function Teaching() {
         </section>
       </FadeInSection>
 
-      {/* Courses Taught */}
+      {/* Courses by Category */}
       <FadeInSection>
         <section className="bg-muted/30 py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl font-semibold mb-4">Courses Taught</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                Taught across Northern Essex Community College, Salem State University, UMass Boston, Merrimack College, Actor's Workshop Boston, and Penn State — spanning more than two decades.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {courses.map((course) => (
-                <div key={course.code} className="bg-background border border-border p-8 rounded-sm">
-                  <p className="text-sm font-mono text-muted-foreground mb-2">{course.code}</p>
-                  <h3 className="font-serif text-2xl font-semibold mb-3">{course.title}</h3>
-                  <p className="text-muted-foreground">{course.description}</p>
+            <div className="space-y-16">
+              {courseCategories.map((cat) => (
+                <div key={cat.category}>
+                  <h3 className="font-serif text-2xl font-semibold mb-8 pb-4 border-b border-border">{cat.category}</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {cat.courses.map((course) => (
+                      <div key={course.title} className="bg-background border border-border p-8 rounded-sm">
+                        <h4 className="font-serif text-xl font-semibold mb-3">{course.title}</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{course.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
@@ -111,41 +139,19 @@ export default function Teaching() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Users className="w-12 h-12 mb-6 text-foreground" />
-              <h2 className="font-serif text-4xl font-semibold mb-6">Student Impact</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              <h2 className="font-serif text-4xl font-semibold mb-6">The Impact of the Classroom</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Teaching isn't just Brianne's profession — it's her calling. For more than two decades, she has helped students across New England develop the confidence to speak up, take risks, and show up authentically in their lives. Her students have gone on to careers in performance, business, education, and beyond.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-serif font-semibold flex-shrink-0">
-                    xx%
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-1">Student Success Rate</p>
-                    <p className="text-sm text-muted-foreground">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-serif font-semibold flex-shrink-0">
-                    x.x
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-1">Average Rating</p>
-                    <p className="text-sm text-muted-foreground">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                She believes that every student who walks into a performance classroom is capable of transformation — and her teaching is built to prove it.
+              </p>
             </div>
             <div className="bg-card border border-border p-10 rounded-sm">
-              <Star className="w-10 h-10 text-muted-foreground/30 mb-6" />
               <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "The greatest thing I can do as an educator is help a student leave my classroom believing in themselves more than they did when they walked in."
               </blockquote>
-              <p className="text-sm text-muted-foreground">— Former student, Class of 2022</p>
+              <p className="text-sm text-muted-foreground">— Brianne Beatrice</p>
             </div>
           </div>
         </section>
@@ -179,7 +185,7 @@ export default function Teaching() {
         <section className="max-w-4xl mx-auto px-6 lg:px-12 py-24 text-center">
           <h2 className="font-serif text-3xl font-semibold mb-6">Curriculum Vitae</h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            For a complete record of Brianne's teaching experience, training, and professional history, download her full CV.
           </p>
           <button
             className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-sm font-medium hover:opacity-90 transition-opacity"

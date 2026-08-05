@@ -21,7 +21,7 @@ export function Footer() {
           <div>
             <h3 className="font-serif text-xl font-semibold mb-3">Brianne Beatrice</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Award-winning director. Master educator. Emerging speaker. Helping people find their voice — on stage and in life.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold mb-4 uppercase tracking-wide">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="mailto:brianne.beatrice@example.com"
+                href="mailto:bribeats@gmail.com"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-accent hover:bg-foreground hover:text-background transition-colors"
                 data-testid="link-email"
               >

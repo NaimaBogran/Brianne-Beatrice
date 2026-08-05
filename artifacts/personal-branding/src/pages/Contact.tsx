@@ -1,24 +1,47 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { Mail, Linkedin, Send } from 'lucide-react';
+import { Mail, Send, Mic, BookOpen, Theater, Users } from 'lucide-react';
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import heroPortrait from '@/assets/hero-portrait.png';
+import brianneHeadshot from '@/assets/brianne-headshot.jpg';
+
+const opportunities = [
+  {
+    icon: Mic,
+    title: 'Speaking Engagements',
+    description: 'Keynotes, workshops, and professional development sessions for conferences, corporate events, educational summits, and leadership retreats.',
+  },
+  {
+    icon: BookOpen,
+    title: 'Workshops & Coaching',
+    description: 'Interactive sessions on communication, public speaking, storytelling, and authentic leadership — from 90 minutes to full-day intensives.',
+  },
+  {
+    icon: Theater,
+    title: 'Directing Opportunities',
+    description: 'Interested in working with an award-winning director whose productions have earned national recognition? Brianne welcomes directing inquiries.',
+  },
+  {
+    icon: Users,
+    title: 'Educational Collaborations',
+    description: 'Curriculum partnerships, guest residencies, and educational events for colleges, universities, and community organizations.',
+  },
+];
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Form submission logic would go here
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -36,10 +59,10 @@ export default function Contact() {
           <Mail className="w-16 h-16 mx-auto mb-6 text-foreground" />
           <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Contact</p>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold mb-6">
-            Let's Start a Conversation
+            Let's Inspire Your Audience Together
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Whether you're booking a keynote, planning a workshop, exploring a directing collaboration, or simply want to connect — Brianne would love to hear from you.
           </p>
         </div>
       </section>
@@ -52,21 +75,21 @@ export default function Contact() {
             <div>
               <div className="aspect-[3/4] bg-gradient-to-br from-muted via-card to-accent rounded-sm overflow-hidden border border-border shadow-lg mb-8">
                 <img
-                  src={heroPortrait}
+                  src={brianneHeadshot}
                   alt="Brianne Beatrice"
-                  className="w-full h-full object-cover mix-blend-multiply opacity-90"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="space-y-6">
                 <div>
                   <h3 className="font-serif text-2xl font-semibold mb-4">Get in Touch</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Brianne is available for speaking engagements, workshops, directing projects, and educational collaborations. She looks forward to learning how she can bring her expertise and passion to your event or organization.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4">
                   <a
-                    href="mailto:brianne.beatrice@example.com"
+                    href="mailto:bribeats@gmail.com"
                     className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors"
                     data-testid="link-email-contact"
                   >
@@ -75,22 +98,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Email</p>
-                      <p className="font-medium">brianne.beatrice@example.com</p>
-                    </div>
-                  </a>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors"
-                    data-testid="link-linkedin-contact"
-                  >
-                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
-                      <Linkedin size={20} />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">LinkedIn</p>
-                      <p className="font-medium">Brianne Beatrice</p>
+                      <p className="font-medium">bribeats@gmail.com</p>
                     </div>
                   </a>
                 </div>
@@ -134,6 +142,21 @@ export default function Contact() {
                   />
                 </div>
                 <div>
+                  <Label htmlFor="subject" className="text-sm font-medium mb-2 block">
+                    Reason for Reaching Out
+                  </Label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Speaking engagement, workshop, directing, other..."
+                    className="w-full"
+                    data-testid="input-subject"
+                  />
+                </div>
+                <div>
                   <Label htmlFor="message" className="text-sm font-medium mb-2 block">
                     Your Message
                   </Label>
@@ -142,7 +165,7 @@ export default function Contact() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell me about your event, project, or inquiry..."
+                    placeholder="Tell Brianne about your event, project, or inquiry — including date, location, audience size, and any other details that would help her respond helpfully."
                     rows={8}
                     required
                     className="w-full resize-none"
@@ -163,33 +186,26 @@ export default function Contact() {
         </section>
       </FadeInSection>
 
-      {/* Collaboration CTA */}
+      {/* Collaboration Opportunities */}
       <FadeInSection>
         <section className="bg-muted/30 py-24">
-          <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-            <h2 className="font-serif text-4xl font-semibold mb-6">Let's Collaborate</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="bg-background border border-border p-8 rounded-sm">
-                <h3 className="font-serif text-xl font-semibold mb-3">Speaking Engagements</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
-              <div className="bg-background border border-border p-8 rounded-sm">
-                <h3 className="font-serif text-xl font-semibold mb-3">Consulting & Coaching</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
-              <div className="bg-background border border-border p-8 rounded-sm">
-                <h3 className="font-serif text-xl font-semibold mb-3">Creative Projects</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl font-semibold mb-6">Ways to Work Together</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+                Brianne is passionate about collaboration — whether it's helping your audience unlock their potential or bringing a powerful story to the stage.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {opportunities.map((opp) => (
+                <div key={opp.title} className="bg-background border border-border p-8 rounded-sm">
+                  <opp.icon className="w-10 h-10 text-foreground mb-6" />
+                  <h3 className="font-serif text-xl font-semibold mb-3">{opp.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {opp.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

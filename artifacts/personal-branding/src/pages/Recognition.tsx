@@ -2,72 +2,78 @@ import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
 import { Award, Trophy, Star } from 'lucide-react';
 
-const awards = [
+const professionalAwards = [
   {
-    year: '2023',
-    award: 'Distinguished Faculty Award',
-    organization: 'State Community College System',
-    description: 'Recognizing excellence in teaching, student impact, and contribution to the academic community.',
+    year: '2026',
+    award: 'National Alliance Acting Teacher of Excellence',
+    organization: 'National Alliance of Acting Teachers — Region I',
+    description: 'One of the most prestigious honors in performance education, recognizing exceptional teaching artistry, student impact, and contribution to the field of acting pedagogy.',
   },
   {
-    year: '2022',
-    award: 'Influential Women in Education',
-    organization: 'Regional Leadership Council',
-    description: 'Honored for transformative leadership in higher education and commitment to student success.',
+    year: '2026',
+    award: 'Influential Women of 2026',
+    organization: 'National Recognition',
+    description: 'Named among the Influential Women of 2026 for her contributions to education, the arts, and empowering others through performance and communication.',
   },
   {
-    year: '2021',
-    award: 'Excellence in Teaching Award',
-    organization: 'National Communication Association',
-    description: 'National recognition for innovative pedagogy and outstanding student outcomes.',
+    year: '2025',
+    award: 'Achievement Award — Outstanding Success & Inspiring Vision',
+    organization: 'Northern Essex Community College',
+    description: 'Institutional recognition for sustained excellence, visionary leadership, and inspiring impact on the NECC community.',
   },
   {
-    year: '2020',
-    award: 'Community Impact Award',
-    organization: 'Bay Area Arts & Culture Foundation',
-    description: 'For contributions to the performing arts and community education through theatre.',
+    year: '2022–23',
+    award: 'Golden Lamp Award of Teaching Excellence',
+    organization: 'Northern Essex Community College',
+    description: 'The highest teaching honor awarded by NECC, recognizing transformative classroom leadership and dedication to student success.',
   },
   {
-    year: '2019',
-    award: 'Best Director',
-    organization: 'Regional Theatre Festival',
-    description: "For direction of August Wilson's \"Fences\" at Bay Area Community College Theatre.",
+    year: '2017',
+    award: 'Stephen Sondheim Teaching Award Nominee',
+    organization: 'Kennedy Center — American College Theatre Festival',
+    description: 'A national nomination honoring outstanding teaching in collegiate theatre — one of the most competitive and prestigious nominations in the field.',
   },
   {
-    year: '2018',
-    award: 'Faculty Leadership Award',
-    organization: 'Bay Area Community College',
-    description: 'Recognizing exceptional leadership in curriculum development and student advocacy.',
+    year: '2015–17',
+    award: 'Distinguished Teaching Award Nominee',
+    organization: 'Salem State University',
+    description: 'Nominated for the university\'s highest teaching honor, recognizing excellence in instruction, mentorship, and curriculum innovation.',
+  },
+  {
+    year: '2017',
+    award: 'Outstanding First Year Advocate Award Nominee',
+    organization: 'Salem State University',
+    description: 'Recognized for exceptional support and advocacy on behalf of first-year students during a critical transition in their academic lives.',
   },
 ];
 
-const honors = [
-  'Featured Speaker, National Communication Association Annual Conference (2023)',
-  'Keynote Speaker, State Community College Leadership Summit (2022)',
-  'Guest Lecturer, UC Berkeley Graduate School of Education (2021-2023)',
-  'Advisory Board Member, Regional Arts & Theatre Alliance (2020-Present)',
-  'Consultant, National Endowment for the Arts Education Initiative (2019)',
-  'Mentor, Faculty Development Program for New Educators (2018-Present)',
+const performanceRecognition = [
+  {
+    year: '2017',
+    award: 'Best Actress in a Play',
+    organization: 'Broadway World',
+    description: 'Winner of the Broadway World regional award for Best Actress in a Play — recognizing an outstanding professional performance.',
+  },
+  {
+    year: '2017',
+    award: 'IRNE Award Nominee — Best Actress in a Play',
+    organization: 'Independent Reviewers of New England (Gloucester Stage)',
+    description: 'Nominated by the Independent Reviewers of New England for Best Actress in a Play, one of the region\'s most respected theatre honors.',
+  },
 ];
 
-const communityRecognition = [
+const directingRecognition = [
   {
-    title: 'Local Hero Award',
-    org: 'Bay Area Community Foundation',
-    year: '2022',
-    description: 'For dedication to community education and empowering underserved populations.',
+    title: 'Hurricane Diane',
+    subtitle: '13 National Awards',
+    year: '2023–2024',
+    description: 'One of the most recognized collegiate productions of the season. Received 13 national awards through the Kennedy Center ACTF process, including recognition for Outstanding Achievement in Ensemble. Invited to multiple ACTF festivals across the country.',
   },
   {
-    title: 'Woman of the Year',
-    org: "Regional Business & Professional Women's Network",
-    year: '2021',
-    description: 'Celebrating achievements in education, leadership, and community service.',
-  },
-  {
-    title: 'Arts Educator of the Year',
-    org: 'Bay Area Arts Council',
-    year: '2019',
-    description: 'Honoring excellence in integrating performing arts with education.',
+    title: 'The Vagina Monologues',
+    subtitle: '7 National Awards',
+    year: '2025–2026',
+    description: 'Eve Ensler\'s landmark work earned 7 national awards under Brianne\'s direction, with productions invited to both NECC and Sierra University for the Kennedy Center American College Theatre Festival.',
   },
 ];
 
@@ -80,38 +86,36 @@ export default function Recognition() {
           <Award className="w-16 h-16 mx-auto mb-6 text-foreground" />
           <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Recognition</p>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold mb-6">
-            Honored for Impact and Excellence
+            Honored for Excellence in Teaching, Directing & Performance
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            From national teaching awards to Kennedy Center directing recognition — a career defined by distinction.
           </p>
         </div>
       </section>
 
-      {/* Awards Timeline */}
+      {/* Professional Awards */}
       <FadeInSection>
         <section className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-semibold mb-4">Awards & Honors</h2>
+            <h2 className="font-serif text-4xl font-semibold mb-4">Professional Recognition</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing.
+              Teaching awards, advocacy honors, and institutional recognition spanning more than a decade.
             </p>
           </div>
           <div className="space-y-8">
-            {awards.map((item, index) => (
+            {professionalAwards.map((item, index) => (
               <div
                 key={index}
                 className="bg-card border border-border rounded-sm overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="grid md:grid-cols-4 gap-0">
-                  {/* Year Badge */}
                   <div className="bg-gradient-to-br from-muted to-accent p-8 flex items-center justify-center border-r border-border">
                     <div className="text-center">
                       <Trophy className="w-10 h-10 mx-auto mb-3 text-foreground/60" />
-                      <p className="text-3xl font-serif font-bold text-foreground">{item.year}</p>
+                      <p className="text-2xl font-serif font-bold text-foreground">{item.year}</p>
                     </div>
                   </div>
-                  {/* Award Details */}
                   <div className="md:col-span-3 p-8">
                     <h3 className="font-serif text-2xl font-semibold mb-2">{item.award}</h3>
                     <p className="text-muted-foreground font-medium mb-4">{item.organization}</p>
@@ -124,25 +128,33 @@ export default function Recognition() {
         </section>
       </FadeInSection>
 
-      {/* Professional Honors */}
+      {/* Directing Recognition */}
       <FadeInSection>
         <section className="bg-muted/30 py-24">
-          <div className="max-w-5xl mx-auto px-6 lg:px-12">
+          <div className="max-w-6xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
               <Star className="w-12 h-12 mx-auto mb-6 text-foreground" />
-              <h2 className="font-serif text-4xl font-semibold mb-4">Professional Honors</h2>
+              <h2 className="font-serif text-4xl font-semibold mb-4">Directing Recognition</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                Productions that earned national attention at the Kennedy Center American College Theatre Festival.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {honors.map((honor, index) => (
+            <div className="grid md:grid-cols-2 gap-8">
+              {directingRecognition.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-background border border-border p-6 rounded-sm flex items-start gap-4"
+                  className="bg-background border border-border p-10 rounded-sm"
                 >
-                  <div className="w-2 h-2 bg-foreground rounded-full flex-shrink-0 mt-2" />
-                  <p className="text-foreground leading-relaxed">{honor}</p>
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <h3 className="font-serif text-2xl font-semibold">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm mt-1">{item.year}</p>
+                    </div>
+                    <div className="bg-foreground text-background text-sm font-semibold px-4 py-2 rounded-full whitespace-nowrap ml-4">
+                      {item.subtitle}
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -150,17 +162,17 @@ export default function Recognition() {
         </section>
       </FadeInSection>
 
-      {/* Community Recognition */}
+      {/* Performance Recognition */}
       <FadeInSection>
-        <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+        <section className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-semibold mb-4">Community Recognition</h2>
+            <h2 className="font-serif text-4xl font-semibold mb-4">Performance Recognition</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Celebrating service, impact, and leadership beyond the classroom and stage.
+              As a performer, Brianne has earned recognition from the region's most respected theatre organizations.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {communityRecognition.map((item, index) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {performanceRecognition.map((item, index) => (
               <div
                 key={index}
                 className="bg-card border border-border p-10 rounded-sm text-center hover:shadow-lg transition-shadow"
@@ -171,8 +183,8 @@ export default function Recognition() {
                 <p className="text-2xl font-serif font-semibold text-muted-foreground/50 mb-4">
                   {item.year}
                 </p>
-                <h3 className="font-serif text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground font-medium mb-4">{item.org}</p>
+                <h3 className="font-serif text-xl font-semibold mb-2">{item.award}</h3>
+                <p className="text-sm text-muted-foreground font-medium mb-4">{item.organization}</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
             ))}
@@ -185,7 +197,7 @@ export default function Recognition() {
         <section className="bg-foreground text-background py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <blockquote className="font-serif text-3xl lg:text-4xl font-medium leading-relaxed mb-8">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "Recognition is meaningful only when it reflects a genuine transformation in the people you work with."
             </blockquote>
             <p className="text-background/70 text-lg">— Brianne Beatrice</p>
           </div>

@@ -1,60 +1,95 @@
+import { useState } from 'react';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { Theater, Download, Award } from 'lucide-react';
+import { Theater, Award, ChevronDown, ChevronUp } from 'lucide-react';
 import theatreStage from '@/assets/theatre-stage.png';
 
-const productions = [
+const featuredProductions = [
   {
-    title: 'A Raisin in the Sun',
-    playwright: 'Lorraine Hansberry',
-    year: '2023',
-    venue: 'Bay Area Community College Theatre',
-    role: 'Director',
-    description: 'A powerful revival exploring dreams deferred and resilience in the face of systemic barriers.',
+    title: 'Angels in America: Part I',
+    playwright: 'Tony Kushner',
+    year: 'May 2026',
+    venue: 'Northern Essex Community College',
+    badge: null,
+    description: 'Tony Kushner\'s landmark work about love, loss, identity, and the AIDS crisis. A bold, visionary production anchoring the 2026 season.',
   },
   {
-    title: 'The Glass Menagerie',
-    playwright: 'Tennessee Williams',
-    year: '2022',
-    venue: 'Regional Theatre Festival',
-    role: 'Director',
-    description: 'An intimate portrait of memory, longing, and the fragility of hope.',
+    title: 'The Vagina Monologues',
+    playwright: 'Eve Ensler',
+    year: 'January 2026',
+    venue: 'Sierra University',
+    badge: 'ACTF Invited Production',
+    description: 'Invited to the Kennedy Center American College Theatre Festival. This landmark production received 7 national awards for its honesty, power, and ensemble performance.',
   },
   {
-    title: 'Into the Woods',
-    playwright: 'Stephen Sondheim & James Lapine',
-    year: '2021',
-    venue: 'Bay Area Community College Theatre',
-    role: 'Director',
-    description: 'A darkly comic musical exploring the consequences of our wishes and choices.',
+    title: 'The Vagina Monologues',
+    playwright: 'Eve Ensler',
+    year: 'May 2025',
+    venue: 'Northern Essex Community College',
+    badge: 'ACTF Invited Production',
+    description: 'A second ACTF invitation for this production — a testament to the depth of storytelling and ensemble craft that Brianne brings to this defining work.',
   },
   {
-    title: 'August: Osage County',
-    playwright: 'Tracy Letts',
-    year: '2020',
-    venue: 'Community Repertory Theatre',
-    role: 'Director',
-    description: 'A searing family drama that lays bare the complexity of love and dysfunction.',
+    title: 'Hurricane Diane',
+    playwright: 'Madeleine George',
+    year: 'October 2024',
+    venue: 'Firehouse Center For The Arts',
+    badge: '13 National Awards',
+    description: 'A darkly comedic masterpiece about nature, desire, and transformation. This production traveled to professional stages and earned 13 national awards — one of the most decorated productions in NECC\'s history.',
   },
   {
-    title: 'Fences',
-    playwright: 'August Wilson',
-    year: '2019',
-    venue: 'Bay Area Community College Theatre',
-    role: 'Director',
-    description: "An exploration of responsibility, regret, and the American Dream through one family's story.",
+    title: 'Hurricane Diane',
+    playwright: 'Madeleine George',
+    year: 'January 2024',
+    venue: 'CCSU',
+    badge: 'ACTF Invited Production',
+    description: 'A second life for this acclaimed production — invited to CCSU for the Kennedy Center American College Theatre Festival, continuing its national recognition.',
   },
   {
-    title: 'The Crucible',
-    playwright: 'Arthur Miller',
-    year: '2018',
-    venue: 'Bay Area Community College Theatre',
-    role: 'Director',
-    description: 'A timeless examination of fear, power, and moral courage in the face of hysteria.',
+    title: 'Hurricane Diane',
+    playwright: 'Madeleine George',
+    year: 'April 2023',
+    venue: 'Northern Essex Community College',
+    badge: 'ACTF Invited Production',
+    description: 'The original ACTF-invited staging that launched a remarkable national journey for this production. Brianne\'s direction was cited for its exceptional ensemble work and inventive staging.',
   },
 ];
 
+const productionHistory = [
+  { year: 'October 2025', title: 'All in the Timing', venue: 'Northern Essex Community College' },
+  { year: 'November 2024', title: 'A Night Of Comedy', venue: 'Northern Essex Community College' },
+  { year: 'October 2023', title: 'Almost, Maine', venue: 'Northern Essex Community College' },
+  { year: 'September 2022', title: 'Love Sick', venue: 'Northern Essex Community College (Outdoor Theater)' },
+  { year: 'May 2022', title: 'Lighten Up', venue: 'Northern Essex Community College (Outdoor Theater)' },
+  { year: 'November 2021', title: 'Tiny Beautiful Things', venue: 'Northern Essex Community College (Outdoor Theater)' },
+  { year: 'December 2020', title: 'Love Letters', venue: 'Northern Essex Community College' },
+  { year: 'May 2020', title: 'Rabbit Hole', venue: 'Northern Essex Community College' },
+  { year: 'November 2019', title: 'Five Women Wearing the Same Dress', venue: 'Northern Essex Community College' },
+  { year: 'November 2019', title: 'All in the Timing', venue: 'Merrimack College' },
+  { year: 'May 2019', title: 'Good People', venue: 'Northern Essex Community College' },
+  { year: 'February 2019', title: 'Uncommon Women and Others', venue: 'Salem State University' },
+  { year: 'October 2018', title: 'Stupid Fucking Bird', venue: 'Northern Essex Community College' },
+  { year: 'February 2018', title: 'The Last of the Red Hot Lovers', venue: 'Northern Essex Community College' },
+  { year: 'November 2017', title: 'The Odd Couple', venue: 'Northern Essex Community College' },
+  { year: 'September 2017', title: 'Escape from Happiness', venue: 'Northern Essex Community College' },
+  { year: 'April 2017', title: 'Laundry and Bourbon / Lonestar', venue: 'Salem State University' },
+  { year: 'February 2017', title: 'Clybourne Park', venue: 'Northern Essex Community College' },
+  { year: 'March 2014', title: 'How the Other Half Loves', venue: 'Marblehead Little Theater' },
+  { year: 'March 2013', title: 'The Odd Couple', venue: 'Northern Essex Community College' },
+  { year: 'November 2012', title: 'Arsenic and Old Lace', venue: 'Summer Theater at Salem' },
+  { year: 'August 2012', title: 'Greater Tuna', venue: 'Marblehead Little Theater' },
+  { year: 'March 2012', title: 'Rabbit Hole', venue: 'Marblehead Little Theater' },
+  { year: 'May 2011', title: 'Proof', venue: 'Marblehead Little Theater' },
+  { year: 'April 2011', title: 'Bedroom Farce', venue: 'Marblehead Little Theater' },
+  { year: 'October 2010', title: 'Almost, Maine', venue: 'Northern Essex Community College' },
+  { year: 'April 2010', title: 'Let Me Check My Calendar', venue: 'Marblehead Little Theater' },
+  { year: 'February 2010', title: 'Italian American Reconciliation', venue: 'Marblehead Little Theater' },
+];
+
 export default function Directing() {
+  const [showFullHistory, setShowFullHistory] = useState(false);
+  const visibleHistory = showFullHistory ? productionHistory : productionHistory.slice(0, 8);
+
   return (
     <PageTransition>
       {/* Hero */}
@@ -74,7 +109,7 @@ export default function Directing() {
             Theatre That Moves, Challenges, and Inspires
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            With productions invited to the Kennedy Center American College Theatre Festival, 13 national awards for a single production, and a directing career spanning more than 15 years — Brianne Beatrice brings an extraordinary standard to every project.
           </p>
         </div>
       </section>
@@ -83,15 +118,15 @@ export default function Directing() {
       <FadeInSection>
         <section className="max-w-4xl mx-auto px-6 lg:px-12 py-24">
           <h2 className="font-serif text-4xl font-semibold mb-8 text-center">Directing Philosophy</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <div className="space-y-6">
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Theatre, at its best, is a conversation — between the story and the audience, between the performers and the truth, between the world on stage and the world outside it. Brianne approaches every production as an act of communication: intentional, rigorously prepared, and deeply human.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              She is drawn to work that challenges her collaborators and her audiences — plays that ask difficult questions, that create space for empathy, and that leave people changed. Whether working with first-year college students or seasoned performers, she creates rehearsal rooms built on trust, rigor, and the belief that every person in the room has something essential to bring.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              The national recognition her productions have received reflects not just her vision, but the collective excellence she draws out of every company she works with.
             </p>
           </div>
         </section>
@@ -102,18 +137,18 @@ export default function Directing() {
         <section className="bg-muted/30 py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
+              <Award className="w-12 h-12 mx-auto mb-6 text-foreground" />
               <h2 className="font-serif text-4xl font-semibold mb-4">Featured Productions</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing.
+                ACTF-invited productions and award-winning work spanning professional stages and national recognition.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {productions.map((production, index) => (
+              {featuredProductions.map((production, index) => (
                 <div
                   key={index}
                   className="bg-background border border-border rounded-sm overflow-hidden hover:shadow-lg transition-shadow group"
                 >
-                  {/* Placeholder Image */}
                   <div className="aspect-[4/3] bg-gradient-to-br from-muted via-accent to-card relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent flex items-end p-6">
                       <div>
@@ -123,9 +158,14 @@ export default function Directing() {
                         </h3>
                       </div>
                     </div>
+                    {production.badge && (
+                      <div className="absolute top-4 right-4 bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-full">
+                        {production.badge}
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
-                    <p className="text-sm text-muted-foreground mb-2">{production.playwright}</p>
+                    <p className="text-sm text-muted-foreground mb-1">by {production.playwright}</p>
                     <p className="text-sm text-muted-foreground mb-4">{production.venue}</p>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {production.description}
@@ -138,57 +178,66 @@ export default function Directing() {
         </section>
       </FadeInSection>
 
-      {/* Recognition */}
+      {/* Full Production History */}
       <FadeInSection>
         <section className="max-w-5xl mx-auto px-6 lg:px-12 py-24">
-          <div className="text-center mb-16">
-            <Award className="w-12 h-12 mx-auto mb-6 text-foreground" />
-            <h2 className="font-serif text-4xl font-semibold mb-4">Recognition & Reviews</h2>
+          <h2 className="font-serif text-4xl font-semibold mb-4 text-center">Production History</h2>
+          <p className="text-muted-foreground text-lg text-center mb-12 max-w-2xl mx-auto">
+            A chronological record of Brianne's directing work across Northern Essex Community College, Salem State University, Merrimack College, Marblehead Little Theater, and beyond.
+          </p>
+          <div className="space-y-3">
+            {visibleHistory.map((prod, index) => (
+              <div
+                key={index}
+                className="flex flex-col sm:flex-row sm:items-center justify-between border border-border rounded-sm p-5 bg-card hover:shadow-sm transition-shadow gap-2"
+              >
+                <div>
+                  <p className="font-serif font-semibold text-foreground">{prod.title}</p>
+                  <p className="text-sm text-muted-foreground mt-1">{prod.venue}</p>
+                </div>
+                <p className="text-sm text-muted-foreground whitespace-nowrap">{prod.year}</p>
+              </div>
+            ))}
           </div>
-          <div className="space-y-8">
-            <div className="bg-card border border-border p-10 rounded-sm">
-              <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              </blockquote>
-              <p className="text-sm text-muted-foreground">
-                — Regional Arts Review, 2023
-              </p>
+          {productionHistory.length > 8 && (
+            <div className="text-center mt-10">
+              <button
+                onClick={() => setShowFullHistory(!showFullHistory)}
+                className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-sm font-medium hover:bg-accent transition-colors"
+              >
+                {showFullHistory ? (
+                  <>Show Less <ChevronUp size={18} /></>
+                ) : (
+                  <>View Full History ({productionHistory.length} Productions) <ChevronDown size={18} /></>
+                )}
+              </button>
             </div>
-            <div className="bg-card border border-border p-10 rounded-sm">
-              <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              </blockquote>
-              <p className="text-sm text-muted-foreground">
-                — Theatre Critic, Bay Area Arts Journal, 2022
-              </p>
-            </div>
-            <div className="bg-card border border-border p-10 rounded-sm">
-              <blockquote className="font-serif text-xl text-foreground leading-relaxed mb-6">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              </blockquote>
-              <p className="text-sm text-muted-foreground">
-                — Regional Theatre Festival, 2019
-              </p>
-            </div>
-          </div>
+          )}
         </section>
       </FadeInSection>
 
-      {/* Resume Download */}
+      {/* Recognition */}
       <FadeInSection>
         <section className="bg-foreground text-background py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-            <h2 className="font-serif text-4xl font-semibold mb-6">Directing Resume</h2>
-            <p className="text-background/80 text-lg mb-10 max-w-2xl mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            <h2 className="font-serif text-4xl font-semibold mb-12">Directing Recognition</h2>
+            <div className="grid md:grid-cols-3 gap-8 text-center mb-12">
+              <div className="border border-background/20 p-8 rounded-sm">
+                <p className="font-serif text-5xl font-bold text-background mb-3">13</p>
+                <p className="text-background/80 leading-snug">National Awards<br />Hurricane Diane</p>
+              </div>
+              <div className="border border-background/20 p-8 rounded-sm">
+                <p className="font-serif text-5xl font-bold text-background mb-3">7</p>
+                <p className="text-background/80 leading-snug">National Awards<br />The Vagina Monologues</p>
+              </div>
+              <div className="border border-background/20 p-8 rounded-sm">
+                <p className="font-serif text-5xl font-bold text-background mb-3">4+</p>
+                <p className="text-background/80 leading-snug">ACTF<br />Invited Productions</p>
+              </div>
+            </div>
+            <p className="text-background/70 text-lg max-w-2xl mx-auto">
+              The KCACTF Citizens Award for Distinguished Directing, multiple ACTF invitations, and national recognition for ensemble excellence — Brianne's directing work speaks for itself.
             </p>
-            <button
-              className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-sm font-medium hover:opacity-90 transition-opacity"
-              data-testid="button-download-resume"
-            >
-              <Download size={20} />
-              Download Resume (PDF)
-            </button>
           </div>
         </section>
       </FadeInSection>
