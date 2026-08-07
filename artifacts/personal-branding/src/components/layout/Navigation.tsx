@@ -3,7 +3,8 @@ import { Link, useLocation } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import brianneLogo from '@/assets/brianne-beatrice-logo.png';
+
+const GOLD = '#C6A15B';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -17,6 +18,46 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
+function BrianneLogo({ mobile = false }: { mobile?: boolean }) {
+  if (mobile) {
+    return (
+      <span className="font-serif text-xl font-semibold text-foreground tracking-tight">
+        Brianne Beatrice
+      </span>
+    );
+  }
+  return (
+    <div className="flex flex-col leading-none">
+      <span
+        style={{
+          fontFamily: "'Great Vibes', cursive",
+          fontSize: '2.1rem',
+          lineHeight: '1.1',
+          color: 'hsl(var(--foreground))',
+          letterSpacing: '0.01em',
+        }}
+      >
+        Brianne Beatrice
+      </span>
+      <div className="flex items-center gap-2 mt-0.5">
+        <div style={{ height: '1px', width: '16px', backgroundColor: GOLD, flexShrink: 0 }} />
+        <span
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: '0.52rem',
+            letterSpacing: '0.14em',
+            fontWeight: 600,
+            textTransform: 'uppercase',
+            color: GOLD,
+          }}
+        >
+          Master of Performance &amp; Inspiration
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function Navigation() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,16 +68,12 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center group">
-              {/* Desktop: full signature logo */}
-              <img
-                src={brianneLogo}
-                alt="Brianne Beatrice — Master of Performance & Inspiration"
-                className="hidden md:block h-12 w-auto object-contain transition-opacity group-hover:opacity-75"
-              />
-              {/* Mobile: text fallback to keep nav clean */}
-              <span className="md:hidden font-serif text-xl font-semibold text-foreground tracking-tight transition-opacity group-hover:opacity-70">
-                Brianne Beatrice
+            <Link href="/" className="flex items-center group transition-opacity hover:opacity-75">
+              <span className="hidden md:flex">
+                <BrianneLogo />
+              </span>
+              <span className="md:hidden">
+                <BrianneLogo mobile />
               </span>
             </Link>
 
@@ -57,7 +94,8 @@ export function Navigation() {
                   {location === link.href && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-foreground"
+                      className="absolute bottom-0 left-0 right-0 h-0.5"
+                      style={{ backgroundColor: GOLD }}
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -87,7 +125,7 @@ export function Navigation() {
             transition={{ duration: 0.2 }}
             className="lg:hidden fixed top-20 left-0 right-0 z-40 bg-background border-b border-border overflow-hidden"
           >
-            <div className="px-6 py-4 space-y-3">
+            <div className="px-6 py-4 space-y-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -96,9 +134,10 @@ export function Navigation() {
                   className={cn(
                     'block py-3 px-4 rounded-md text-base font-medium transition-colors',
                     location === link.href
-                      ? 'bg-accent text-foreground'
+                      ? 'text-foreground bg-accent'
                       : 'text-muted-foreground hover:bg-accent/50 hover:text-foreground'
                   )}
+                  style={location === link.href ? { borderLeft: `3px solid ${GOLD}` } : {}}
                 >
                   {link.label}
                 </Link>

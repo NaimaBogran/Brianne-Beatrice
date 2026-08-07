@@ -61,15 +61,32 @@ export default function Media() {
         <section className="bg-muted/30 py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Artwork placeholder */}
-              <div className="bg-card border border-border p-10 rounded-sm">
-                <div className="aspect-square bg-gradient-to-br from-foreground/10 via-muted to-card rounded-sm flex items-center justify-center">
-                  <div className="text-center px-8">
-                    <Podcast className="w-20 h-20 text-foreground/40 mx-auto mb-6" />
-                    <p className="font-serif text-2xl font-semibold text-foreground/70 leading-snug">
-                      Women in Business
-                    </p>
-                    <p className="text-muted-foreground mt-2 text-sm">Podcast · River Run</p>
+              {/* Podcast thumbnail */}
+              <div className="bg-card border border-border p-4 rounded-sm">
+                <div className="aspect-square rounded-sm overflow-hidden">
+                  <img
+                    src="https://img.youtube.com/vi/eQ6xmxy0lIg/hqdefault.jpg"
+                    alt="Women in Business Podcast — Brianne Beatrice: The Art of Public Speaking"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement | null;
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
+                  />
+                  <div
+                    className="hidden w-full h-full bg-gradient-to-br from-foreground/10 via-muted to-card items-center justify-center"
+                    style={{ aspectRatio: '1' }}
+                  >
+                    <div className="text-center px-8">
+                      <Podcast className="w-20 h-20 text-foreground/40 mx-auto mb-6" />
+                      <p className="font-serif text-2xl font-semibold text-foreground/70 leading-snug">
+                        Women in Business
+                      </p>
+                      <p className="text-muted-foreground mt-2 text-sm">Podcast · River Run</p>
+                    </div>
                   </div>
                 </div>
               </div>

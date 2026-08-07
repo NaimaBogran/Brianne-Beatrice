@@ -12,7 +12,7 @@ const featuredProductions = [
     year: 'May 2026',
     venue: 'Northern Essex Community College',
     badge: null,
-    description: 'Tony Kushner\'s landmark work about love, loss, identity, and the AIDS crisis. A bold, visionary production anchoring the 2026 season.',
+    description: "Tony Kushner's landmark work about love, loss, identity, and the AIDS crisis — anchoring the 2026 season at NECC.",
   },
   {
     title: 'The Vagina Monologues',
@@ -20,7 +20,7 @@ const featuredProductions = [
     year: 'January 2026',
     venue: 'Sierra University',
     badge: 'ACTF Invited Production',
-    description: 'Invited to the Kennedy Center American College Theatre Festival. This landmark production received 7 national awards for its honesty, power, and ensemble performance.',
+    description: 'Invited to the Kennedy Center American College Theatre Festival. This production received 7 national awards for its honesty, power, and ensemble performance.',
   },
   {
     title: 'The Vagina Monologues',
@@ -28,7 +28,7 @@ const featuredProductions = [
     year: 'May 2025',
     venue: 'Northern Essex Community College',
     badge: 'ACTF Invited Production',
-    description: 'A second ACTF invitation for this production — a testament to the depth of storytelling and ensemble craft that Brianne brings to this defining work.',
+    description: 'A second ACTF invitation for this production — recognition of the depth of storytelling and ensemble craft Brianne brought to this defining work.',
   },
   {
     title: 'Hurricane Diane',
@@ -36,7 +36,7 @@ const featuredProductions = [
     year: 'October 2024',
     venue: 'Firehouse Center For The Arts',
     badge: '13 National Awards',
-    description: 'A darkly comedic masterpiece about nature, desire, and transformation. This production traveled to professional stages and earned 13 national awards — one of the most decorated productions in NECC\'s history.',
+    description: "A production about nature, desire, and transformation that traveled to professional stages and earned 13 national awards — among the most decorated in NECC's history.",
   },
   {
     title: 'Hurricane Diane',
@@ -44,7 +44,7 @@ const featuredProductions = [
     year: 'January 2024',
     venue: 'CCSU',
     badge: 'ACTF Invited Production',
-    description: 'A second life for this acclaimed production — invited to CCSU for the Kennedy Center American College Theatre Festival, continuing its national recognition.',
+    description: 'A second life for this acclaimed production — invited to CCSU for the Kennedy Center American College Theatre Festival.',
   },
   {
     title: 'Hurricane Diane',
@@ -52,14 +52,20 @@ const featuredProductions = [
     year: 'April 2023',
     venue: 'Northern Essex Community College',
     badge: 'ACTF Invited Production',
-    description: 'The original ACTF-invited staging that launched a remarkable national journey for this production. Brianne\'s direction was cited for its exceptional ensemble work and inventive staging.',
+    description: "The original ACTF-invited staging that launched a remarkable national journey for this production. Brianne's direction was cited for exceptional ensemble work and inventive staging.",
   },
 ];
 
 const productionHistory = [
+  { year: 'May 2026', title: 'Angels in America: Part I', venue: 'Northern Essex Community College' },
+  { year: 'January 2026', title: 'The Vagina Monologues', venue: 'Sierra University — ACTF Invited Production' },
   { year: 'October 2025', title: 'All in the Timing', venue: 'Northern Essex Community College' },
+  { year: 'May 2025', title: 'The Vagina Monologues', venue: 'Northern Essex Community College — ACTF Invited Production' },
   { year: 'November 2024', title: 'A Night Of Comedy', venue: 'Northern Essex Community College' },
+  { year: 'October 2024', title: 'Hurricane Diane', venue: 'Firehouse Center For The Arts — 13 National Awards' },
+  { year: 'January 2024', title: 'Hurricane Diane', venue: 'CCSU — ACTF Invited Production' },
   { year: 'October 2023', title: 'Almost, Maine', venue: 'Northern Essex Community College' },
+  { year: 'April 2023', title: 'Hurricane Diane', venue: 'Northern Essex Community College — ACTF Invited Production' },
   { year: 'September 2022', title: 'Love Sick', venue: 'Northern Essex Community College (Outdoor Theater)' },
   { year: 'May 2022', title: 'Lighten Up', venue: 'Northern Essex Community College (Outdoor Theater)' },
   { year: 'November 2021', title: 'Tiny Beautiful Things', venue: 'Northern Essex Community College (Outdoor Theater)' },
@@ -99,15 +105,15 @@ export default function Directing() {
           <img
             src={brianneStageDirecting}
             alt="Brianne Beatrice on stage at Firehouse Center for the Arts"
-            className="w-full h-full object-cover object-center opacity-25"
+            className="w-full h-full object-cover object-center opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
         </div>
         <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center relative z-10">
           <Theater className="w-16 h-16 mx-auto mb-6 text-foreground" />
           <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Directing</p>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold mb-6">
-            Theatre That Moves, Challenges, and Inspires
+            Theatre That Moves, Challenges, and Connects
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             With productions invited to the Kennedy Center American College Theatre Festival, 13 national awards for a single production, and a directing career spanning more than 15 years — Brianne Beatrice brings an extraordinary standard to every project.
@@ -127,7 +133,7 @@ export default function Directing() {
               Theatre, at its best, is a conversation — between the story and the audience, between the performers and the truth, between the world on stage and the world outside it. Brianne approaches every production as an act of communication: intentional, rigorously prepared, and deeply human.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              She is drawn to work that challenges her collaborators and her audiences — plays that ask difficult questions, that create space for empathy, and that leave people changed. Whether working with first-year college students or seasoned performers, she creates rehearsal rooms built on trust, rigor, and the belief that every person in the room has something essential to bring.
+              She is drawn to work that challenges her collaborators and her audiences — plays that ask difficult questions, that create space for empathy, and that leave people changed. Whether working with first-year college students or seasoned performers, she builds rehearsal rooms on trust, rigor, and the belief that every person in the room has something essential to bring.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The national recognition her productions have received reflects not just her vision, but the collective excellence she draws out of every company she works with.
@@ -277,7 +283,7 @@ export default function Directing() {
               </div>
             </div>
             <p className="text-background/70 text-lg max-w-2xl mx-auto">
-              The KCACTF Citizens Award for Distinguished Directing, multiple ACTF invitations, and national recognition for ensemble excellence — Brianne's directing work speaks for itself.
+              The KCACTF Citizens Award for Distinguished Directing, multiple ACTF invitations, and national recognition for ensemble excellence.
             </p>
           </div>
         </section>

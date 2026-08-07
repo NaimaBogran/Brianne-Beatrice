@@ -1,6 +1,5 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel';
 import { MessageSquare, Users, Lightbulb, Heart, Star, Play, Mail, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import {
@@ -21,25 +20,25 @@ const keynoteTopics = [
     icon: Lightbulb,
     title: 'Confidence Through Communication',
     description:
-      'Confidence isn\'t something you\'re born with — it\'s something you build. Brianne shares the tools and techniques she\'s used with thousands of students to help audiences speak with clarity, presence, and conviction.',
+      "Confidence is built, not born. Brianne shares the tools and techniques she's used with thousands of students to help audiences speak with clarity, presence, and conviction.",
   },
   {
     icon: Heart,
-    title: 'Authenticity — The Ultimate Performance',
+    title: 'Authenticity in Action',
     description:
-      'The greatest performance you will ever give is the one where you show up exactly as you are. Brianne explores what authentic communication looks like in leadership, relationships, and the moments that matter most.',
+      'The most powerful communication happens when you show up exactly as you are. Brianne explores what authentic presence looks like in leadership, relationships, and the moments that matter most.',
   },
   {
     icon: Users,
     title: 'Leadership Through Storytelling',
     description:
-      'The world\'s most effective leaders are storytellers. Brianne helps audiences understand how to craft and deliver narratives that move people, build trust, and inspire meaningful action.',
+      "The world's most effective leaders are storytellers. Brianne helps audiences understand how to craft and deliver narratives that move people, build trust, and inspire meaningful action.",
   },
   {
     icon: Star,
     title: 'Performance Beyond the Stage',
     description:
-      'Every boardroom is a stage. Every meeting, every presentation, every difficult conversation is a performance. Brianne translates the craft of acting into practical skills for leaders and communicators in any field.',
+      'Every boardroom is a stage. Every meeting, presentation, and difficult conversation is a performance. Brianne translates the craft of acting into practical skills for leaders and communicators in any field.',
   },
 ];
 
@@ -52,17 +51,17 @@ const faqs = [
   {
     question: 'How does she customize keynotes?',
     answer:
-      'Every engagement begins with a conversation about your organization\'s goals, audience, and desired outcomes. Brianne integrates your themes, language, and challenges into the presentation so it feels like it was written specifically for your event — because it was.',
+      "Every engagement begins with a conversation about your organization's goals, audience, and desired outcomes. Brianne integrates your themes, language, and challenges into the presentation so it feels like it was written specifically for your event — because it was.",
   },
   {
     question: 'Does she offer workshops and trainings in addition to keynotes?',
     answer:
-      'Absolutely. Brianne offers interactive workshops on communication, public speaking, storytelling, and authentic leadership — drawing directly on her 20+ years of teaching experience. These range from 90-minute sessions to full-day intensives.',
+      'Yes. Brianne offers interactive workshops on communication, public speaking, storytelling, and authentic leadership — drawing directly on her 20+ years of teaching experience. These range from 90-minute sessions to full-day intensives.',
   },
   {
     question: 'Does she offer virtual presentations?',
     answer:
-      'Yes. Brianne brings the same energy, preparation, and engagement to virtual presentations as she does to in-person events. She uses dynamic visuals, interactive elements, and a deep understanding of how to hold an audience\'s attention across any format.',
+      'Yes. Brianne brings the same energy and preparation to virtual presentations as she does to in-person events, with an eye toward dynamic visuals and audience engagement across any format.',
   },
   {
     question: 'What is her speaking fee?',
@@ -82,7 +81,7 @@ export default function Speaking() {
             Inspiring Audiences to Lead with Authenticity
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10">
-            With more than two decades of experience helping people discover their voice — in classrooms, rehearsal rooms, and on national stages — Brianne Beatrice brings a rare combination of expertise, warmth, and performance craft to every speaking engagement.
+            With more than two decades of experience helping people find their voice — in classrooms, rehearsal rooms, and on national stages — Brianne Beatrice brings a rare combination of expertise, warmth, and performance craft to every speaking engagement.
           </p>
           <Link
             href="/contact"
@@ -101,7 +100,7 @@ export default function Speaking() {
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-semibold mb-4">Keynote Topics</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Each keynote is customized to your audience and goals — rooted in real expertise and delivered with genuine passion.
+              Each keynote is customized to your audience and goals — rooted in real expertise and shaped by what your organization actually needs.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -141,21 +140,6 @@ export default function Speaking() {
         </section>
       </FadeInSection>
 
-      {/* Testimonials */}
-      <FadeInSection>
-        <section className="py-24">
-          <div className="max-w-5xl mx-auto px-6 lg:px-12">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl font-semibold mb-4">What Audiences Say</h2>
-              <p className="text-muted-foreground text-lg">
-                From students, colleagues, and collaborators who have experienced Brianne's teaching and presence.
-              </p>
-            </div>
-            <TestimonialsCarousel />
-          </div>
-        </section>
-      </FadeInSection>
-
       {/* FAQ */}
       <FadeInSection>
         <section className="bg-muted/30 py-24">
@@ -189,10 +173,10 @@ export default function Speaking() {
           <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <Mail className="w-16 h-16 mx-auto mb-8 opacity-80" />
             <h2 className="font-serif text-4xl font-semibold mb-6">
-              Let's Inspire Your Audience Together
+              Ready to Bring Brianne to Your Stage?
             </h2>
             <p className="text-background/80 text-lg mb-10 max-w-2xl mx-auto">
-              Whether you're planning a conference, a workshop, a leadership retreat, or a community event — Brianne is ready to bring her passion, expertise, and presence to your stage.
+              Whether you're planning a conference, a workshop, a leadership retreat, or a community event — Brianne is ready to bring her expertise and presence to your audience.
             </p>
             <Link
               href="/contact"

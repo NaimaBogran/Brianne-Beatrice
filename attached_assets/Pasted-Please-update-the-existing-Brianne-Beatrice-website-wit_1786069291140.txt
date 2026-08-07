@@ -1,0 +1,220 @@
+Please update the existing Brianne Beatrice website without redesigning it from scratch.
+
+Preserve the current layout, page structure, visual style, colors, typography, responsiveness, and animations unless a change below specifically requires an adjustment.
+
+This is a refinement/debugging pass before a client review.
+
+IMPORTANT:
+- Do not invent new content.
+- Use the files and content already uploaded to the project as the source of truth.
+- Do not add placeholder testimonials, fake quotes, fake awards, fake productions, or fake media.
+- Remove anything that feels obviously AI-generated in tone or formatting.
+
+## 1. LOGO
+
+The current logo in the navigation is too small and not visually crisp enough.
+
+Please rebuild the navigation logo as a clean web-native logo rather than relying on a low-resolution raster image.
+
+Use:
+- “Brianne Beatrice” in an elegant handwritten/signature-style script
+- “Master of Performance & Inspiration” beneath it in a small, clean uppercase sans-serif
+- Black for the signature
+- Muted warm gold for the subtitle/accent line
+
+Requirements:
+- Transparent background
+- Crisp and legible at all screen sizes
+- No pixelation
+- Use text/SVG/CSS where possible instead of a blurry JPG/PNG
+- Preserve sufficient contrast
+- Make the logo noticeably larger in the desktop navigation
+- Keep the nav height balanced and not excessively tall
+- On mobile, scale the logo down gracefully without making it illegible
+
+Add a subtle gold accent line or small gold flourish near the logo, similar to the branding already established.
+
+## 2. GOLD ACCENTS THROUGHOUT THE SITE
+
+Incorporate subtle gold accents inspired by the logo without changing the overall palette.
+
+Use the gold sparingly for:
+- Section dividers
+- Small rules/lines
+- Button hover states
+- Active nav states
+- Icon accents
+- Small decorative details around featured awards or media
+
+Do not turn large backgrounds gold.
+Do not make the site flashy.
+Keep it elegant and understated.
+
+Use a warm muted gold close to:
+#C6A15B
+
+## 3. REMOVE AI-GENERATED FORMATTING / COPY ARTIFACTS
+
+Audit the entire site for:
+- excessive italic emphasis
+- generic AI-style labels
+- repetitive “inspiring / empowering / transformative” filler
+- awkward em dashes
+- overly generic card descriptions
+- text that sounds obviously generated rather than human
+
+Do not rewrite factual content in a way that changes its meaning.
+
+Keep the voice:
+- warm
+- accomplished
+- human
+- professional
+- direct
+
+## 4. TESTIMONIALS
+
+Review the testimonials currently available in the uploaded project content.
+
+Only include verified testimonials with real attribution.
+
+If the testimonials specifically support:
+- speaking
+- teaching
+- directing
+- mentorship
+- communication
+
+then place the strongest relevant testimonials on the Speaking page.
+
+Do not create a large testimonial section if only one or two good quotes exist.
+
+Preferred layout:
+- 1 or 2 large editorial quote blocks
+rather than a carousel.
+
+If no testimonial is directly relevant to speaking or Brianne’s impact on audiences/students, remove the testimonial section entirely within the Speaking tab ONLY not the teaching tab.
+
+Do not invent or paraphrase testimonial quotes.
+
+## 5. PAGE SCROLL BEHAVIOR
+
+When navigating to a new page/route/section, automatically scroll the user back to the top of the page.
+
+Currently some routes retain the previous scroll position.
+
+Implement route-change scroll restoration so every newly opened page begins at the top.
+
+Do not interfere with intentional anchor links within the same page.
+
+## 6. FIREHOUSE IMAGE
+
+The Firehouse stage image is currently not displaying.
+
+Find the uploaded Firehouse image in the project assets and repair the broken reference/path.
+
+Requirements:
+- Confirm the correct file path
+- Confirm filename capitalization
+- Confirm the asset imports correctly in production
+- Display it in the intended section
+- Preserve its aspect ratio
+- Do not stretch it
+- Use object-position intentionally if cropped
+- Add descriptive alt text
+
+If the current image component is broken, replace it with a reliable local asset reference.
+
+## 7. DIRECTING / PRODUCTION HISTORY
+
+Keep the currently featured productions, but also add these productions to the full Production History list:
+
+- The Vagina Monologues
+- Angels in America: Part I
+- Hurricane Diane
+
+Do not remove them from the Featured Productions section.
+
+They should appear in BOTH:
+1. Featured Productions
+2. Full Production History
+
+Use the production details already provided in the project files for:
+- year
+- theatre/company
+- recognition
+
+Do not invent missing details.
+
+Maintain chronological ordering in the production history.
+
+## 8. ACTING PAGE / ROUTE
+
+The Acting section currently returns a 404 error.
+
+Fix the route.
+
+Requirements:
+- Add/repair the Acting route
+- Ensure the navigation link points to the correct route
+- Confirm it works from desktop navigation
+- Confirm it works from mobile navigation
+- Confirm direct URL access works
+- Confirm browser refresh on the Acting page does not return a 404
+- Preserve responsive behavior
+
+Use the acting content and images already uploaded.
+
+The Acting page should include:
+- introductory section
+- the 5 selected productions provided by the client
+- production title
+- theatre/company
+- year if provided
+- Brianne’s role if provided
+- associated image
+
+Do not invent details.
+
+Use an editorial gallery layout rather than a plain resume list.
+
+## 9. PODCAST THUMBNAIL
+
+The podcast card currently needs a thumbnail.
+
+Use the real podcast artwork or episode thumbnail.
+
+Preferred source order:
+1. official episode thumbnail
+2. official podcast artwork
+3. Open Graph image from the podcast website
+4. YouTube thumbnail, if the episode is on YouTube
+
+Do not use a generic placeholder image.
+
+Preserve the existing verified podcast link.
+
+If multiple verified listening links exist, keep the compact listening buttons already used or add them cleanly beneath the episode details.
+
+## 10. FINAL QA PASS
+
+After completing the changes, verify all of the following:
+
+- Navigation logo is larger, crisp, and transparent
+- No logo pixelation
+- Gold accents are visible but subtle
+- No unnecessary <em> tags or obvious AI-style copy
+- Testimonials are either relevant and verified or removed
+- New routes scroll to the top automatically
+- Firehouse image displays correctly
+- Acting page no longer returns 404
+- Acting nav works on desktop and mobile
+- Podcast thumbnail displays correctly
+- The Vagina Monologues appears in both Featured and Production History
+- Angels in America: Part I appears in both Featured and Production History
+- Hurricane Diane appears in both Featured and Production History
+- No broken image paths
+- No console errors related to these changes
+- All pages remain responsive
+- External links still work
+- No factual content has been invented
