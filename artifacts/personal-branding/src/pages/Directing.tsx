@@ -98,7 +98,7 @@ export default function Directing() {
         <div className="absolute inset-0 z-0">
           <img
             src={brianneStageDirecting}
-            alt="Brianne Beatrice directing a theatre production on stage"
+            alt="Brianne Beatrice on stage at Firehouse Center for the Arts"
             className="w-full h-full object-cover object-center opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
@@ -111,6 +111,9 @@ export default function Directing() {
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             With productions invited to the Kennedy Center American College Theatre Festival, 13 national awards for a single production, and a directing career spanning more than 15 years — Brianne Beatrice brings an extraordinary standard to every project.
+          </p>
+          <p className="text-sm text-muted-foreground/60 mt-6 italic">
+            Brianne Beatrice on stage at Firehouse Center for the Arts
           </p>
         </div>
       </section>
@@ -194,7 +197,7 @@ export default function Directing() {
             </div>
             <div className="p-8 lg:p-10">
               <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                Haverhill Life / Merrimack Valley Life
+                Merrimack Valley Life
               </p>
               <h3 className="font-serif text-2xl font-semibold mb-4 leading-snug">
                 Directing Change

@@ -1,0 +1,193 @@
+Update the existing Brianne Beatrice website without rebuilding it from scratch.
+
+Preserve the current visual style, color palette, typography, animations, layout system, responsiveness, and overall personal-brand direction. This is a content and refinement pass before a client review.
+
+Use only the uploaded content and verified links as the source of truth. Do not invent awards, quotes, testimonials, productions, roles, dates, or biographical details.
+
+Complete the following updates:
+
+1. SIGNATURE LOGO
+Replace the current navigation branding with the uploaded signature-style Brianne Beatrice logo.
+
+Desktop navigation:
+- Show the uploaded logo
+- Keep it readable without making the navigation too tall.
+- Link the logo to the homepage.
+
+Mobile navigation:
+- Use a simplified signature wordmark version of the uploaded logo or simple B icon uploaded if the full lockup becomes too small.
+
+Favicon/browser tab:
+- Use the uploaded simplified B signature monogram.
+- Ensure it remains readable at 16x16, 32x32, and 48x48 pixels.
+- Update the browser title to “Brianne Beatrice | Master of Performance & Inspiration.”
+
+2. ABOUT IMAGE
+Replace the current About-section image with the uploaded file:
+about-headshot.jpg
+
+Preserve the image’s natural proportions.
+Do not crop her face, hair, or shoulders awkwardly.
+Use intentional object-position settings for desktop and mobile.
+
+3. FIREHOUSE STAGE IMAGE
+Verify whether brianne-stage-directing.jpg is already used on the website.
+
+If it is already present:
+- Keep it, but confirm it is placed in the most relevant Speaking, Directing, or Performance section.
+- Add an accurate caption identifying it as Brianne onstage at the Firehouse venue, using only wording provided in the project content.
+
+If it is not present:
+- Add it as a large editorial image in the most relevant section.
+- Do not place it in a small card where the stage and lighting cannot be appreciated.
+
+4. ACTING WORKSHOP IMAGE
+Locate the existing group image brianne-large-group.jpg that represents Brianne’s acting workshop.
+
+Update its context to explain that Brianne ran a Master Meisner Acting Workshop yearly from 2010-2023 at Region 1 American College Theater Festival.
+
+Suggested copy:
+“From 2010 through 2023, Brianne led an ongoing acting workshop focused on craft, confidence, collaboration, and artistic growth.”
+
+Use the exact name of the workshop if one is included in the uploaded materials. Otherwise, do not invent a name.
+
+Place this image and description on the Teaching page, About page, or Acting page—whichever best fits the existing structure. Prefer Teaching or Acting.
+
+5. PODCAST LINK
+Test the existing podcast link and repair it.
+
+- Keep the verified podcast website link.
+- Use the correct official podcast artwork or thumbnail.
+- If an embedded media player is available, use it.
+- Confirm the button visibly communicates where it goes.
+- Open external links in a new tab with rel="noopener noreferrer".
+- Do not create extra podcast appearances or placeholder episodes.
+- If verified direct links to Brianne’s episode on Spotify, Apple Podcasts, YouTube, or another platform are already provided in the project, add compact listening buttons.
+- Do not invent or guess episode URLs.
+https://www.riverrun.com/women-in-business-podcast link to the podcast she is located on, episode 7
+https://open.spotify.com/episode/08IPVdNCoikypxHDI2vSRi?si=92856d34cd25457f Spotify link directly to episode
+https://podcasts.apple.com/us/podcast/brianne-beatrice-the-art-of-public-speaking/id1862240243?i=1000771803514 Apple Podcasts link directly to episode
+
+https://music.amazon.com/podcasts/d53e018c-8b96-42be-bc24-1d7383909bdc/episodes/681fd452-b8f8-4550-adae-a407ce07d87b/women-in-business-brianne-beatrice---the-art-of-public-speaking Amazon Music link directly to episode
+
+
+
+6. RECOGNITION
+Replace the current awards and recognition content with the corrected recognition list below.
+
+ Professional Recognition:
+2026 - National Alliance Acting Teacher Of Excellence - National Alliance Of Acting Teachers 
+2026 - Influential Women Of 2026 - Influential Women 
+2023 - Golden Lamp Award - Northern Essex Community College 
+2019 - Distinguished Teaching Award – Salem State University
+2018 - National Society of Leadership and Success Award - Salem State University
+2017 - Winner – ‘Best Actress in a play’ – Broadway World
+2017 - Stephen Sondheim Teaching Award - Kennedy Center
+2017 - Outstanding First Year Advocate Award - Salem State University
+2017 - IRNE Award Nominee – Best Actress in a Play
+ 
+Directing Recognition: 
+2025- NECC - ' The Vagina Monologues' - 7 National Awards from ACTF
+2023 - NECC - 'Hurricane Diane' - 13 National Awards from KCACTF 
+2022- NECC 'Lighten Up' - Outstanding Achievement in Ensemble
+2021 - NECC - 'Tiny Beautiful Things' - Outstanding Achievement in Ensemble 
+2019 - NECC - ‘Five Women Wearing The Same Dress’ - Outstanding Achievement in Ensemble 
+2019 - NECC - ‘Good People’ - Outstanding Achievement in Ensemble 
+2019 - SSU - ‘Uncommon Women and Others’ - Outstanding Achievement in Ensemble 
+2018 - NECC - ‘Stupid Fucking Bird’ - (Nationally Recognized) - Outstanding Achievement in Ensemble
+2017 - SSU - ‘Clybourne Park’ - Outstanding Achievement in Ensemble 
+
+
+
+Treat the new list as the source of truth over older content.
+
+Organize recognition into:
+- Professional Recognition
+- Directing Recognition
+
+Keep the strongest and most recent honors prominent.
+Use elegant cards or a clean timeline.
+Do not display duplicate awards.
+Do not alter “winner,” “nominee,” “award,” or “recognition” language.
+Preserve the exact status supplied by the client.
+
+7. YOUTUBE VIDEO
+Add the verified YouTube video supplied by the client.
+
+https://www.youtube.com/watch?v=5Kig2V3Bl1w 
+
+
+- Use the official YouTube thumbnail.
+- Embed the video responsively.
+- Do not autoplay.
+- Include a descriptive title.
+- Add a fallback “Watch on YouTube” link.
+- Place it on the Media page and, if especially relevant, feature it once elsewhere.
+- Do not duplicate the same video across several pages.
+
+8. TESTIMONIALS
+Do not search social media or invent additional testimonials during this update.
+
+Only add testimonials that the client has already directly provided or that can be quoted accurately from a supplied article or video.
+
+For any quote:
+- Preserve the exact wording.
+- Attribute the speaker by name and role when verified.
+- Identify the original source, such as Haverhill Life or the supplied YouTube video.
+- Do not paraphrase quotation marks around rewritten text.
+- Do not create placeholder testimonial cards.
+- Use the most relevant or quote-worthy content.
+
+
+Use testimonials quoted from:
+
+Glenn in this article:
+https://www.merrimackvalleylife.com/articles/directing-change/ 
+
+This video:
+https://youtube.com/shorts/eQ6xmxy0lIg?si=An1Rp9-AzBMsFPrS 
+
+And these direct quotes from her former students:
+“These courses had helped me feel young again with self-confidence and pride for working through difficulties of forgetfulness, fear of public speaking or belonging.”
+
+
+“It’s such a privilege to have award winning (NECC Theater) be so accessible…Not only do we get to learn from the best, but I’ve also met an amazing community who inspires me to do what I love!”
+
+“I can’t even begin to explain how much my confidence in myself has grown since taking (her) classes (and) joining the NECC theater family. I’ve personally met some of the greatest people through (her) courses.”
+
+“It’s my honor to say that I was able to be part of NECC theater. The classes are so much more than I could’ve ever imagined!”
+
+Group testimonials by context only if there are enough verified quotes: - Teaching and Mentorship - Directing and Theatre - Speaking and Community Impact If there are fewer than three verified testimonials, do not use a carousel. Use one or two large editorial quote blocks with generous spacing. 
+
+
+9. ACTING PAGE PREPARATION
+Add “Acting” to the site navigation and create the basic page structure, but do not invent details.
+
+Use this structure:
+- Page introduction
+- Five selected productions
+- Acting workshop legacy section
+- Optional closing connection to Brianne’s work as an educator, director, and inspirational speaker
+
+If the five production images and details are already uploaded and clearly matched:
+- Create one polished production card for each.
+- Show the production title, theatre company, year, and Brianne’s role.
+- Use the real production image.
+- Avoid a chronological résumé-style wall of text.
+- Use a gallery or editorial layout with generous spacing.
+
+If any image cannot be confidently matched to its production, leave that item out rather than guessing.
+
+10. FINAL QUALITY CHECK
+Before finishing:
+- Confirm all navigation links work.
+- Confirm the podcast link works.
+- Confirm the YouTube embed works.
+- Confirm the correct About image is used.
+- Confirm the corrected awards appear without duplicates.
+- Confirm no invented testimonials remain.
+- Confirm all external links open safely in a new tab.
+- Confirm image crops work on desktop and mobile.
+- Confirm the website remains responsive.
+- Do not remove existing content unless it is incorrect, duplicated, or explicitly replaced above.
+

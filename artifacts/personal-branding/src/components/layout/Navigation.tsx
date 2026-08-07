@@ -3,6 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import brianneLogo from '@/assets/brianne-beatrice-logo.png';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -10,6 +11,7 @@ const navLinks = [
   { href: '/speaking', label: 'Speaking' },
   { href: '/teaching', label: 'Teaching' },
   { href: '/directing', label: 'Directing' },
+  { href: '/acting', label: 'Acting' },
   { href: '/media', label: 'Media' },
   { href: '/recognition', label: 'Recognition' },
   { href: '/contact', label: 'Contact' },
@@ -24,15 +26,22 @@ export function Navigation() {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
-            {/* Logo/Name */}
+            {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <span className="font-serif text-2xl font-semibold text-foreground tracking-tight transition-opacity group-hover:opacity-70">
+              {/* Desktop: full signature logo */}
+              <img
+                src={brianneLogo}
+                alt="Brianne Beatrice — Master of Performance & Inspiration"
+                className="hidden md:block h-12 w-auto object-contain transition-opacity group-hover:opacity-75"
+              />
+              {/* Mobile: text fallback to keep nav clean */}
+              <span className="md:hidden font-serif text-xl font-semibold text-foreground tracking-tight transition-opacity group-hover:opacity-70">
                 Brianne Beatrice
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

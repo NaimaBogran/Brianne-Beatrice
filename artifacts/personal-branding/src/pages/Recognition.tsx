@@ -3,80 +3,109 @@ import { FadeInSection } from '@/components/ui/FadeInSection';
 import { Award, Trophy, Star } from 'lucide-react';
 import brianneTeachingAward from '@/assets/brianne-teaching-award.jpg';
 import brianneCareerRecognition from '@/assets/brianne-career-recognition.jpg';
-import brianneAwardDisplay from '@/assets/brianne-award-display.jpg';
 
 const professionalAwards = [
   {
     year: '2026',
     award: 'National Alliance Acting Teacher of Excellence',
-    organization: 'National Alliance of Acting Teachers — Region I',
-    description: 'One of the most prestigious honors in performance education, recognizing exceptional teaching artistry, student impact, and contribution to the field of acting pedagogy.',
+    organization: 'National Alliance of Acting Teachers',
   },
   {
     year: '2026',
     award: 'Influential Women of 2026',
-    organization: 'National Recognition',
-    description: 'Named among the Influential Women of 2026 for her contributions to education, the arts, and empowering others through performance and communication.',
+    organization: 'Influential Women',
   },
   {
-    year: '2025',
-    award: 'Achievement Award — Outstanding Success & Inspiring Vision',
+    year: '2023',
+    award: 'Golden Lamp Award',
     organization: 'Northern Essex Community College',
-    description: 'Institutional recognition for sustained excellence, visionary leadership, and inspiring impact on the NECC community.',
   },
   {
-    year: '2022–23',
-    award: 'Golden Lamp Award of Teaching Excellence',
-    organization: 'Northern Essex Community College',
-    description: 'The highest teaching honor awarded by NECC, recognizing transformative classroom leadership and dedication to student success.',
-  },
-  {
-    year: '2017',
-    award: 'Stephen Sondheim Teaching Award Nominee',
-    organization: 'Kennedy Center — American College Theatre Festival',
-    description: 'A national nomination honoring outstanding teaching in collegiate theatre — one of the most competitive and prestigious nominations in the field.',
-  },
-  {
-    year: '2015–17',
-    award: 'Distinguished Teaching Award Nominee',
+    year: '2019',
+    award: 'Distinguished Teaching Award',
     organization: 'Salem State University',
-    description: 'Nominated for the university\'s highest teaching honor, recognizing excellence in instruction, mentorship, and curriculum innovation.',
   },
   {
-    year: '2017',
-    award: 'Outstanding First Year Advocate Award Nominee',
+    year: '2018',
+    award: 'National Society of Leadership and Success Award',
     organization: 'Salem State University',
-    description: 'Recognized for exceptional support and advocacy on behalf of first-year students during a critical transition in their academic lives.',
   },
-];
-
-const performanceRecognition = [
   {
     year: '2017',
-    award: 'Best Actress in a Play',
+    award: 'Winner — Best Actress in a Play',
     organization: 'Broadway World',
-    description: 'Winner of the Broadway World regional award for Best Actress in a Play — recognizing an outstanding professional performance.',
+  },
+  {
+    year: '2017',
+    award: 'Stephen Sondheim Teaching Award',
+    organization: 'Kennedy Center',
+  },
+  {
+    year: '2017',
+    award: 'Outstanding First Year Advocate Award',
+    organization: 'Salem State University',
   },
   {
     year: '2017',
     award: 'IRNE Award Nominee — Best Actress in a Play',
-    organization: 'Independent Reviewers of New England (Gloucester Stage)',
-    description: 'Nominated by the Independent Reviewers of New England for Best Actress in a Play, one of the region\'s most respected theatre honors.',
+    organization: 'Independent Reviewers of New England',
   },
 ];
 
-const directingRecognition = [
+const directingAwards = [
   {
-    title: 'Hurricane Diane',
-    subtitle: '13 National Awards',
-    year: '2023–2024',
-    description: 'One of the most recognized collegiate productions of the season. Received 13 national awards through the Kennedy Center ACTF process, including recognition for Outstanding Achievement in Ensemble. Invited to multiple ACTF festivals across the country.',
+    year: '2025',
+    production: 'The Vagina Monologues',
+    venue: 'NECC',
+    honor: '7 National Awards from ACTF',
   },
   {
-    title: 'The Vagina Monologues',
-    subtitle: '7 National Awards',
-    year: '2025–2026',
-    description: 'Eve Ensler\'s landmark work earned 7 national awards under Brianne\'s direction, with productions invited to both NECC and Sierra University for the Kennedy Center American College Theatre Festival.',
+    year: '2023',
+    production: 'Hurricane Diane',
+    venue: 'NECC',
+    honor: '13 National Awards from KCACTF',
+  },
+  {
+    year: '2022',
+    production: 'Lighten Up',
+    venue: 'NECC',
+    honor: 'Outstanding Achievement in Ensemble',
+  },
+  {
+    year: '2021',
+    production: 'Tiny Beautiful Things',
+    venue: 'NECC',
+    honor: 'Outstanding Achievement in Ensemble',
+  },
+  {
+    year: '2019',
+    production: 'Five Women Wearing the Same Dress',
+    venue: 'NECC',
+    honor: 'Outstanding Achievement in Ensemble',
+  },
+  {
+    year: '2019',
+    production: 'Good People',
+    venue: 'NECC',
+    honor: 'Outstanding Achievement in Ensemble',
+  },
+  {
+    year: '2019',
+    production: 'Uncommon Women and Others',
+    venue: 'SSU',
+    honor: 'Outstanding Achievement in Ensemble',
+  },
+  {
+    year: '2018',
+    production: 'Stupid Fucking Bird',
+    venue: 'NECC',
+    honor: 'Nationally Recognized — Outstanding Achievement in Ensemble',
+  },
+  {
+    year: '2017',
+    production: 'Clybourne Park',
+    venue: 'SSU',
+    honor: 'Outstanding Achievement in Ensemble',
   },
 ];
 
@@ -131,26 +160,25 @@ export default function Recognition() {
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-semibold mb-4">Professional Recognition</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Teaching awards, advocacy honors, and institutional recognition spanning more than a decade.
+              Teaching awards, performing arts honors, and advocacy recognition spanning more than a decade.
             </p>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-5">
             {professionalAwards.map((item, index) => (
               <div
                 key={index}
                 className="bg-card border border-border rounded-sm overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="grid md:grid-cols-4 gap-0">
-                  <div className="bg-gradient-to-br from-muted to-accent p-8 flex items-center justify-center border-r border-border">
+                  <div className="bg-gradient-to-br from-muted to-accent p-6 flex items-center justify-center border-r border-border">
                     <div className="text-center">
-                      <Trophy className="w-10 h-10 mx-auto mb-3 text-foreground/60" />
-                      <p className="text-2xl font-serif font-bold text-foreground">{item.year}</p>
+                      <Trophy className="w-8 h-8 mx-auto mb-2 text-foreground/60" />
+                      <p className="text-xl font-serif font-bold text-foreground">{item.year}</p>
                     </div>
                   </div>
-                  <div className="md:col-span-3 p-8">
-                    <h3 className="font-serif text-2xl font-semibold mb-2">{item.award}</h3>
-                    <p className="text-muted-foreground font-medium mb-4">{item.organization}</p>
-                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  <div className="md:col-span-3 p-6">
+                    <h3 className="font-serif text-xl font-semibold mb-1">{item.award}</h3>
+                    <p className="text-muted-foreground font-medium">{item.organization}</p>
                   </div>
                 </div>
               </div>
@@ -188,67 +216,51 @@ export default function Recognition() {
 
       {/* Directing Recognition */}
       <FadeInSection>
-        <section className="py-24">
-          <div className="max-w-6xl mx-auto px-6 lg:px-12">
-            <div className="text-center mb-16">
-              <Star className="w-12 h-12 mx-auto mb-6 text-foreground" />
-              <h2 className="font-serif text-4xl font-semibold mb-4">Directing Recognition</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Productions that earned national attention at the Kennedy Center American College Theatre Festival.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {directingRecognition.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-background border border-border p-10 rounded-sm"
-                >
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <h3 className="font-serif text-2xl font-semibold">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm mt-1">{item.year}</p>
-                    </div>
-                    <div className="bg-foreground text-background text-sm font-semibold px-4 py-2 rounded-full whitespace-nowrap ml-4">
-                      {item.subtitle}
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              ))}
-            </div>
+        <section className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
+          <div className="text-center mb-16">
+            <Star className="w-12 h-12 mx-auto mb-6 text-foreground" />
+            <h2 className="font-serif text-4xl font-semibold mb-4">Directing Recognition</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Productions recognized by the Kennedy Center American College Theatre Festival and regional adjudicators.
+            </p>
           </div>
-        </section>
-      </FadeInSection>
 
-      {/* Award Display Photo */}
-      <FadeInSection>
-        <section className="bg-muted/30 py-24">
-          <div className="max-w-6xl mx-auto px-6 lg:px-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="aspect-[4/3] rounded-sm overflow-hidden border border-border shadow-lg">
-                <img
-                  src={brianneAwardDisplay}
-                  alt="Display of awards and recognition at a Brianne Beatrice recognition event"
-                  className="w-full h-full object-cover object-center"
-                  loading="lazy"
-                />
+          {/* Top 2 flagship honors */}
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            {directingAwards.slice(0, 2).map((item, index) => (
+              <div
+                key={index}
+                className="bg-foreground text-background p-10 rounded-sm"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <p className="text-background/60 text-sm mb-1">{item.year} · {item.venue}</p>
+                    <h3 className="font-serif text-2xl font-semibold">{item.production}</h3>
+                  </div>
+                </div>
+                <p className="text-background/80 font-medium text-lg">{item.honor}</p>
               </div>
-              <div>
-                <h2 className="font-serif text-4xl font-semibold mb-6">Performance Recognition</h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  As a performer, Brianne has earned recognition from the region's most respected theatre organizations.
-                </p>
-                <div className="space-y-6">
-                  {performanceRecognition.map((item, index) => (
-                    <div key={index} className="border-l-4 border-foreground pl-6">
-                      <p className="text-sm text-muted-foreground mb-1">{item.year} · {item.organization}</p>
-                      <h3 className="font-serif text-xl font-semibold mb-2">{item.award}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                    </div>
-                  ))}
+            ))}
+          </div>
+
+          {/* Remaining ensemble awards */}
+          <div className="space-y-4">
+            {directingAwards.slice(2).map((item, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-sm p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:shadow-md transition-shadow"
+              >
+                <div>
+                  <p className="text-sm text-muted-foreground mb-1">{item.year} · {item.venue}</p>
+                  <h3 className="font-serif text-lg font-semibold">{item.production}</h3>
+                </div>
+                <div className="flex-shrink-0">
+                  <span className="inline-block border border-border text-sm font-medium px-4 py-1.5 rounded-full text-foreground/80">
+                    {item.honor}
+                  </span>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </section>
       </FadeInSection>

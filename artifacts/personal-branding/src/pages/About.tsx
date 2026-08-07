@@ -1,12 +1,12 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
 import { Heart, Lightbulb, Target, Mic } from 'lucide-react';
-import brianneEducatorCommunity from '@/assets/brianne-educator-community.jpg';
+import aboutHeadshot from '@/assets/about-headshot.jpg';
 
 const timeline = [
   { year: '2026', event: 'National Alliance Acting Teacher of Excellence Award — National Alliance of Acting Teachers, Region I' },
   { year: '2024', event: 'Hurricane Diane receives 13 national awards; KCACTF Citizens Award for Distinguished Directing' },
-  { year: '2022–23', event: 'Golden Lamp Award of Teaching Excellence — Northern Essex Community College' },
+  { year: '2023', event: 'Golden Lamp Award of Teaching Excellence — Northern Essex Community College' },
   { year: '2017', event: 'Winner, Best Actress in a Play — Broadway World; Stephen Sondheim Teaching Award Nominee — Kennedy Center' },
   { year: '2010', event: 'Joined Northern Essex Community College as Associate Professor and Theater Coordinator' },
   { year: '2008', event: 'Head Meisner Acting for Film Instructor, Actor\'s Workshop Boston' },
@@ -56,9 +56,9 @@ export default function About() {
             <div className="relative">
               <div className="aspect-[3/4] bg-gradient-to-br from-accent via-muted to-card rounded-sm overflow-hidden border border-border shadow-lg">
                 <img
-                  src={brianneEducatorCommunity}
-                  alt="Brianne Beatrice in community with fellow educators"
-                  className="w-full h-full object-cover object-center"
+                  src={aboutHeadshot}
+                  alt="Brianne Beatrice professional portrait"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>

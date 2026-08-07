@@ -10,6 +10,7 @@ import About from '@/pages/About';
 import Speaking from '@/pages/Speaking';
 import Teaching from '@/pages/Teaching';
 import Directing from '@/pages/Directing';
+import Acting from '@/pages/Acting';
 import Media from '@/pages/Media';
 import Recognition from '@/pages/Recognition';
 import Contact from '@/pages/Contact';
@@ -27,6 +28,7 @@ function Router() {
           <Route path="/speaking" component={Speaking} />
           <Route path="/teaching" component={Teaching} />
           <Route path="/directing" component={Directing} />
+          <Route path="/acting" component={Acting} />
           <Route path="/media" component={Media} />
           <Route path="/recognition" component={Recognition} />
           <Route path="/contact" component={Contact} />
