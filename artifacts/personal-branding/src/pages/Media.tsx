@@ -65,8 +65,8 @@ export default function Media() {
               <div className="bg-card border border-border p-4 rounded-sm">
                 <div className="aspect-square rounded-sm overflow-hidden">
                   <img
-                    src="https://img.youtube.com/vi/eQ6xmxy0lIg/hqdefault.jpg"
-                    alt="Women in Business Podcast — Brianne Beatrice: The Art of Public Speaking"
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/99/36/10/993610fd-63c7-4b14-74a5-6a868b1c5541/mza_8581553668876945766.jpg/600x600bb.jpg"
+                    alt="Women in Business Podcast artwork"
                     className="w-full h-full object-cover"
                     loading="lazy"
                     onError={(e) => {

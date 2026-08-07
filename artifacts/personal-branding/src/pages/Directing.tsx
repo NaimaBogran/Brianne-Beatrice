@@ -17,18 +17,18 @@ const featuredProductions = [
   {
     title: 'The Vagina Monologues',
     playwright: 'Eve Ensler',
-    year: 'January 2026',
-    venue: 'Sierra University',
+    year: 'May 2025',
+    venue: 'Northern Essex Community College',
     badge: 'ACTF Invited Production',
-    description: 'Invited to the Kennedy Center American College Theatre Festival. This production received 7 national awards for its honesty, power, and ensemble performance.',
+    description: 'First produced at NECC in May 2025, this production received 7 national awards and was invited to the ACTF Regional Festival — recognizing the depth of storytelling and ensemble craft Brianne brought to this defining work.',
   },
   {
     title: 'The Vagina Monologues',
     playwright: 'Eve Ensler',
-    year: 'May 2025',
-    venue: 'Northern Essex Community College',
-    badge: 'ACTF Invited Production',
-    description: 'A second ACTF invitation for this production — recognition of the depth of storytelling and ensemble craft Brianne brought to this defining work.',
+    year: 'January 2026',
+    venue: 'ACTF Regional Festival',
+    badge: 'ACTF Festival',
+    description: 'Invited to perform at the ACTF Regional Festival based on the strength of the original NECC production — a second stage for a production that had already earned national recognition.',
   },
   {
     title: 'Hurricane Diane',
@@ -44,7 +44,7 @@ const featuredProductions = [
     year: 'January 2024',
     venue: 'CCSU',
     badge: 'ACTF Invited Production',
-    description: 'A second life for this acclaimed production — invited to CCSU for the Kennedy Center American College Theatre Festival.',
+    description: 'A second life for this acclaimed production — invited to CCSU for the ACTF Regional Festival, continuing its national recognition.',
   },
   {
     title: 'Hurricane Diane',
@@ -58,7 +58,7 @@ const featuredProductions = [
 
 const productionHistory = [
   { year: 'May 2026', title: 'Angels in America: Part I', venue: 'Northern Essex Community College' },
-  { year: 'January 2026', title: 'The Vagina Monologues', venue: 'Sierra University — ACTF Invited Production' },
+  { year: 'January 2026', title: 'The Vagina Monologues', venue: 'ACTF Regional Festival' },
   { year: 'October 2025', title: 'All in the Timing', venue: 'Northern Essex Community College' },
   { year: 'May 2025', title: 'The Vagina Monologues', venue: 'Northern Essex Community College — ACTF Invited Production' },
   { year: 'November 2024', title: 'A Night Of Comedy', venue: 'Northern Essex Community College' },
@@ -99,34 +99,40 @@ export default function Directing() {
 
   return (
     <PageTransition>
-      {/* Hero */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={brianneStageDirecting}
-            alt="Brianne Beatrice on stage at Firehouse Center for the Arts"
-            className="w-full h-full object-cover object-center opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
-        </div>
-        <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center relative z-10">
+      {/* Hero — text only, clean */}
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-muted/30 to-background">
+        <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
           <Theater className="w-16 h-16 mx-auto mb-6 text-foreground" />
           <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Directing</p>
           <h1 className="font-serif text-5xl lg:text-6xl font-bold mb-6">
             Theatre That Moves, Challenges, and Connects
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            With productions invited to the Kennedy Center American College Theatre Festival, 13 national awards for a single production, and a directing career spanning more than 15 years — Brianne Beatrice brings an extraordinary standard to every project.
-          </p>
-          <p className="text-sm text-muted-foreground/60 mt-6 italic">
-            Brianne Beatrice on stage at Firehouse Center for the Arts
+            With productions invited to the ACTF Regional Festival, 13 national awards for a single production, and a directing career spanning more than 15 years — Brianne Beatrice brings an extraordinary standard to every project.
           </p>
         </div>
       </section>
 
+      {/* Firehouse Image — full and clear */}
+      <FadeInSection>
+        <section className="max-w-5xl mx-auto px-6 lg:px-12 pb-12">
+          <figure>
+            <img
+              src={brianneStageDirecting}
+              alt="Brianne Beatrice on stage at Firehouse Center for the Arts"
+              className="w-full h-auto rounded-sm border border-border shadow-lg"
+              style={{ display: 'block' }}
+            />
+            <figcaption className="text-sm text-muted-foreground/70 italic text-center mt-3">
+              Brianne Beatrice on stage at Firehouse Center for the Arts
+            </figcaption>
+          </figure>
+        </section>
+      </FadeInSection>
+
       {/* Directing Philosophy */}
       <FadeInSection>
-        <section className="max-w-4xl mx-auto px-6 lg:px-12 py-24">
+        <section className="max-w-4xl mx-auto px-6 lg:px-12 py-20">
           <h2 className="font-serif text-4xl font-semibold mb-8 text-center">Directing Philosophy</h2>
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg leading-relaxed">

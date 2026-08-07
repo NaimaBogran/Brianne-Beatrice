@@ -18,20 +18,17 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
-function BrianneLogo({ mobile = false }: { mobile?: boolean }) {
-  if (mobile) {
-    return (
-      <span className="font-serif text-xl font-semibold text-foreground tracking-tight">
-        Brianne Beatrice
-      </span>
-    );
-  }
+function ScriptLogo({ size = 'desktop' }: { size?: 'desktop' | 'mobile' }) {
+  const scriptSize = size === 'desktop' ? '2.1rem' : '1.55rem';
+  const subtitleSize = size === 'desktop' ? '0.52rem' : '0.44rem';
+  const dashWidth = size === 'desktop' ? '16px' : '10px';
+
   return (
     <div className="flex flex-col leading-none">
       <span
         style={{
           fontFamily: "'Great Vibes', cursive",
-          fontSize: '2.1rem',
+          fontSize: scriptSize,
           lineHeight: '1.1',
           color: 'hsl(var(--foreground))',
           letterSpacing: '0.01em',
@@ -39,13 +36,13 @@ function BrianneLogo({ mobile = false }: { mobile?: boolean }) {
       >
         Brianne Beatrice
       </span>
-      <div className="flex items-center gap-2 mt-0.5">
-        <div style={{ height: '1px', width: '16px', backgroundColor: GOLD, flexShrink: 0 }} />
+      <div className="flex items-center gap-1.5 mt-0.5">
+        <div style={{ height: '1px', width: dashWidth, backgroundColor: GOLD, flexShrink: 0 }} />
         <span
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: '0.52rem',
-            letterSpacing: '0.14em',
+            fontSize: subtitleSize,
+            letterSpacing: '0.13em',
             fontWeight: 600,
             textTransform: 'uppercase',
             color: GOLD,
@@ -69,11 +66,13 @@ export function Navigation() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center group transition-opacity hover:opacity-75">
+              {/* Desktop */}
               <span className="hidden md:flex">
-                <BrianneLogo />
+                <ScriptLogo size="desktop" />
               </span>
+              {/* Mobile — smaller version of the same script logo */}
               <span className="md:hidden">
-                <BrianneLogo mobile />
+                <ScriptLogo size="mobile" />
               </span>
             </Link>
 

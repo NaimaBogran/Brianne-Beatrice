@@ -4,8 +4,6 @@ import { Theater, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import lastSchwartz1 from '@/assets/last-schwartz-1.jpg';
 import lastSchwartz2 from '@/assets/last-schwartz-2.jpg';
-import lastSchwartz3 from '@/assets/last-schwartz-3.jpg';
-import lastSchwartz4 from '@/assets/last-schwartz-4.jpg';
 import notConstantinople1 from '@/assets/not-constantinople-1.jpg';
 import notConstantinople2 from '@/assets/not-constantinople-2.jpg';
 import northShoreFish from '@/assets/north-shore-fish.jpg';
@@ -13,40 +11,36 @@ import kimberlyAkimbo from '@/assets/kimberly-akimbo.jpg';
 import mrBurns from '@/assets/mr-burns.jpg';
 import brianneGroup from '@/assets/brianne-large-group.jpg';
 
+// Each production has a primary image (displayed full-width, no crop) and optional secondary images
 const productions = [
   {
     title: 'The Last Schwartz',
     company: 'Gloucester Stage Company',
-    images: [lastSchwartz1, lastSchwartz2, lastSchwartz3, lastSchwartz4],
-    primaryImage: lastSchwartz1,
+    images: [lastSchwartz2, lastSchwartz1], // largest files first — best quality
     altText: 'Scene from The Last Schwartz at Gloucester Stage Company',
   },
   {
     title: 'Not Constantinople',
-    company: 'Martha\'s Vineyard Playhouse',
+    company: "Martha's Vineyard Playhouse",
     images: [notConstantinople1, notConstantinople2],
-    primaryImage: notConstantinople1,
     altText: 'Scene from Not Constantinople at Martha\'s Vineyard Playhouse',
   },
   {
     title: 'North Shore Fish',
     company: 'Gloucester Stage Company',
     images: [northShoreFish],
-    primaryImage: northShoreFish,
     altText: 'Scene from North Shore Fish at Gloucester Stage Company',
   },
   {
     title: 'Kimberly Akimbo',
     company: 'New Century Theater',
     images: [kimberlyAkimbo],
-    primaryImage: kimberlyAkimbo,
     altText: 'Scene from Kimberly Akimbo at New Century Theater',
   },
   {
     title: 'Mr. Burns, a Post-Electric Play',
     company: 'New Century Theater',
     images: [mrBurns],
-    primaryImage: mrBurns,
     altText: 'Scene from Mr. Burns, a Post-Electric Play at New Century Theater',
   },
 ];
@@ -70,7 +64,7 @@ export default function Acting() {
 
       {/* Selected Productions */}
       <FadeInSection>
-        <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+        <section className="max-w-6xl mx-auto px-6 lg:px-12 py-24">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-semibold mb-4">Selected Productions</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -78,66 +72,53 @@ export default function Acting() {
             </p>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-24">
             {productions.map((production, index) => {
               const isEven = index % 2 === 0;
               return (
                 <div
                   key={index}
-                  className={`grid lg:grid-cols-2 gap-12 items-center ${isEven ? '' : 'lg:grid-flow-dense'}`}
+                  className={`grid lg:grid-cols-2 gap-12 items-start ${isEven ? '' : 'lg:grid-flow-dense'}`}
                 >
                   {/* Image area */}
                   <div className={`${isEven ? '' : 'lg:col-start-2'}`}>
                     {production.images.length > 1 ? (
-                      <div className="grid grid-cols-2 gap-3">
-                        <div className="col-span-2 aspect-[16/9] rounded-sm overflow-hidden border border-border shadow-lg">
-                          <img
-                            src={production.primaryImage}
-                            alt={production.altText}
-                            className="w-full h-full object-cover object-center"
-                            loading="lazy"
-                          />
-                        </div>
-                        {production.images.slice(1, 3).map((img, i) => (
-                          <div key={i} className="aspect-[4/3] rounded-sm overflow-hidden border border-border">
-                            <img
-                              src={img}
-                              alt={`${production.title} — production photo ${i + 2}`}
-                              className="w-full h-full object-cover object-center"
-                              loading="lazy"
-                            />
-                          </div>
-                        ))}
-                        {production.images[3] && (
-                          <div className="aspect-[4/3] rounded-sm overflow-hidden border border-border">
-                            <img
-                              src={production.images[3]}
-                              alt={`${production.title} — production photo 4`}
-                              className="w-full h-full object-cover object-center"
-                              loading="lazy"
-                            />
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <div className="aspect-[4/3] rounded-sm overflow-hidden border border-border shadow-lg">
+                      <div className="space-y-3">
+                        {/* Primary image — full width, natural aspect ratio */}
                         <img
-                          src={production.primaryImage}
+                          src={production.images[0]}
                           alt={production.altText}
-                          className="w-full h-full object-cover object-center"
+                          className="w-full h-auto rounded-sm border border-border shadow-lg"
+                          style={{ display: 'block' }}
+                          loading="lazy"
+                        />
+                        {/* Secondary image alongside */}
+                        <img
+                          src={production.images[1]}
+                          alt={`${production.title} — production photo`}
+                          className="w-full h-auto rounded-sm border border-border shadow-sm"
+                          style={{ display: 'block' }}
                           loading="lazy"
                         />
                       </div>
+                    ) : (
+                      <img
+                        src={production.images[0]}
+                        alt={production.altText}
+                        className="w-full h-auto rounded-sm border border-border shadow-lg"
+                        style={{ display: 'block' }}
+                        loading="lazy"
+                      />
                     )}
                   </div>
 
                   {/* Text area */}
-                  <div className={`${isEven ? '' : 'lg:col-start-1 lg:row-start-1'}`}>
+                  <div className={`${isEven ? '' : 'lg:col-start-1 lg:row-start-1'} lg:pt-6`}>
                     <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">{production.company}</p>
                     <h3 className="font-serif text-3xl lg:text-4xl font-semibold mb-6 leading-tight">
                       {production.title}
                     </h3>
-                    <div className="w-12 h-0.5 bg-foreground/30 mb-6" />
+                    <div className="w-12 h-px mb-6" style={{ backgroundColor: '#C6A15B' }} />
                     <p className="text-muted-foreground text-lg leading-relaxed">
                       A professional production at {production.company}.
                     </p>
@@ -173,11 +154,12 @@ export default function Acting() {
                   <ArrowRight size={16} />
                 </Link>
               </div>
-              <div className="aspect-[4/3] rounded-sm overflow-hidden border border-border shadow-lg">
+              <div className="rounded-sm overflow-hidden border border-border shadow-lg">
                 <img
                   src={brianneGroup}
                   alt="Brianne Beatrice leading an acting workshop at Region 1 American College Theater Festival"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-auto"
+                  style={{ display: 'block' }}
                   loading="lazy"
                 />
               </div>
