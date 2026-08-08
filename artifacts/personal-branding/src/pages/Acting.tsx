@@ -48,6 +48,7 @@ const productions = [
     images: [mrBurns],
     altText: 'Scene from Mr. Burns, a Post-Electric Play at New Century Theater',
     cropTop: true,
+    cropAspectRatio: '1/1',
   },
 ];
 
@@ -92,7 +93,7 @@ export default function Acting() {
                       <div className="space-y-3">
                         {/* Primary image */}
                         {production.cropTop ? (
-                          <div className="w-full overflow-hidden rounded-sm border border-border shadow-lg" style={{ aspectRatio: '4/3' }}>
+                          <div className="w-full overflow-hidden rounded-sm border border-border shadow-lg" style={{ aspectRatio: production.cropAspectRatio ?? '4/3' }}>
                             <img
                               src={production.images[0]}
                               alt={production.altText}
@@ -119,7 +120,7 @@ export default function Acting() {
                         />
                       </div>
                     ) : production.cropTop ? (
-                      <div className="w-full overflow-hidden rounded-sm border border-border shadow-lg" style={{ aspectRatio: '4/3' }}>
+                      <div className="w-full overflow-hidden rounded-sm border border-border shadow-lg" style={{ aspectRatio: production.cropAspectRatio ?? '4/3' }}>
                         <img
                           src={production.images[0]}
                           alt={production.altText}
