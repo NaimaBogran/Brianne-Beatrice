@@ -22,6 +22,7 @@ const productions = [
   },
   {
     title: 'Not Constantinople',
+    playwright: 'Arnie Reisman',
     playwright: null, // playwright unverified — not listed to avoid inventing content
     company: "Martha's Vineyard Playhouse",
     images: [notConstantinople1, notConstantinople2],
