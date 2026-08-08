@@ -2,7 +2,6 @@ import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
 import { Theater, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
-import lastSchwartz1 from '@/assets/last-schwartz-1.jpg';
 import lastSchwartz2 from '@/assets/last-schwartz-2.jpg';
 import notConstantinople1 from '@/assets/not-constantinople-1.jpg';
 import notConstantinople2 from '@/assets/not-constantinople-2.jpg';
@@ -17,13 +16,12 @@ const productions = [
     title: 'The Last Schwartz',
     playwright: 'Deborah Zoe Laufer',
     company: 'Gloucester Stage Company',
-    images: [lastSchwartz2, lastSchwartz1],
+    images: [lastSchwartz2],
     altText: 'Scene from The Last Schwartz at Gloucester Stage Company',
   },
   {
     title: 'Not Constantinople',
     playwright: 'Arnie Reisman',
-    playwright: null, // playwright unverified — not listed to avoid inventing content
     company: "Martha's Vineyard Playhouse",
     images: [notConstantinople1, notConstantinople2],
     altText: "Scene from Not Constantinople at Martha's Vineyard Playhouse",
