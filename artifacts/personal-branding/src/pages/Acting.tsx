@@ -15,30 +15,35 @@ import brianneGroup from '@/assets/brianne-large-group.jpg';
 const productions = [
   {
     title: 'The Last Schwartz',
+    playwright: 'Deborah Zoe Laufer',
     company: 'Gloucester Stage Company',
-    images: [lastSchwartz2, lastSchwartz1], // largest files first — best quality
+    images: [lastSchwartz2, lastSchwartz1],
     altText: 'Scene from The Last Schwartz at Gloucester Stage Company',
   },
   {
     title: 'Not Constantinople',
+    playwright: null, // playwright unverified — not listed to avoid inventing content
     company: "Martha's Vineyard Playhouse",
     images: [notConstantinople1, notConstantinople2],
-    altText: 'Scene from Not Constantinople at Martha\'s Vineyard Playhouse',
+    altText: "Scene from Not Constantinople at Martha's Vineyard Playhouse",
   },
   {
     title: 'North Shore Fish',
+    playwright: 'Israel Horovitz',
     company: 'Gloucester Stage Company',
     images: [northShoreFish],
     altText: 'Scene from North Shore Fish at Gloucester Stage Company',
   },
   {
     title: 'Kimberly Akimbo',
+    playwright: 'David Lindsay-Abaire',
     company: 'New Century Theater',
     images: [kimberlyAkimbo],
     altText: 'Scene from Kimberly Akimbo at New Century Theater',
   },
   {
     title: 'Mr. Burns, a Post-Electric Play',
+    playwright: 'Anne Washburn',
     company: 'New Century Theater',
     images: [mrBurns],
     altText: 'Scene from Mr. Burns, a Post-Electric Play at New Century Theater',
@@ -115,12 +120,15 @@ export default function Acting() {
                   {/* Text area */}
                   <div className={`${isEven ? '' : 'lg:col-start-1 lg:row-start-1'} lg:pt-6`}>
                     <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">{production.company}</p>
-                    <h3 className="font-serif text-3xl lg:text-4xl font-semibold mb-6 leading-tight">
+                    <h3 className="font-serif text-3xl lg:text-4xl font-semibold mb-2 leading-tight">
                       {production.title}
                     </h3>
+                    {production.playwright && (
+                      <p className="text-muted-foreground text-base mb-6">by {production.playwright}</p>
+                    )}
                     <div className="w-12 h-px mb-6" style={{ backgroundColor: '#C6A15B' }} />
                     <p className="text-muted-foreground text-lg leading-relaxed">
-                      A professional production at {production.company}.
+                      An AEA production at {production.company}.
                     </p>
                   </div>
                 </div>
