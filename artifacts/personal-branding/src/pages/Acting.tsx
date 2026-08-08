@@ -25,6 +25,7 @@ const productions = [
     company: "Martha's Vineyard Playhouse",
     images: [notConstantinople1, notConstantinople2],
     altText: "Scene from Not Constantinople at Martha's Vineyard Playhouse",
+    cropTop: true,
   },
   {
     title: 'North Shore Fish',
@@ -46,6 +47,7 @@ const productions = [
     company: 'New Century Theater',
     images: [mrBurns],
     altText: 'Scene from Mr. Burns, a Post-Electric Play at New Century Theater',
+    cropTop: true,
   },
 ];
 
@@ -88,20 +90,40 @@ export default function Acting() {
                   <div className={`${isEven ? '' : 'lg:col-start-2'}`}>
                     {production.images.length > 1 ? (
                       <div className="space-y-3">
-                        {/* Primary image — full width, natural aspect ratio */}
-                        <img
-                          src={production.images[0]}
-                          alt={production.altText}
-                          className="w-full h-auto rounded-sm border border-border shadow-lg"
-                          style={{ display: 'block' }}
-                          loading="lazy"
-                        />
-                        {/* Secondary image alongside */}
+                        {/* Primary image */}
+                        {production.cropTop ? (
+                          <div className="w-full overflow-hidden rounded-sm border border-border shadow-lg" style={{ aspectRatio: '4/3' }}>
+                            <img
+                              src={production.images[0]}
+                              alt={production.altText}
+                              style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'bottom' }}
+                              loading="lazy"
+                            />
+                          </div>
+                        ) : (
+                          <img
+                            src={production.images[0]}
+                            alt={production.altText}
+                            className="w-full h-auto rounded-sm border border-border shadow-lg"
+                            style={{ display: 'block' }}
+                            loading="lazy"
+                          />
+                        )}
+                        {/* Secondary image */}
                         <img
                           src={production.images[1]}
                           alt={`${production.title} — production photo`}
                           className="w-full h-auto rounded-sm border border-border shadow-sm"
                           style={{ display: 'block' }}
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : production.cropTop ? (
+                      <div className="w-full overflow-hidden rounded-sm border border-border shadow-lg" style={{ aspectRatio: '4/3' }}>
+                        <img
+                          src={production.images[0]}
+                          alt={production.altText}
+                          style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'bottom' }}
                           loading="lazy"
                         />
                       </div>
