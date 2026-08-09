@@ -1,12 +1,6 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { BookOpen, Users, Award, Download, TrendingUp, Quote } from 'lucide-react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+import { BookOpen, Users, Award, Download, TrendingUp } from 'lucide-react';
 import brianneGroup from '@/assets/brianne-large-group.jpg';
 
 const courseCategories = [
@@ -15,7 +9,7 @@ const courseCategories = [
     courses: [
       { title: 'Acting Theory and Practice', description: 'A performance-based exploration of vocal, physical, and psychological technique through exercises, scenes, and monologues. Students develop the tools to take creative risks and work truthfully with scene partners.' },
       { title: 'Acting Scene Study', description: 'In-depth scene and monologue work emphasizing character development and script analysis. Students overcome fears, build confidence in public, and develop the ability to make bold creative choices.' },
-      { title: 'Improvisation, Voice & Movement', description: 'The actor\'s instruments are the voice and the body. This course isolates these areas through mime, rudimentary improvisation, and physical awareness — culminating in performed improvised scenes.' },
+      { title: 'Improvisation, Voice & Movement', description: "The actor's instruments are the voice and the body. This course isolates these areas through mime, rudimentary improvisation, and physical awareness — culminating in performed improvised scenes." },
       { title: 'Audition Preparation', description: 'Contemporary, classical, and on-camera audition techniques including Meisner and Rotenberg approaches. Covers the business of acting: headshots, resumes, casting, and interview skills.' },
     ],
   },
@@ -33,7 +27,7 @@ const courseCategories = [
       { title: 'Introduction to Theatre', description: 'A broad introduction to the theatrical world — playwright, producer, director, actor, designer, and technician — through reading, discussing, and attending performances.' },
       { title: 'Shakespeare Literature', description: 'Close reading and analysis of selected Shakespeare plays, with attention to language, performance, and cultural context. Students learn to read plays comfortably and write about them with insight.' },
       { title: 'Script Analysis', description: 'A methodology for breaking down a dramatic text: identifying action, objectives, obstacles, and relationships. An essential foundation for both actors and directors.' },
-      { title: 'Directing', description: 'Students direct a one-act play performed before a live audience. Each student selects a script, conducts research and analysis, blocks the production, casts actors, and completes a full director\'s book.' },
+      { title: 'Directing', description: "Students direct a one-act play performed before a live audience. Each student selects a script, conducts research and analysis, blocks the production, casts actors, and completes a full director's book." },
     ],
   },
 ];
@@ -47,41 +41,18 @@ const accomplishments = [
   'Distinguished Teaching Award — Salem State University (2019)',
 ];
 
-const philosophyPrinciples = [
+const philosophyPillars = [
   {
-    question: 'What drives my teaching?',
-    answer:
-      'I believe education is about transformation, not information. My goal is to create a space where students feel safe to take risks, make mistakes, and discover their authentic voice. Many of my students are first-generation college attendees, and I take seriously the responsibility of helping them see themselves as capable, articulate, confident people — both on stage and in life.',
+    title: 'Authenticity',
+    body: `Students learn to bring themselves truthfully to the work — not playing an idea of a character, but drawing from their own lived experience. As Meisner said, "If it's not personal, it's no good." The words on the page are lifeless until the actor gives them meaning from within.`,
   },
   {
-    question: 'How do I approach the classroom?',
-    answer:
-      'Every class is a performance and a conversation. I blend technique, discussion, experiential activities, and real-world application. Students learn by doing — whether that\'s delivering speeches, analyzing performances, directing scenes, or improvising together. I meet students where they are and challenge them to go further than they thought possible.',
+    title: 'Presence & Connection',
+    body: 'Moment-to-moment listening and responding — what Meisner called the bedrock of acting — is central to both performance and communication. Being genuinely present and connected to others is a skill that transforms work on stage and in life.',
   },
   {
-    question: 'What do students gain?',
-    answer:
-      'Beyond content knowledge, students develop confidence, critical thinking, empathy, and the ability to communicate across difference. They leave with skills that matter in every aspect of life — in the boardroom, on a stage, in a job interview, or in an everyday conversation. The skills of the stage are the skills of a full life.',
-  },
-];
-
-// Verified testimonials only
-const studentTestimonials = [
-  {
-    quote: 'These courses had helped me feel young again with self-confidence and pride for working through difficulties of forgetfulness, fear of public speaking or belonging.',
-    attribution: 'NECC Student',
-  },
-  {
-    quote: "It's such a privilege to have award winning [NECC Theater] be so accessible… Not only do we get to learn from the best, but I've also met an amazing community who inspires me to do what I love!",
-    attribution: 'NECC Student',
-  },
-  {
-    quote: "I can't even begin to explain how much my confidence in myself has grown since taking [her] classes [and] joining the NECC theater family. I've personally met some of the greatest people through [her] courses.",
-    attribution: 'NECC Student',
-  },
-  {
-    quote: "It's my honor to say that I was able to be part of NECC theater. The classes are so much more than I could've ever imagined!",
-    attribution: 'NECC Student',
+    title: 'Learning by Doing',
+    body: 'Talking, reading, or studying can never replace the value of physical experience. Brianne emphasizes exercises, scenes, and practical application. The classroom experience should live in the whole body — not only in the thinking center.',
   },
 ];
 
@@ -104,24 +75,43 @@ export default function Teaching() {
 
       {/* Teaching Philosophy */}
       <FadeInSection>
-        <section className="max-w-4xl mx-auto px-6 lg:px-12 py-24">
-          <h2 className="font-serif text-4xl font-semibold mb-12 text-center">Teaching Philosophy</h2>
-          <Accordion type="single" collapsible className="space-y-4">
-            {philosophyPrinciples.map((principle, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-card border border-border rounded-sm px-6"
-              >
-                <AccordionTrigger className="text-left font-serif text-xl font-semibold hover:no-underline">
-                  {principle.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-lg leading-relaxed pt-4">
-                  {principle.answer}
-                </AccordionContent>
-              </AccordionItem>
+        <section className="max-w-5xl mx-auto px-6 lg:px-12 py-24">
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Teaching Philosophy</p>
+            <h2 className="font-serif text-4xl font-semibold mb-8">How She Teaches</h2>
+            <p className="text-muted-foreground text-xl leading-relaxed max-w-3xl mx-auto">
+              Brianne's teaching is grounded in the belief that performance begins with authenticity, presence, and genuine human connection. Rooted in Sanford Meisner's definition of acting as "the ability to live truthfully under imaginary circumstances," her approach creates space for students to discover what is real in themselves and bring it to the work.
+            </p>
+          </div>
+
+          {/* Meisner quote */}
+          <blockquote
+            className="border-l-4 pl-8 mb-16 font-serif text-xl text-muted-foreground italic"
+            style={{ borderColor: '#C6A15B' }}
+          >
+            <p>"Life beats down and crushes our souls and theatre reminds us that we have one."</p>
+            <footer className="mt-3 text-sm not-italic font-sans uppercase tracking-wider text-muted-foreground/60">
+              — Sanford Meisner
+            </footer>
+          </blockquote>
+
+          {/* 3 Pillars */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {philosophyPillars.map((pillar) => (
+              <div key={pillar.title} className="bg-card border border-border p-8 rounded-sm">
+                <div className="w-8 h-px mb-6" style={{ backgroundColor: '#C6A15B' }} />
+                <h3 className="font-serif text-xl font-semibold mb-4">{pillar.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">{pillar.body}</p>
+              </div>
             ))}
-          </Accordion>
+          </div>
+
+          {/* Methodological adaptability */}
+          <div className="bg-muted/40 border border-border p-8 rounded-sm">
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Although her training is heavily influenced by the Meisner approach, Brianne draws upon tools and exercises ranging from Adler to Strasberg to Stanislavski when she intuits that a specific individual will benefit from a different method. Fear is a common byproduct of the beginning performer, and she works to eliminate its presence early — building trust and a strong theatrical foundation so students feel safe enough to take genuine artistic risks.
+            </p>
+          </div>
         </section>
       </FadeInSection>
 
@@ -211,43 +201,6 @@ export default function Teaching() {
                   <p className="text-muted-foreground text-sm">Northern Essex Community College, 2023</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-      </FadeInSection>
-
-      {/* What Colleagues & NECC President Say */}
-      <FadeInSection>
-        <section className="py-24">
-          <div className="max-w-5xl mx-auto px-6 lg:px-12">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-4xl font-semibold mb-4">What Students & Colleagues Say</h2>
-            </div>
-
-            {/* Lane Glenn — NECC President */}
-            <div className="bg-foreground text-background rounded-sm p-12 mb-10">
-              <Quote className="w-10 h-10 text-background/30 mb-6" />
-              <p className="font-serif text-2xl lg:text-3xl font-medium leading-relaxed mb-8">
-                "Theater at Northern Essex isn't simply a creative outlet. It serves as a catalyst for so many strengths and attributes that allow our students to thrive in any field they pursue."
-              </p>
-              <p className="text-background/70 text-sm font-medium uppercase tracking-wider">
-                Lane Glenn, President — Northern Essex Community College
-                <span className="ml-2 normal-case font-normal">· Merrimack Valley Life</span>
-              </p>
-            </div>
-
-            {/* Student testimonials grid */}
-            <div className="grid md:grid-cols-2 gap-6">
-              {studentTestimonials.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-card border border-border p-8 rounded-sm"
-                >
-                  <Quote className="w-6 h-6 text-foreground/20 mb-4" />
-                  <p className="text-foreground leading-relaxed mb-6 italic">"{item.quote}"</p>
-                  <p className="text-sm text-muted-foreground font-medium">— {item.attribution}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>

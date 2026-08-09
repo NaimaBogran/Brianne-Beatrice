@@ -1,6 +1,6 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { Mail, Send, Mic, BookOpen, Theater, Users } from 'lucide-react';
+import { Mail, Send, Mic, BookOpen, Theater, Users, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -101,6 +101,69 @@ export default function Contact() {
                       <p className="font-medium">bribeats@gmail.com</p>
                     </div>
                   </a>
+                </div>
+
+                {/* Social Links */}
+                <div className="pt-4 border-t border-border space-y-6">
+                  {/* Brianne Beatrice */}
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wider mb-3">Brianne Beatrice</p>
+                    <div className="flex flex-col gap-3">
+                      <a
+                        href="https://www.linkedin.com/in/brianne-beatrice-5457a627/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Brianne Beatrice on LinkedIn (opens in new tab)"
+                        className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors"
+                      >
+                        <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                          <Linkedin size={18} />
+                        </div>
+                        <span className="text-sm font-medium">LinkedIn</span>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/bribeats79/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Brianne Beatrice on Instagram (opens in new tab)"
+                        className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors"
+                      >
+                        <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                          <Instagram size={18} />
+                        </div>
+                        <span className="text-sm font-medium">Instagram · @bribeats79</span>
+                      </a>
+                      <a
+                        href="https://www.facebook.com/bribeats79/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Brianne Beatrice on Facebook (opens in new tab)"
+                        className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors"
+                      >
+                        <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                          <Facebook size={18} />
+                        </div>
+                        <span className="text-sm font-medium">Facebook</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* NECC Theater */}
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wider mb-3">NECC Theater</p>
+                    <a
+                      href="https://www.instagram.com/necctheater/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="NECC Theater on Instagram (opens in new tab)"
+                      className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors"
+                    >
+                      <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                        <Instagram size={18} />
+                      </div>
+                      <span className="text-sm font-medium">Instagram · @necctheater</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

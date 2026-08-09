@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { Mail, Linkedin } from 'lucide-react';
+import { Mail, Linkedin, Instagram, Facebook } from 'lucide-react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -10,6 +10,36 @@ const navLinks = [
   { href: '/media', label: 'Media' },
   { href: '/recognition', label: 'Recognition' },
   { href: '/contact', label: 'Contact' },
+];
+
+const socialLinks = [
+  {
+    href: 'mailto:bribeats@gmail.com',
+    icon: Mail,
+    label: 'Email Brianne Beatrice',
+    testId: 'link-email',
+  },
+  {
+    href: 'https://www.linkedin.com/in/brianne-beatrice-5457a627/',
+    icon: Linkedin,
+    label: 'Brianne Beatrice on LinkedIn',
+    testId: 'link-linkedin',
+    external: true,
+  },
+  {
+    href: 'https://www.instagram.com/bribeats79/',
+    icon: Instagram,
+    label: 'Brianne Beatrice on Instagram',
+    testId: 'link-instagram',
+    external: true,
+  },
+  {
+    href: 'https://www.facebook.com/bribeats79/',
+    icon: Facebook,
+    label: 'Brianne Beatrice on Facebook',
+    testId: 'link-facebook',
+    external: true,
+  },
 ];
 
 export function Footer() {
@@ -45,23 +75,20 @@ export function Footer() {
           {/* Connect */}
           <div>
             <h4 className="text-sm font-semibold mb-4 uppercase tracking-wide">Connect</h4>
-            <div className="flex gap-4">
-              <a
-                href="mailto:bribeats@gmail.com"
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-accent hover:bg-foreground hover:text-background transition-colors"
-                data-testid="link-email"
-              >
-                <Mail size={18} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-accent hover:bg-foreground hover:text-background transition-colors"
-                data-testid="link-linkedin"
-              >
-                <Linkedin size={18} />
-              </a>
+            <div className="flex gap-3 flex-wrap">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.testId}
+                  href={link.href}
+                  target={link.external ? '_blank' : undefined}
+                  rel={link.external ? 'noopener noreferrer' : undefined}
+                  aria-label={link.label}
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-accent hover:bg-foreground hover:text-background transition-colors"
+                  data-testid={link.testId}
+                >
+                  <link.icon size={18} />
+                </a>
+              ))}
             </div>
           </div>
         </div>

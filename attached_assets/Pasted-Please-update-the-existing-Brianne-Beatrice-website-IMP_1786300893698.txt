@@ -1,0 +1,404 @@
+Please update the existing Brianne Beatrice website.
+
+IMPORTANT:
+Do NOT redesign the site from scratch. Preserve the current branding, typography, layout system, page structure, animations, gold/green visual identity, responsive behavior, and overall polished personal-brand aesthetic.
+
+This is an accuracy, content, and refinement pass based on new client feedback.
+
+Use the newly uploaded:
+- Teaching Philosophy document
+- TED-Ed Educator Talks certificate
+- Amy Callahan quote image
+- any testimonial/source materials already uploaded
+
+Do not invent awards, quotes, credentials, testimonials, student information, or social media links.
+
+==================================================
+1. CORRECT THE STEPHEN SONDHEIM RECOGNITION
+==================================================
+
+On the Recognition page, find the Stephen Sondheim Teaching Award entry associated with the Kennedy Center.
+
+Brianne was NOMINATED for this award. She did NOT win it.
+
+Update the entry so it clearly states:
+
+“Stephen Sondheim Teaching Award Nominee”
+Kennedy Center
+2017
+
+Do not use language such as:
+- Winner
+- Recipient
+- Awarded
+
+Keep the recognition because the nomination is still meaningful, but make the distinction visually and factually clear.
+
+If the Recognition page distinguishes between awards and nominations, use a subtle “Nominee” label.
+
+==================================================
+2. REPLACE THE TEACHING PHILOSOPHY WITH HER REAL PHILOSOPHY
+==================================================
+
+On the Teaching page, remove the existing generic or AI-generated teaching philosophy.
+
+Use the uploaded “Teaching Philosophy 2020” document as the source of truth.
+
+Do NOT paste the entire document onto the webpage.
+
+Turn it into polished web content while staying faithful to Brianne’s actual ideas.
+
+Her philosophy emphasizes:
+
+- Sanford Meisner’s approach to acting
+- living truthfully under imaginary circumstances
+- moment-to-moment listening and responding
+- “the reality of doing”
+- adapting methods to the needs of individual students
+- reducing fear and insecurity in beginning performers
+- creating a classroom where students feel safe enough to take artistic risks
+- authenticity of self
+- being present and genuinely connecting with others
+- learning through physical experience rather than lecture alone
+- scenes, exercises, practice, and experiential learning
+
+Suggested structure:
+
+TEACHING PHILOSOPHY
+
+Introductory paragraph:
+Brianne’s teaching is grounded in the belief that performance begins with authenticity, presence, and genuine human connection.
+
+Then create 3 smaller philosophy pillars:
+
+AUTHENTICITY
+Students learn to bring themselves truthfully to the work rather than simply “playing” an idea of a character.
+
+PRESENCE & CONNECTION
+Listening, responding, and remaining fully present are central to both performance and communication.
+
+LEARNING BY DOING
+Brianne emphasizes exercises, scenes, practical application, and experience over passive lecture.
+
+Then include one short section explaining that although her training is heavily influenced by the Meisner approach, she draws from multiple acting methodologies when another approach better supports an individual student.
+
+Do not over-polish this into generic motivational copy. It should still sound rooted in Brianne’s actual teaching practice.
+
+==================================================
+3. MOVE TESTIMONIALS FROM TEACHING TO RECOGNITION
+==================================================
+
+Remove the testimonial section currently located on the Teaching page.
+
+Move verified testimonials to the Recognition page.
+
+The Recognition page should now tell a broader story of Brianne’s impact through:
+
+- Professional recognition
+- Directing recognition
+- TED-Ed professional development
+- Student feedback
+- Peer/leadership recognition
+- 15 Years of Impact quote
+
+Create a section titled something like:
+
+“IN THEIR WORDS”
+
+or
+
+“IMPACT IN THEIR WORDS”
+
+Do not call it “Testimonials” if a more editorial title fits the existing design better.
+
+==================================================
+4. ADD VERIFIED RATE MY PROFESSORS STUDENT FEEDBACK
+==================================================
+
+Add a curated selection of positive Rate My Professors feedback.
+
+IMPORTANT:
+Do not manufacture student names.
+Rate My Professors reviewers are anonymous.
+
+Attribute each one using:
+“Anonymous Student”
+and identify:
+- course/category
+- school
+- source: Rate My Professors
+
+Use varied feedback representing different aspects of Brianne’s teaching.
+
+Include these short verified excerpts:
+
+NORTHERN ESSEX COMMUNITY COLLEGE
+Communication student — COM111
+
+“Bri is the best professor I've had.”
+
+Source:
+Rate My Professors — Northern Essex Community College
+
+Another NECC Communication / speaking-focused review:
+
+“She gave great feedback for speeches.”
+
+Source:
+Rate My Professors — Northern Essex Community College
+
+Another NECC student:
+
+“Bri is awesome, one of my favorite professors at NECC!”
+
+Source:
+Rate My Professors — Northern Essex Community College
+
+
+SALEM STATE UNIVERSITY
+Public Speaking student — SPC101A
+
+“She is inspiring in the way she handles herself with such confidence.”
+
+Source:
+Rate My Professors — Salem State University
+
+Another Salem State Public Speaking student:
+
+“She builds confidence, supports every student.”
+
+Source:
+Rate My Professors — Salem State University
+
+Another Salem State student:
+
+“She truly cares about her students.”
+
+Source:
+Rate My Professors — Salem State University
+
+Design these as polished student-feedback cards.
+
+Each card should have a small category label such as:
+
+COMMUNICATION
+Northern Essex Community College
+
+PUBLIC SPEAKING
+Salem State University
+
+THEATER
+[only use this category if a verified theater-specific review exists in the source material]
+
+Do not label a review as Theater unless the course or source actually establishes that.
+
+Do not display grades or difficulty ratings.
+
+If useful, add a small external source link:
+“View on Rate My Professors”
+
+Use external links safely and open them in a new tab.
+
+Do not overwhelm the page with reviews.
+Use approximately 4–6 strong short quotes total.
+
+==================================================
+5. ADD SOCIAL MEDIA LINKS
+==================================================
+
+Add social links to BOTH:
+
+- site footer
+- Contact page
+
+Keep the existing email contact option.
+
+Use clean recognizable icons for:
+- LinkedIn
+- Instagram
+- Facebook
+- Email
+
+Verified LinkedIn:
+https://www.linkedin.com/in/brianne-beatrice-5457a627/
+
+Verified Instagram:
+Personal:
+https://www.instagram.com/bribeats79/
+
+NECC Theater:
+https://www.instagram.com/necctheater/
+
+Verified Facebook personal/professional page:
+https://www.facebook.com/bribeats79/
+
+On the Contact page, distinguish the accounts cleanly:
+
+Brianne Beatrice
+- LinkedIn
+- Instagram
+- Facebook
+
+NECC Theater
+- Instagram
+
+Do not make the social section visually dominant over speaking/booking contact information.
+
+==================================================
+6. ADD TED-ED EDUCATOR TALKS CERTIFICATE
+==================================================
+
+Add Brianne’s uploaded TED-Ed certificate to the Recognition page.
+
+IMPORTANT ACCURACY:
+This is a:
+
+“TED-Ed Educator Talks — Idea Workshop Certificate of Completion”
+
+It verifies completion of the Idea Workshop.
+
+Create a polished recognition card.
+
+Suggested title:
+
+TED-Ed Educator Talks
+Idea Workshop Completion
+
+Supporting copy:
+
+“Completed the TED-Ed Educator Talks Idea Workshop, a professional learning experience focused on developing ideas, storytelling, communication, and public speaking.”
+
+Display the uploaded certificate as a clickable image or document preview.
+
+Add a small contextual label such as:
+
+Professional Development
+
+This recognition is particularly relevant to Brianne’s growth as a speaker, so place it prominently but do not present it as a competitive award.
+
+==================================================
+7. POLISH THE RECOGNITION YEAR CARDS
+==================================================
+
+On the Recognition page, the year/award cards currently contain a small trophy icon that looks unfinished or placeholder-like.
+
+Refine these cards.
+
+Use the existing brand gold:
+#C6A15B
+or the closest gold already defined in the site design system.
+
+Make the trophy icon gold.
+
+Also incorporate very subtle gold details such as:
+- thin top border
+- small divider
+- hover highlight
+- year accent
+- icon background
+
+Do NOT make the entire card gold.
+
+The result should feel elegant, intentional, and consistent with the signature logo.
+
+Keep accessibility/contrast in mind.
+
+==================================================
+8. REWORK “15 YEARS OF IMPACT”
+==================================================
+
+On the Recognition page there is currently a section titled:
+
+“15 Years of Impact”
+
+It displays a low-resolution photograph of text projected on a screen.
+
+Remove that image from the visible page.
+
+The image itself should NOT be displayed because the quality is poor.
+
+Instead:
+
+Read the quote displayed in the uploaded image and reproduce that quote as styled text.
+
+The quote was written/said about Brianne by:
+
+Dr. Amy Callahan
+Dean of Liberal Arts
+Northern Essex Community College
+
+Display it as an elegant editorial quote section.
+
+Suggested structure:
+
+15 YEARS OF IMPACT
+
+[large quotation text]
+
+Dr. Amy Callahan
+Dean of Liberal Arts
+Northern Essex Community College
+
+Use:
+- large serif or italic quote typography
+- subtle oversized quotation mark or gold decorative accent
+- generous whitespace
+- no fake headshot
+- no replacement stock image
+
+IMPORTANT:
+Transcribe the quote exactly from the uploaded image.
+Do not summarize it.
+Do not rewrite it.
+Do not invent missing words.
+
+If any portion of the image is unreadable, leave that portion unchanged/unimplemented rather than guessing.
+
+==================================================
+9. RECOGNITION PAGE STRUCTURE
+==================================================
+
+After these additions, reorganize the Recognition page so it does not become cluttered.
+
+Recommended hierarchy:
+
+1. Recognition hero
+2. Featured professional honors
+3. Professional Recognition timeline/cards
+4. Directing Recognition
+5. TED-Ed Educator Talks professional-development recognition
+6. 15 Years of Impact — Amy Callahan quote
+7. Impact in Their Words — student/peer testimonials
+
+Avoid repeating the same award in multiple locations unless it is intentionally featured once and then included in a complete timeline.
+
+Use generous spacing.
+
+The page should communicate credibility and impact, not feel like a database.
+
+==================================================
+10. FINAL CONTENT ACCURACY CHECK
+==================================================
+
+Before finishing, verify:
+
+- Stephen Sondheim Teaching Award says NOMINEE, not winner.
+- Brianne’s actual uploaded teaching philosophy replaced the generic version.
+- Testimonials no longer appear under Teaching.
+- Student feedback appears on Recognition.
+- Rate My Professors quotes are attributed anonymously and include school/course context.
+- No fake student names are used.
+- TED-Ed certificate is accurately described as Idea Workshop completion.
+- No claim is made that Brianne has given a TED/TEDx talk.
+- The certificate renders clearly.
+- Trophy icons and recognition accents use the brand gold.
+- The low-quality Amy Callahan projector image is removed.
+- Amy Callahan’s quote appears as styled text instead.
+- Amy is correctly attributed as Dean of Liberal Arts at Northern Essex Community College.
+- LinkedIn works.
+- Both verified Instagram links work.
+- Verified Facebook links work.
+- Email remains available.
+- All social links open externally and include accessible labels.
+- Mobile layout remains clean.
+- No broken images, console errors, or 404s are introduced.
