@@ -1,6 +1,6 @@
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { MessageSquare, Users, Lightbulb, Heart, Star, Play, Mail, ArrowRight } from 'lucide-react';
+import { MessageSquare, Users, Lightbulb, Heart, Star, Mail, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import {
   Accordion,
@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import speakingImage from '@/assets/brianne-speaking-to-audience.jpg';
 
 const keynoteTopics = [
   {
@@ -94,6 +95,60 @@ export default function Speaking() {
         </div>
       </section>
 
+      {/* Signature Talk */}
+      <FadeInSection>
+        <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            {/* Visual — swap this <img> for an <iframe> embed when the talk video is ready */}
+            <div className="relative order-2 lg:order-1">
+              <div
+                className="absolute -top-3 left-0 w-14 h-0.5"
+                style={{ backgroundColor: '#C6A15B' }}
+              />
+              <img
+                src={speakingImage}
+                alt="Brianne Beatrice speaking on stage"
+                className="w-full rounded-sm"
+                style={{ aspectRatio: '4/3', objectFit: 'cover', objectPosition: 'center top' }}
+              />
+            </div>
+
+            {/* Editorial content */}
+            <div className="order-1 lg:order-2">
+              <p
+                className="text-xs uppercase tracking-widest font-semibold mb-5"
+                style={{ color: '#C6A15B' }}
+              >
+                Signature Talk
+              </p>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                Unshakable: Confidence, Resilience &amp; Integrity
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+                Unshakable is a signature talk centered on the power of confidence, resilience, and integrity — and what it means to remain grounded in who you are through challenge, change, and growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-sm font-medium hover:opacity-90 transition-opacity"
+                >
+                  Book Brianne to Speak
+                  <ArrowRight size={18} />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 border border-foreground text-foreground px-8 py-4 rounded-sm font-medium hover:bg-muted/40 transition-colors"
+                >
+                  Contact Brianne
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </FadeInSection>
+
       {/* Keynote Topics */}
       <FadeInSection>
         <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
@@ -114,28 +169,6 @@ export default function Speaking() {
                 <p className="text-muted-foreground leading-relaxed">{topic.description}</p>
               </div>
             ))}
-          </div>
-        </section>
-      </FadeInSection>
-
-      {/* Video Embed Placeholder */}
-      <FadeInSection>
-        <section className="bg-muted/30 py-24">
-          <div className="max-w-5xl mx-auto px-6 lg:px-12">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-4xl font-semibold mb-4">See Brianne Speak</h2>
-              <p className="text-muted-foreground text-lg">
-                Video coming soon — contact Brianne to request a demo reel.
-              </p>
-            </div>
-            <div className="aspect-video bg-gradient-to-br from-muted via-card to-accent rounded-sm border border-border flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-foreground text-background rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Play size={32} fill="currentColor" />
-                </div>
-                <p className="text-muted-foreground">Keynote Demo Reel — Coming Soon</p>
-              </div>
-            </div>
           </div>
         </section>
       </FadeInSection>
