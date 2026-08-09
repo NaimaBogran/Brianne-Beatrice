@@ -47,10 +47,11 @@ router.post("/contact", async (req, res) => {
     return;
   }
 
-  const { name, email, subject, message, website } = req.body as {
+  const { name, email, subject, otherDetail, message, website } = req.body as {
     name?: string;
     email?: string;
     subject?: string;
+    otherDetail?: string;
     message?: string;
     website?: string; // honeypot — bots fill this, humans don't
   };
@@ -86,8 +87,15 @@ router.post("/contact", async (req, res) => {
 
   const safeName = name.trim().slice(0, 200);
   const safeEmail = email.trim().slice(0, 200);
-  const safeSubject = (subject?.trim() ?? "").slice(0, 300) || "New contact form inquiry";
+  const safeInquiryType = (subject?.trim() ?? "").slice(0, 300) || "General Inquiry";
+  const safeOtherDetail = (otherDetail?.trim() ?? "").slice(0, 200);
   const safeMessage = message.trim().slice(0, 5000);
+
+  // Build the display label: for "Other", append the clarification if provided
+  const inquiryLabel =
+    safeInquiryType === "Other" && safeOtherDetail
+      ? `Other — ${safeOtherDetail}`
+      : safeInquiryType;
 
   try {
     const transporter = nodemailer.createTransport({
@@ -102,12 +110,15 @@ router.post("/contact", async (req, res) => {
       from: `"Contact Form" <${CONTACT_EMAIL}>`,
       to: CONTACT_EMAIL,
       replyTo: `"${safeName}" <${safeEmail}>`,
-      subject: `[Contact] ${safeSubject}`,
+      subject: `[${inquiryLabel}] ${safeName}`,
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a;">
           <h2 style="font-size: 22px; border-bottom: 1px solid #e0e0e0; padding-bottom: 12px; margin-bottom: 20px;">
             New Message from Your Website
           </h2>
+          <div style="background: #1a1a1a; color: #ffffff; display: inline-block; padding: 6px 14px; border-radius: 2px; font-size: 13px; font-weight: bold; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;">
+            ${escapeHtml(inquiryLabel)}
+          </div>
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
             <tr>
               <td style="padding: 8px 0; font-weight: bold; width: 120px; vertical-align: top;">Name</td>
@@ -119,10 +130,6 @@ router.post("/contact", async (req, res) => {
                 <a href="mailto:${escapeHtml(safeEmail)}" style="color: #1a1a1a;">${escapeHtml(safeEmail)}</a>
               </td>
             </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; vertical-align: top;">Subject</td>
-              <td style="padding: 8px 0;">${escapeHtml(safeSubject)}</td>
-            </tr>
           </table>
           <div style="background: #f7f7f7; border-left: 3px solid #1a1a1a; padding: 16px 20px; border-radius: 2px;">
             <p style="margin: 0; white-space: pre-wrap; line-height: 1.7;">${escapeHtml(safeMessage)}</p>
@@ -132,7 +139,7 @@ router.post("/contact", async (req, res) => {
           </p>
         </div>
       `,
-      text: `New message from your website\n\nName: ${safeName}\nEmail: ${safeEmail}\nSubject: ${safeSubject}\n\nMessage:\n${safeMessage}\n\n--\nSent via your personal branding website. Reply to respond to ${safeName}.`,
+      text: `New message from your website\n\nInquiry Type: ${inquiryLabel}\nName: ${safeName}\nEmail: ${safeEmail}\n\nMessage:\n${safeMessage}\n\n--\nSent via your personal branding website. Reply to respond to ${safeName}.`,
     });
 
     logger.info({ messageId: info.messageId }, "Contact email sent successfully");

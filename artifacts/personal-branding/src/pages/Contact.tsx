@@ -5,8 +5,23 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import brianneHeadshot from '@/assets/brianne-headshot.jpg';
 import { Mail, Send, Mic, BookOpen, Theater, Users, CheckCircle, AlertCircle, Linkedin, Instagram, Facebook } from 'lucide-react';
+
+const INQUIRY_TYPES = [
+  { value: 'Speaking', label: 'Speaking' },
+  { value: 'Workshop/Coaching', label: 'Workshop/Coaching' },
+  { value: 'Directing', label: 'Directing' },
+  { value: 'Educational Collaboration', label: 'Educational Collaboration' },
+  { value: 'Other', label: 'Other' },
+] as const;
 
 
 const opportunities = [
@@ -38,6 +53,7 @@ export default function Contact() {
     name: '',
     email: '',
     subject: '',
+    otherDetail: '',
     message: '',
     website: '', // honeypot — hidden from users
   });
@@ -63,7 +79,7 @@ export default function Contact() {
       }
 
       setFormState('success');
-      setFormData({ name: '', email: '', subject: '', message: '', website: '' });
+      setFormData({ name: '', email: '', subject: '', otherDetail: '', message: '', website: '' });
     } catch (err) {
       setFormState('error');
       setErrorMessage(
@@ -269,18 +285,45 @@ export default function Contact() {
                     <Label htmlFor="subject" className="text-sm font-medium mb-2 block">
                       Reason for Reaching Out
                     </Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      type="text"
+                    <Select
                       value={formData.subject}
-                      onChange={handleChange}
-                      placeholder="Speaking engagement, workshop, directing, other..."
+                      onValueChange={(value) =>
+                        setFormData({ ...formData, subject: value, otherDetail: value !== 'Other' ? '' : formData.otherDetail })
+                      }
                       disabled={formState === 'submitting'}
-                      className="w-full"
-                      data-testid="input-subject"
-                    />
+                    >
+                      <SelectTrigger id="subject" className="w-full" data-testid="input-subject">
+                        <SelectValue placeholder="Select an inquiry type…" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {INQUIRY_TYPES.map(({ value, label }) => (
+                          <SelectItem key={value} value={value}>
+                            {label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
+
+                  {formData.subject === 'Other' && (
+                    <div>
+                      <Label htmlFor="otherDetail" className="text-sm font-medium mb-2 block">
+                        Please briefly describe your inquiry
+                      </Label>
+                      <Input
+                        id="otherDetail"
+                        name="otherDetail"
+                        type="text"
+                        value={formData.otherDetail}
+                        onChange={handleChange}
+                        placeholder="e.g. podcast interview, media inquiry…"
+                        disabled={formState === 'submitting'}
+                        className="w-full"
+                        data-testid="input-other-detail"
+                        maxLength={200}
+                      />
+                    </div>
+                  )}
                   <div>
                     <Label htmlFor="message" className="text-sm font-medium mb-2 block">
                       Your Message
