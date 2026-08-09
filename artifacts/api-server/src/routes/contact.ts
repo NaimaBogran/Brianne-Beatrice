@@ -2,14 +2,15 @@ import { Router, type IRouter } from "express";
 import nodemailer from "nodemailer";
 import { logger } from "../lib/logger";
 import { INQUIRY_TYPE_VALUES } from "@workspace/api-zod";
+import { pool } from "@workspace/db";
 
 const router: IRouter = Router();
 
 const CONTACT_EMAIL = "bribeats@gmail.com";
 
-// Simple in-memory rate limiter: max 5 submissions per 10 minutes per IP.
-// Uses the rightmost hop from X-Forwarded-For to resist header spoofing.
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+// Database-backed rate limiter: max 5 submissions per 10 minutes per IP.
+// State persists across server restarts. Uses the rightmost hop from
+// X-Forwarded-For to resist header spoofing.
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 
@@ -23,27 +24,43 @@ function getRateLimitKey(req: import("express").Request): string {
   return req.socket.remoteAddress ?? "unknown";
 }
 
-function isRateLimited(ip: string): boolean {
+/**
+ * Atomically increments (or resets) the counter for `ip` in the database and
+ * returns whether the caller is over the limit.
+ *
+ * The single upsert handles all three cases without a separate read:
+ *   1. No existing row           → insert count=1, fresh window
+ *   2. Existing row, window live → increment count
+ *   3. Existing row, window past → reset to count=1, fresh window
+ */
+async function isRateLimited(ip: string): Promise<boolean> {
   const now = Date.now();
-  const entry = rateLimitMap.get(ip);
+  const resetAt = now + RATE_LIMIT_WINDOW_MS;
 
-  if (!entry || now > entry.resetAt) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
-    return false;
-  }
+  const result = await pool.query<{ count: number }>(
+    `INSERT INTO rate_limits (ip, count, reset_at)
+     VALUES ($1, 1, $2)
+     ON CONFLICT (ip) DO UPDATE
+       SET count    = CASE
+                        WHEN rate_limits.reset_at < $3 THEN 1
+                        ELSE LEAST(rate_limits.count + 1, $4 + 1)
+                      END,
+           reset_at = CASE
+                        WHEN rate_limits.reset_at < $3 THEN $2
+                        ELSE rate_limits.reset_at
+                      END
+     RETURNING count`,
+    [ip, resetAt, now, RATE_LIMIT_MAX],
+  );
 
-  if (entry.count >= RATE_LIMIT_MAX) {
-    return true;
-  }
-
-  entry.count++;
-  return false;
+  const count = result.rows[0]?.count ?? 1;
+  return count > RATE_LIMIT_MAX;
 }
 
 router.post("/contact", async (req, res) => {
   const ip = getRateLimitKey(req);
 
-  if (isRateLimited(ip)) {
+  if (await isRateLimited(ip)) {
     res.status(429).json({ error: "Too many requests. Please try again later." });
     return;
   }
