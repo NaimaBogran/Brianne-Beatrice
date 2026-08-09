@@ -3,6 +3,7 @@ import { FadeInSection } from '@/components/ui/FadeInSection';
 import { Podcast, Newspaper, ExternalLink, ArrowRight, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import haverhillLifeCover from '@/assets/brianne-haverhill-life-cover.jpg';
+import influentialWomenImage from '@/assets/influential-women.png';
 
 export default function Media() {
   return (
@@ -207,11 +208,13 @@ export default function Media() {
                 rel="noopener noreferrer"
                 className="group bg-background border border-border rounded-sm overflow-hidden hover:shadow-xl transition-shadow flex flex-col"
               >
-                <div className="aspect-[16/9] bg-gradient-to-br from-foreground/10 via-muted to-accent flex items-center justify-center">
-                  <div className="text-center px-8">
-                    <Newspaper className="w-14 h-14 text-foreground/30 mx-auto mb-4" />
-                    <p className="font-serif text-xl font-semibold text-foreground/60">InfluentialWomen.com</p>
-                  </div>
+                <div className="aspect-[16/9] overflow-hidden bg-[#fce4f0] flex items-center justify-center">
+                  <img
+                    src={influentialWomenImage}
+                    alt="Influential Women recognition card for Brianne Beatrice, Associate Professor of Theater and Communications at Northern Essex Community College"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="p-8 flex flex-col flex-1">
                   <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">

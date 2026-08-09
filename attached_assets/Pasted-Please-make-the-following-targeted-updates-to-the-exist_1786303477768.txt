@@ -1,0 +1,373 @@
+Please make the following targeted updates to the existing Brianne Beatrice website.
+
+IMPORTANT:
+- Do NOT redesign the site.
+- Preserve the current layout, typography, colors, animations, spacing system, navigation, responsive behavior, and overall branding.
+- Use the uploaded assets exactly as mapped below.
+- Do not invent content, dates, awards, production details, quotes, or credentials.
+- After making the changes, perform a full QA pass on desktop and mobile.
+
+==================================================
+1. FIX THE “DOWNLOAD CV” BUTTON
+==================================================
+
+On the Teaching page, the “Download CV” button currently does not work.
+
+Fix it so users can download or open Brianne’s actual uploaded CV.
+
+Requirements:
+- Use the real CV file already stored in the project.
+- Do not link to a placeholder.
+- If possible, open the CV in a new tab while also making it downloadable.
+- Use a proper <a> link rather than a non-functional button.
+- Add an accessible label.
+- Test the link in production, not just development.
+- Confirm the file path and filename capitalization are correct.
+
+If the file is stored in /public or an assets folder, reference it in a production-safe way.
+
+==================================================
+2. ADD REAL POSTERS TO FEATURED DIRECTING PRODUCTIONS
+==================================================
+
+Update the Featured Productions section under the Directing page.
+
+Use the newly uploaded production posters.
+
+Do not use generic images, placeholders, generated artwork, or incorrect posters.
+
+### ANGELS IN AMERICA
+
+Production:
+Angels in America: Part I
+
+Use:
+angels-in-america.jpg
+
+This is the only Angels in America poster.
+
+Brianne directed this Northern Essex Community College production in May 2026.
+
+Use this image for the featured Angels in America card.
+
+--------------------------------------------------
+
+### THE VAGINA MONOLOGUES
+
+There are two different productions.
+
+MAY 2025:
+The Vagina Monologues
+
+Use:
+the-vagina-monolouges.jpg
+
+JANUARY 2026:
+The Vagina Monologues / Revival
+
+Use:
+the-vagina-monolouges-revival.jpg
+
+Do NOT switch these two posters.
+
+The May 2025 production uses the regular poster.
+
+The January 2026 production uses the Revival poster.
+
+If The Vagina Monologues is represented as a single featured-production section, create a tasteful way to show that Brianne directed more than one production, such as:
+- a primary image with a secondary image
+OR
+- two small production entries within the featured card
+
+Do not incorrectly imply they are the same production.
+
+--------------------------------------------------
+
+### HURRICANE DIANE
+
+There are three Hurricane Diane posters.
+
+They are numbered chronologically from oldest production to newest:
+
+hurricane-diane-1.png
+= oldest production
+
+hurricane-diane-2.jpg
+= middle production
+
+hurricane-diane-3.jpg
+= newest production
+
+Map them as follows:
+
+APRIL 2023
+Northern Essex Community College
+Use:
+hurricane-diane-1.png
+
+JANUARY 2024
+ACTF invited production / CCSU
+Use:
+hurricane-diane-2.jpg
+
+OCTOBER 2024
+Firehouse Center for the Arts
+Use:
+hurricane-diane-3.jpg
+
+Do not mix up the chronology.
+
+If Hurricane Diane is displayed as one featured-production section, show the three productions as a small visual progression or gallery.
+
+Suggested treatment:
+
+Hurricane Diane
+2023–2024
+
+[three poster thumbnails]
+
+2023 — Northern Essex Community College
+2024 — ACTF Invited Production
+2024 — Firehouse Center for the Arts
+
+Allow users to click/tap the poster images to see a larger version if it fits the existing design system.
+
+==================================================
+3. PRESERVE FEATURED + PRODUCTION HISTORY
+==================================================
+
+Angels in America, The Vagina Monologues, and Hurricane Diane should remain in:
+
+1. Featured Productions
+AND
+2. Full Production History
+
+Do not remove them from one location because they appear in the other.
+
+For repeated productions such as Hurricane Diane and The Vagina Monologues, preserve the individual year/date entries in Production History.
+
+==================================================
+4. IMAGE DISPLAY QUALITY
+==================================================
+
+For all production posters:
+
+- Preserve their original aspect ratios.
+- Do not stretch posters into landscape rectangles.
+- Use object-fit: contain where appropriate.
+- Keep the full poster visible whenever possible.
+- Avoid cropping off titles, dates, logos, actors, or production credits.
+- Add subtle framing/background treatment if necessary so posters with different aspect ratios still look cohesive.
+- Add meaningful alt text.
+
+Examples:
+
+“Poster for Brianne Beatrice’s 2026 production of Angels in America: Part I”
+
+“Poster for Brianne Beatrice’s May 2025 production of The Vagina Monologues”
+
+“Poster for Brianne Beatrice’s 2024 Firehouse production of Hurricane Diane”
+
+==================================================
+5. INFLUENTIAL WOMEN MEDIA THUMBNAIL
+==================================================
+
+Under the Media page, the Influential Women article currently does not have a proper thumbnail.
+
+Replace the current placeholder with:
+
+influential-women.png
+
+This image shows Brianne’s Influential Women recognition and should be used as the real article/media thumbnail.
+
+Requirements:
+- Keep the image readable.
+- Do not crop out Brianne’s name, portrait, Influential Women logo, or recognition text.
+- Use object-fit: contain if necessary.
+- Keep the existing verified article link.
+- Do not add another duplicate Influential Women media card.
+
+==================================================
+6. FIX STEPHEN SONDHEIM NOMINEE DISPLAY
+==================================================
+
+Under Recognition, Brianne’s Stephen Sondheim Teaching Award entry must clearly state that she was a NOMINEE.
+
+Currently it has a separate visual label indicating nomination.
+
+Remove that separate nominee badge/label.
+
+There is already another nomination on the page where “Nominee” appears naturally within the award title.
+
+Match that treatment.
+
+Use:
+
+Stephen Sondheim Teaching Award Nominee
+Kennedy Center
+2017
+
+Do not use:
+- Winner
+- Recipient
+- Award Winner
+
+Do not create a separate “Nominee” badge.
+
+The fact that she was nominated should simply be part of the award title, consistent with the other nominee entry.
+
+==================================================
+7. TED-ED CERTIFICATE MUST BE VISIBLE ON THE PAGE
+==================================================
+
+The TED-Ed Educator Talks certificate is currently not visibly displayed.
+
+Fix this.
+
+The certificate should be viewable DIRECTLY within the Recognition page.
+
+Do not require users to click a text link just to see what the certificate looks like.
+
+Use the uploaded TED-Ed certificate asset.
+
+Create a polished recognition section such as:
+
+TED-Ed Educator Talks
+
+Idea Workshop
+Certificate of Completion
+
+Supporting copy:
+
+“Completed the TED-Ed Educator Talks Idea Workshop, a professional learning experience focused on developing ideas, storytelling, communication, and public speaking.”
+
+IMPORTANT:
+This is a certificate of completion.
+
+Do NOT describe Brianne as:
+- a TED speaker
+- TEDx speaker
+- TED Fellow
+- TED-certified speaker
+
+==================================================
+8. CERTIFICATE DISPLAY / EXPAND EXPERIENCE
+==================================================
+
+Show the actual certificate on the Recognition page.
+
+Preferred layout:
+
+Desktop:
+Text/context on one side
+Certificate preview on the other
+
+Mobile:
+Text first
+Certificate underneath
+
+The certificate preview should be large enough that users can recognize and partially read it without opening anything.
+
+Make the certificate interactive.
+
+When a user clicks/taps it:
+
+- Open a modal/lightbox
+- Display a larger version of the certificate
+- Allow the user to close the modal easily
+- Support keyboard Escape
+- Ensure the modal is accessible
+
+Within or beneath the enlarged certificate include:
+
+“Download Certificate”
+
+This should download/open the actual uploaded certificate PDF.
+
+Also consider a small expand icon over the certificate preview so users understand it can be enlarged.
+
+Do NOT use an external document viewer if a simple native modal/image/PDF preview works.
+
+==================================================
+9. TED-ED CARD VISUAL POLISH
+==================================================
+
+Make this section feel like legitimate professional development rather than another generic award card.
+
+Possible visual hierarchy:
+
+PROFESSIONAL DEVELOPMENT
+
+TED-Ed Educator Talks
+Idea Workshop
+
+Certificate of Completion
+
+[certificate preview]
+
+Use Brianne’s existing gold brand accents subtly.
+
+Do not recolor or modify the actual TED certificate.
+
+==================================================
+10. VERIFY RECOGNITION PAGE ACCURACY
+==================================================
+
+After these changes, inspect the entire Recognition page.
+
+Verify that:
+
+- Stephen Sondheim Teaching Award says “Nominee”
+- it does not have a redundant separate nominee badge
+- the TED-Ed certificate is visible without clicking
+- certificate expansion works
+- certificate download works
+- no award has accidentally been upgraded from nominee to winner
+- gold icons and accents remain consistent
+- student testimonials and Amy Callahan quote remain intact
+- no duplicated recognition cards were created
+
+==================================================
+11. FINAL QA
+==================================================
+
+Before finishing, test:
+
+TEACHING
+- Download CV works
+- Correct CV opens/downloads
+- Works on desktop
+- Works on mobile
+
+DIRECTING
+- Angels in America poster displays
+- May 2025 Vagina Monologues uses the regular poster
+- January 2026 Vagina Monologues uses the Revival poster
+- Hurricane Diane 1 = oldest
+- Hurricane Diane 2 = middle
+- Hurricane Diane 3 = newest
+- Posters are not stretched or badly cropped
+- Featured Productions still contains these productions
+- Production History still contains these productions
+
+MEDIA
+- Influential Women uses influential-women.png
+- No placeholder remains
+- Article link still works
+
+RECOGNITION
+- Stephen Sondheim entry is accurately labeled Nominee
+- No separate redundant nominee badge
+- TED-Ed certificate is visibly shown
+- Expand/lightbox works
+- Download Certificate works
+- Certificate looks good on mobile
+
+GENERAL
+- No broken image paths
+- No broken downloads
+- No 404s
+- No console errors related to these changes
+- All routes scroll to top normally
+- Site remains responsive
+- Existing brand styling is preserved

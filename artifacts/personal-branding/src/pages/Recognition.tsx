@@ -1,6 +1,7 @@
+import { useState, useEffect } from 'react';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { FadeInSection } from '@/components/ui/FadeInSection';
-import { Award, Trophy, Star, Quote, ExternalLink } from 'lucide-react';
+import { Award, Trophy, Star, Quote, Download, Maximize2, X } from 'lucide-react';
 import brianneTeachingAward from '@/assets/brianne-teaching-award.jpg';
 
 const professionalAwards = [
@@ -10,7 +11,7 @@ const professionalAwards = [
   { year: '2019', award: 'Distinguished Teaching Award', organization: 'Salem State University' },
   { year: '2018', award: 'National Society of Leadership and Success Award', organization: 'Salem State University' },
   { year: '2017', award: 'Winner — Best Actress in a Play', organization: 'Broadway World' },
-  { year: '2017', award: 'Stephen Sondheim Teaching Award', organization: 'Kennedy Center', isNominee: true },
+  { year: '2017', award: 'Stephen Sondheim Teaching Award Nominee', organization: 'Kennedy Center' },
   { year: '2017', award: 'Outstanding First Year Advocate Award', organization: 'Salem State University' },
   { year: '2017', award: 'IRNE Award Nominee — Best Actress in a Play', organization: 'Independent Reviewers of New England' },
 ];
@@ -55,7 +56,27 @@ const rmpReviews = [
   { quote: 'She truly cares about her students.', category: 'Public Speaking', course: null, school: 'Salem State University' },
 ];
 
+const CERT_URL = '/ted-ed-certificate.pdf';
+
 export default function Recognition() {
+  const [certModalOpen, setCertModalOpen] = useState(false);
+
+  // Close modal on Escape key
+  useEffect(() => {
+    if (!certModalOpen) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setCertModalOpen(false);
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, [certModalOpen]);
+
+  // Prevent body scroll while modal is open
+  useEffect(() => {
+    document.body.style.overflow = certModalOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [certModalOpen]);
+
   return (
     <PageTransition>
       {/* Hero */}
@@ -128,19 +149,11 @@ export default function Recognition() {
                     </div>
                   </div>
                   {/* Award details */}
-                  <div className="md:col-span-3 p-6 flex items-center justify-between gap-4">
+                  <div className="md:col-span-3 p-6 flex items-center">
                     <div>
                       <h3 className="font-serif text-xl font-semibold mb-1">{item.award}</h3>
                       <p className="text-muted-foreground font-medium">{item.organization}</p>
                     </div>
-                    {item.isNominee && (
-                      <span
-                        className="flex-shrink-0 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full border"
-                        style={{ color: '#C6A15B', borderColor: '#C6A15B' }}
-                      >
-                        Nominee
-                      </span>
-                    )}
                   </div>
                 </div>
               </div>
@@ -200,49 +213,147 @@ export default function Recognition() {
         </section>
       </FadeInSection>
 
-      {/* TED-Ed Educator Talks */}
+      {/* TED-Ed Educator Talks — Professional Development */}
       <FadeInSection>
         <section className="bg-muted/30 py-24">
           <div className="max-w-6xl mx-auto px-6 lg:px-12">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Professional Development</p>
               <h2 className="font-serif text-4xl font-semibold mb-4">TED-Ed Educator Talks</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Idea Workshop · Certificate of Completion
+              </p>
             </div>
+
             <div
-              className="max-w-2xl mx-auto bg-card border border-border rounded-sm overflow-hidden hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-sm overflow-hidden"
               style={{ borderTop: '3px solid #C6A15B' }}
             >
-              <div className="p-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: 'rgba(198,161,91,0.12)' }}
-                  >
-                    <Trophy className="w-6 h-6" style={{ color: '#C6A15B' }} />
+              <div className="grid lg:grid-cols-2 gap-0">
+
+                {/* Left — context */}
+                <div className="p-10 lg:p-12 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-border">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div
+                      className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: 'rgba(198,161,91,0.12)' }}
+                    >
+                      <Trophy className="w-5 h-5" style={{ color: '#C6A15B' }} />
+                    </div>
+                    <div>
+                      <p className="font-semibold font-serif text-lg leading-tight">Idea Workshop</p>
+                      <p className="text-muted-foreground text-sm">TED-Ed Educator Talks</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-lg font-serif">Idea Workshop Completion</p>
-                    <p className="text-muted-foreground text-sm">TED-Ed Educator Talks</p>
+
+                  <p className="text-muted-foreground leading-relaxed mb-8">
+                    Completed the TED-Ed Educator Talks Idea Workshop, a professional learning experience focused on developing ideas, storytelling, communication, and public speaking.
+                  </p>
+
+                  <div className="flex flex-wrap gap-3">
+                    <button
+                      onClick={() => setCertModalOpen(true)}
+                      className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-sm font-medium text-sm hover:opacity-90 transition-opacity"
+                      aria-label="View TED-Ed certificate in full screen"
+                    >
+                      <Maximize2 size={15} />
+                      View Certificate
+                    </button>
+                    <a
+                      href={CERT_URL}
+                      download="TED-Ed-Certificate-Brianne-Beatrice.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-sm font-medium text-sm hover:bg-accent transition-colors"
+                      aria-label="Download TED-Ed certificate PDF"
+                    >
+                      <Download size={15} />
+                      Download Certificate
+                    </a>
                   </div>
                 </div>
-                <p className="text-muted-foreground leading-relaxed mb-8">
-                  Completed the TED-Ed Educator Talks Idea Workshop, a professional learning experience focused on developing ideas, storytelling, communication, and public speaking.
-                </p>
-                <a
-                  href="/ted-ed-certificate.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium border border-border px-5 py-2.5 rounded-sm hover:bg-accent transition-colors"
-                  aria-label="View TED-Ed Educator Talks certificate (opens in new tab)"
-                >
-                  <ExternalLink size={15} />
-                  View Certificate
-                </a>
+
+                {/* Right — certificate preview (click to expand) */}
+                <div className="relative group cursor-pointer" onClick={() => setCertModalOpen(true)}>
+                  <iframe
+                    src={`${CERT_URL}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+                    title="TED-Ed Educator Talks Certificate of Completion — Brianne Beatrice"
+                    className="w-full border-0 pointer-events-none"
+                    style={{ height: '380px', display: 'block' }}
+                    loading="lazy"
+                    aria-label="TED-Ed Certificate preview — click to enlarge"
+                  />
+                  {/* Expand hint overlay */}
+                  <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-foreground text-background rounded-full p-3 shadow-lg">
+                      <Maximize2 size={18} />
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
         </section>
       </FadeInSection>
+
+      {/* Certificate Lightbox Modal */}
+      {certModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 lg:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label="TED-Ed Certificate enlarged view"
+        >
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-foreground/80 backdrop-blur-sm"
+            onClick={() => setCertModalOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Modal panel */}
+          <div className="relative z-10 bg-card rounded-sm shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden border border-border">
+            {/* Modal header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-border flex-shrink-0">
+              <div>
+                <p className="font-serif font-semibold text-lg">TED-Ed Educator Talks</p>
+                <p className="text-muted-foreground text-sm">Idea Workshop · Certificate of Completion</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <a
+                  href={CERT_URL}
+                  download="TED-Ed-Certificate-Brianne-Beatrice.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-border px-4 py-2 rounded-sm text-sm font-medium hover:bg-accent transition-colors"
+                  aria-label="Download TED-Ed certificate PDF"
+                >
+                  <Download size={14} />
+                  Download
+                </a>
+                <button
+                  onClick={() => setCertModalOpen(false)}
+                  className="p-2 rounded-sm hover:bg-muted transition-colors"
+                  aria-label="Close certificate modal"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+            </div>
+
+            {/* Certificate iframe */}
+            <div className="flex-1 overflow-hidden">
+              <iframe
+                src={`${CERT_URL}#toolbar=0&navpanes=0&scrollbar=0`}
+                title="TED-Ed Educator Talks Certificate of Completion — Brianne Beatrice (enlarged)"
+                className="w-full h-full border-0"
+                style={{ minHeight: '60vh' }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 15 Years of Impact — Amy Callahan Quote */}
       <FadeInSection>

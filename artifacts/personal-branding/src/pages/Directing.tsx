@@ -5,6 +5,13 @@ import { Theater, Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-rea
 import brianneStageDirecting from '@/assets/brianne-stage-directing.jpg';
 import haverhillLifeCover from '@/assets/brianne-haverhill-life-cover.jpg';
 
+import angelsInAmericaPoster from '@/assets/angels-in-america.jpg';
+import vagMonologues2025 from '@/assets/vagina-monologues-may2025.jpg';
+import vagMonologuesRevival from '@/assets/vagina-monologues-revival-jan2026.jpg';
+import hurricaneDiane2023 from '@/assets/hurricane-diane-apr2023.png';
+import hurricaneDiane2024Actf from '@/assets/hurricane-diane-jan2024.jpg';
+import hurricaneDiane2024Firehouse from '@/assets/hurricane-diane-oct2024.jpg';
+
 const featuredProductions = [
   {
     title: 'Angels in America: Part I',
@@ -13,6 +20,8 @@ const featuredProductions = [
     venue: 'Northern Essex Community College',
     badge: null,
     description: "Tony Kushner's landmark work about love, loss, identity, and the AIDS crisis — anchoring the 2026 season at NECC.",
+    image: angelsInAmericaPoster,
+    imageAlt: "Poster for Brianne Beatrice's 2026 production of Angels in America: Part I at NECC",
   },
   {
     title: 'The Vagina Monologues',
@@ -21,6 +30,8 @@ const featuredProductions = [
     venue: 'Northern Essex Community College',
     badge: 'ACTF Invited Production',
     description: 'First produced at NECC in May 2025, this production received 7 national awards and was invited to the ACTF Regional Festival — recognizing the depth of storytelling and ensemble craft Brianne brought to this defining work.',
+    image: vagMonologues2025,
+    imageAlt: "Poster for Brianne Beatrice's May 2025 production of The Vagina Monologues at NECC",
   },
   {
     title: 'The Vagina Monologues',
@@ -29,6 +40,8 @@ const featuredProductions = [
     venue: 'ACTF Regional Festival',
     badge: 'ACTF Festival',
     description: 'Invited to perform at the ACTF Regional Festival based on the strength of the original NECC production — a second stage for a production that had already earned national recognition.',
+    image: vagMonologuesRevival,
+    imageAlt: "Poster for Brianne Beatrice's January 2026 revival of The Vagina Monologues at the ACTF Regional Festival",
   },
   {
     title: 'Hurricane Diane',
@@ -37,14 +50,18 @@ const featuredProductions = [
     venue: 'Firehouse Center For The Arts',
     badge: '13 National Awards',
     description: "A production about nature, desire, and transformation that traveled to professional stages and earned 13 national awards — among the most decorated in NECC's history.",
+    image: hurricaneDiane2024Firehouse,
+    imageAlt: "Poster for Brianne Beatrice's 2024 Firehouse production of Hurricane Diane",
   },
   {
     title: 'Hurricane Diane',
     playwright: 'Madeleine George',
     year: 'January 2024',
-    venue: 'CCSU',
+    venue: 'CCSU — ACTF Invited Production',
     badge: 'ACTF Invited Production',
     description: 'A second life for this acclaimed production — invited to CCSU for the ACTF Regional Festival, continuing its national recognition.',
+    image: hurricaneDiane2024Actf,
+    imageAlt: "Poster for Brianne Beatrice's January 2024 ACTF invited production of Hurricane Diane at CCSU",
   },
   {
     title: 'Hurricane Diane',
@@ -53,6 +70,8 @@ const featuredProductions = [
     venue: 'Northern Essex Community College',
     badge: 'ACTF Invited Production',
     description: "The original ACTF-invited staging that launched a remarkable national journey for this production. Brianne's direction was cited for exceptional ensemble work and inventive staging.",
+    image: hurricaneDiane2023,
+    imageAlt: "Poster for Brianne Beatrice's April 2023 original production of Hurricane Diane at NECC",
   },
 ];
 
@@ -163,26 +182,40 @@ export default function Directing() {
               {featuredProductions.map((production, index) => (
                 <div
                   key={index}
-                  className="bg-background border border-border rounded-sm overflow-hidden hover:shadow-lg transition-shadow group"
+                  className="bg-background border border-border rounded-sm overflow-hidden hover:shadow-lg transition-shadow group flex flex-col"
                 >
-                  <div className="aspect-[4/3] bg-gradient-to-br from-muted via-accent to-card relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent flex items-end p-6">
-                      <div>
-                        <p className="text-background/80 text-sm font-medium mb-1">{production.year}</p>
-                        <h3 className="font-serif text-xl font-semibold text-background">
-                          {production.title}
-                        </h3>
-                      </div>
-                    </div>
+                  {/* Poster image — full portrait, no cropping */}
+                  <div
+                    className="relative flex-shrink-0"
+                    style={{ background: '#0d0d0d' }}
+                  >
+                    <img
+                      src={production.image}
+                      alt={production.imageAlt}
+                      className="w-full"
+                      style={{
+                        display: 'block',
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'contain',
+                        maxHeight: '420px',
+                      }}
+                      loading="lazy"
+                    />
                     {production.badge && (
-                      <div className="absolute top-4 right-4 bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-full">
+                      <div className="absolute top-3 right-3 bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-full">
                         {production.badge}
                       </div>
                     )}
                   </div>
-                  <div className="p-6">
-                    <p className="text-sm text-muted-foreground mb-1">by {production.playwright}</p>
-                    <p className="text-sm text-muted-foreground mb-4">{production.venue}</p>
+
+                  {/* Card body */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide mb-1">
+                      {production.year} · {production.venue}
+                    </p>
+                    <h3 className="font-serif text-xl font-semibold mb-2">{production.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4 italic">by {production.playwright}</p>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {production.description}
                     </p>

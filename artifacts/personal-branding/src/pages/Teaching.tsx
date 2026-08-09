@@ -236,13 +236,18 @@ export default function Teaching() {
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
             For a complete record of Brianne's teaching experience, training, and professional history, download her full CV.
           </p>
-          <button
+          <a
+            href="/brianne-beatrice-cv.docx"
+            download="Brianne-Beatrice-CV.docx"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-sm font-medium hover:opacity-90 transition-opacity"
+            aria-label="Download Brianne Beatrice's curriculum vitae (Word document)"
             data-testid="button-download-cv"
           >
             <Download size={20} />
-            Download CV (PDF)
-          </button>
+            Download CV
+          </a>
         </section>
       </FadeInSection>
     </PageTransition>
