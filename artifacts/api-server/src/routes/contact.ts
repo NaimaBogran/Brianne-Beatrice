@@ -1,6 +1,7 @@
 import { Router, type IRouter } from "express";
 import nodemailer from "nodemailer";
 import { logger } from "../lib/logger";
+import { INQUIRY_TYPE_VALUES } from "@workspace/api-zod";
 
 const router: IRouter = Router();
 
@@ -69,6 +70,10 @@ router.post("/contact", async (req, res) => {
   }
   if (!email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
     res.status(400).json({ error: "A valid email address is required." });
+    return;
+  }
+  if (subject && !(INQUIRY_TYPE_VALUES as readonly string[]).includes(subject)) {
+    res.status(400).json({ error: "Invalid inquiry type." });
     return;
   }
   if (!message?.trim()) {

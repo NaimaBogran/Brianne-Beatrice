@@ -14,14 +14,7 @@ import {
 } from '@/components/ui/select';
 import brianneHeadshot from '@/assets/brianne-headshot.jpg';
 import { Mail, Send, Mic, BookOpen, Theater, Users, CheckCircle, AlertCircle, Linkedin, Instagram, Facebook } from 'lucide-react';
-
-const INQUIRY_TYPES = [
-  { value: 'Speaking', label: 'Speaking' },
-  { value: 'Workshop/Coaching', label: 'Workshop/Coaching' },
-  { value: 'Directing', label: 'Directing' },
-  { value: 'Educational Collaboration', label: 'Educational Collaboration' },
-  { value: 'Other', label: 'Other' },
-] as const;
+import { INQUIRY_TYPES } from '@workspace/api-zod';
 
 
 const opportunities = [
