@@ -73,7 +73,7 @@ export default function Home() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
               <p className="text-sm uppercase tracking-wider text-muted-foreground mb-6">
-                Speaker • Educator • Director
+                Speaker • Educator • Director • Actor
               </p>
               <h1 className="font-serif text-5xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
                 Master of Performance & Inspiration
