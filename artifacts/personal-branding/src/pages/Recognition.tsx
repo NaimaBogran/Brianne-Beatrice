@@ -273,8 +273,8 @@ export default function Recognition() {
                   </div>
                 </div>
 
-                {/* Right — certificate preview (click to expand) */}
-                <div className="relative group cursor-pointer" onClick={() => setCertModalOpen(true)}>
+                {/* Right — certificate preview, desktop only (PDF iframes are unsupported on iOS/Android) */}
+                <div className="relative group cursor-pointer hidden lg:block" onClick={() => setCertModalOpen(true)}>
                   <iframe
                     src={`${CERT_URL}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
                     title="TED-Ed Educator Talks Certificate of Completion — Brianne Beatrice"
