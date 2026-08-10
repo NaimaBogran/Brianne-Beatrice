@@ -93,9 +93,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border">
+        <div className="mt-12 pt-8 border-t border-border space-y-2">
           <p className="text-sm text-muted-foreground text-center">
             &copy; {new Date().getFullYear()} Brianne Beatrice. All rights reserved.
+          </p>
+          <p className="text-xs text-muted-foreground/50 text-center">
+            Website designed &amp; developed by{' '}
+            <a
+              href="https://naimabogran-portfolio.us"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-muted-foreground transition-colors underline underline-offset-2"
+              aria-label="Naima Eve Bogran — website designer (opens in new tab)"
+            >
+              Naima Eve Bogran
+            </a>
           </p>
         </div>
       </div>

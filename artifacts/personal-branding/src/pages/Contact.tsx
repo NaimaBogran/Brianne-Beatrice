@@ -382,6 +382,35 @@ export default function Contact() {
           </div>
         </section>
       </FadeInSection>
+
+      {/* Designer credit — visually separated, intentionally secondary */}
+      <section className="border-t border-border" style={{ borderTopColor: 'rgba(198,161,91,0.35)' }}>
+        <div className="max-w-2xl mx-auto px-6 py-14 text-center">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground/50 mb-5">
+            Like this website?
+          </p>
+          <p className="text-sm text-muted-foreground mb-1">
+            Designed &amp; developed by
+          </p>
+          <p className="font-serif text-lg font-medium text-foreground/80 mb-4">
+            Naima Eve Bogran
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-8 max-w-sm mx-auto">
+            Looking for a custom website or digital portfolio of your own?
+            Let's build something that feels uniquely yours.
+          </p>
+          <a
+            href="https://naimabogran-portfolio.us"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-border text-foreground/70 px-6 py-2.5 rounded-sm text-sm font-medium hover:border-foreground/40 hover:text-foreground transition-colors"
+            aria-label="Work with the website designer, Naima Eve Bogran (opens in new tab)"
+          >
+            Work With the Designer
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
     </PageTransition>
   );
 }
